@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Windows-1252" ?>
+<TKStudioProject Name="nrf905" BuildTool="0" Version="3.00" Author="YinHandong[Òüº®¶¬]">
+    <Configurations>
+        <Configuration Name="DebugRel" CodeMode="2" MemMode="0" RTOS="0" T51FL="0" SIMCLK="24.000000" OCM51="" OCR51="" OutputDirectory=".\DebugRel\" OutputName="nrf905" GENAPP="1" GENLIB="0" ListingDirectory=".\DebugRel\" OPTLT="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" OPTDBG="1,-1,1,1,1,0,()" DEVICE="W78L52" VENDOR="Winbond" FAMINY="0">
+            <Tool Name="C51Tool" C51FL="4853008" C51VA="0" C51DEF="" C51UDF="" C51MSC="" INCC5="" />
+            <Tool Name="A51Tool" A51FL="68" A51SET="" A51RST="" A51MSC="" INCA5="" />
+            <Tool Name="Lx51Tool" LX51FL="4" LX51COB="" LX51XDB="" LX51PDB="" LX51BIB="" LX51DAB="" LX51IDB="" LX51PRC="" LX51STK="" LX51COS="" LX51XDS="" LX51BIS="" LX51DAS="" LX51IDS="" LX51OVL="" LX51MSC="" LX51DWN="" />
+            <DeviceProperties Item0='SIM=S8051.DLL DP51.DLL(&quot;-p52W&quot;)' Item1='BOOK0=DATASHTS\WINBOND\W78L52.PDF(&quot;Data Sheet&quot;)' Item2="CPU=IRAM(0 - 0xFF) IROM(0-0x1FFF) CLOCK(24000000)" Item3='MON=S8051.DLL TP51.DLL(&quot;-p52W&quot;)' Item4='REGFILE=REG54.H(&quot;Winbond&quot;)' Item5='SFILE=&quot;LIB\STARTUP.A51&quot; (&quot;Standard 8051 Startup Code&quot;)' />
+            <DeviceDescription Description="8051 based CMOS controller with high speed architecture&#x0D;&#x0A;36 I/O lines, 3 Timers/Counters, 8 Interrupts/2 priority levels,&#x0D;&#x0A;Extra I/O Port, INT2, INT3, WDT &#x0D;&#x0A;8k ROM, 256 Bytes on-chip RAM" />
+        </Configuration>
+    </Configurations>
+    <Files>
+        <Filter Name="Source Files" />
+        <File RelativePath="nrf905_89c52.c" />
+    </Files>
+</TKStudioProject>

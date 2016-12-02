@@ -1,0 +1,287 @@
+C51 COMPILER V7.06   FASONG                                                                04/14/2010 23:39:16 PAGE 1   
+
+
+C51 COMPILER V7.06, COMPILATION OF MODULE FASONG
+OBJECT MODULE PLACED IN Fasong.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE Fasong.c BROWSE DEBUG OBJECTEXTEND
+
+stmt level    source
+
+   1          #include <reg52.h>
+   2          #include <ABSACC.h>
+   3          #include <intrins.h>
+   4          #include <stdio.h>
+   5          //--------------------------------------------------------------------------------------------------------
+             ---------
+   6          #define uint unsigned int
+   7          #define uchar unsigned char
+   8          //--------------------------------------------------------------------------------------------------------
+             ---------
+   9          #define BYTE_BIT0       0x01
+  10          #define BYTE_BIT7       0x80
+  11          //--------------------------------------------------------------------------------------------------------
+             ---------
+  12          bdata unsigned  char DATA_BUF;
+  13          #define DATA7   ((DATA_BUF&BYTE_BIT7) != 0)
+  14          #define DATA0   ((DATA_BUF&BYTE_BIT0) != 0)
+  15          sbit    flag    =DATA_BUF^7;
+  16          sbit    flag1   =DATA_BUF^0;
+  17          //-----------------------------------------------------------------------------------------------
+  18          #define TxRxBuf_Len 4
+  19          unsigned char TxRxBuf[TxRxBuf_Len]={0x29,0x30,0x31,0x32,};
+  20          code TxAddress[4]={0xcc,0xcc,0xcc,0xcc};
+  21          char tf;
+  22          //-------------------------------------------------------------------------------------------
+  23          sbit    TXEN=P1^4;
+  24          sbit    TRX_CE=P3^2;
+  25          sbit    PWR=P1^3;
+  26          //-----------------------------------------------------------------------------------------
+  27          sbit    LED=P3^5;
+  28          //-------------------------------------------------------------------------------------------
+  29          sbit    MISO=P1^6;
+  30          sbit    MOSI=P1^1;
+  31          sbit    SCK=P1^5;
+  32          sbit    CSN=P1^0;
+  33          //------------------------------------------------------------------------------------------------
+  34          sbit    AM=P1^7;
+  35          sbit    DR=P3^3;
+  36          sbit    CD=P1^2;
+  37          //--------------------------------------------------------------------------------------------------------
+             --------
+  38          //----------------------------------------------------------------------------------------------
+  39          sbit    KEY=P3^4;
+  40          //----------------------------------------------------------------------------------
+  41          #define WC              0x00
+  42          #define RC              0x10
+  43          #define WTP             0x20
+  44          #define RTP             0x21
+  45          #define WTA             0x22
+  46          #define RTA             0x23
+  47          #define RRP             0x24
+  48          //------------------------------------------Ã------------------------------------------------
+  49          unsigned char idata RFConf[11]=
+  50          {
+  51            0x00,                             
+C51 COMPILER V7.06   FASONG                                                                04/14/2010 23:39:16 PAGE 2   
+
+  52            0x5f,                            
+  53            0x0c,                            
+  54            0x44,                             
+  55            0x04,0x04,                        
+  56            0xCC,0xCC,0xCC,0xCC,                            
+  57            0x58,                              
+  58          };
+  59          //========================================================================================================
+             -==
+  60          void nrf905_Delay(int n)
+  61          {
+  62   1              uint i;
+  63   1              while(n--)
+  64   1              for(i=0;i<80;i++);
+  65   1      }
+  66          //========================================================================================================
+  67          unsigned char SpiRead(void)
+  68          {
+  69   1              unsigned char j;
+  70   1              for (j=0;j<8;j++)
+  71   1              {
+  72   2              DATA_BUF=DATA_BUF<<1;
+  73   2                      SCK=1;
+  74   2                      if (MISO)       
+  75   2                      {
+  76   3                              DATA_BUF|=BYTE_BIT0;
+  77   3                      }
+  78   2                      else
+  79   2                      {
+  80   3                              DATA_BUF&=~BYTE_BIT0;
+  81   3                      }
+  82   2                      SCK=0;
+  83   2               }
+  84   1               return DATA_BUF;
+  85   1      }
+  86          //========================================================================================================
+             -==
+  87          void SpiWrite(unsigned char send)
+  88          {
+  89   1              unsigned char i;
+  90   1              DATA_BUF=send;
+  91   1              for (i=0;i<8;i++)
+  92   1              {
+  93   2                      if (DATA7)
+  94   2                      {
+  95   3                              MOSI=1;
+  96   3                      }
+  97   2                      else
+  98   2                      {
+  99   3                              MOSI=0;
+ 100   3                      }
+ 101   2                      SCK=1;
+ 102   2                      DATA_BUF=DATA_BUF<<1;
+ 103   2                      SCK=0;
+ 104   2              }
+ 105   1      }
+ 106          //---------------------------------------------
+ 107          void nRF905Init(void)
+ 108          {
+ 109   1          CSN=1;                                              // Spi  disable
+ 110   1              SCK=0;                                          // Spi clock line init low
+ 111   1              DR=1;                                           // Init DR for input
+C51 COMPILER V7.06   FASONG                                                                04/14/2010 23:39:16 PAGE 3   
+
+ 112   1              AM=1;                                           // Init AM for input
+ 113   1              CD=1;                                           // Init CD for input
+ 114   1              PWR=1;                                  // nRF905 power on
+ 115   1              TRX_CE=0;                                       // Set nRF905 in standby mode
+ 116   1              TXEN=0;                                 // set radio in Rx mode
+ 117   1      }
+ 118          //-----------------------------------------------------³õÊ¼»¯¼Ä´æÆ÷---------------------------------------
+             ---------
+ 119          void Config905(void)
+ 120          {
+ 121   1              uchar i;
+ 122   1              CSN=0;                                          // Spi enable for write a spi command
+ 123   1              //SpiWrite(WC);                         // Write config commandÐ´·ÅÅäÖÃÃüÁî
+ 124   1              for (i=0;i<11;i++)      // Write configration words  Ð´·ÅÅäÖÃ×Ö
+ 125   1              {
+ 126   2                 SpiWrite(RFConf[i]);
+ 127   2              }
+ 128   1              CSN=1;                                  // Disable Spi
+ 129   1      }
+ 130          //-----------------------------------------------------·¢ËÍÊý¾Ý´ò°ü---------------------------------------
+             -------------
+ 131          void TxPacket(uchar *TxRxBuf)
+ 132          {
+ 133   1              uchar i;
+ 134   1              Config905();
+ 135   1              CSN=0;
+ 136   1              SpiWrite(WTP);                          // Write payload command
+ 137   1              for (i=0;i<4;i++)
+ 138   1              {
+ 139   2                      SpiWrite(TxRxBuf[i]);           // Write 32 bytes Tx data
+ 140   2              }
+ 141   1              CSN=1;
+ 142   1              nrf905_Delay(1);                                                // Spi disable
+ 143   1              CSN=0;                                          // Spi enable for write a spi command
+ 144   1              SpiWrite(WTA);                          // Write address command
+ 145   1              for (i=0;i<4;i++)                       // Ð´ÈëÓë¶Ô·½µØÖ·Ò»ÑùµÄµØÖ·
+ 146   1              {
+ 147   2                      SpiWrite(TxAddress[i]);
+ 148   2              }
+ 149   1              CSN=1;                                          // Spi disable
+ 150   1              TRX_CE=1;                                       // Set TRX_CE high,start Tx data transmission
+ 151   1              nrf905_Delay(1);                                        // while (DR!=1);
+ 152   1              TRX_CE=0;                                       // Set TRX_CE low
+ 153   1      }
+ 154          //----------------------------------------------ÉèÖÃ·¢ËÍ³õÊ¼×´Ì¬------------------------------------------
+             ----
+ 155          void SetTxMode(void)
+ 156          {
+ 157   1              TRX_CE=0;
+ 158   1              TXEN=1;
+ 159   1              nrf905_Delay(1);                                        // nrf905_Delay for mode change(>=650us)
+ 160   1      }
+ 161          //-----------------------------------------------ÉèÖÃ½ÓÊÕ³õÊ¼»¯-------------------------------------------
+             ---------
+ 162          void SetRxMode(void)
+ 163          {
+ 164   1              TXEN=0;
+ 165   1              TRX_CE=1;
+ 166   1              nrf905_Delay(1);                                        // nrf905_Delay for mode change(>=650us)
+ 167   1      }
+ 168          //-------------------------------------------------ÅÐ¶ÏÊý¾Ý½ÓÊÕ×´Ì¬---------------------------------------
+             ---------------
+C51 COMPILER V7.06   FASONG                                                                04/14/2010 23:39:16 PAGE 4   
+
+ 169          unsigned char CheckDR(void)             //¼ì²éÊÇ·ñÓÐÐÂÊý¾Ý´«Èë Data Ready
+ 170          {
+ 171   1              if (DR==1)
+ 172   1              {
+ 173   2                      DR=0;
+ 174   2                      return 1;
+ 175   2              }
+ 176   1              else
+ 177   1              {
+ 178   2                      return 0;
+ 179   2              }
+ 180   1      
+ 181   1      }
+ 182          //----------------------------------------------------¶ÁNRF905½ÓÊÕÊý¾Ý------------------------------------
+             -------------------------
+ 183          void RxPacket(void)                                             
+ 184          {
+ 185   1              uchar i;
+ 186   1          nrf905_Delay(1);
+ 187   1              TRX_CE=0;                                       // Set nRF905 in standby mode
+ 188   1          nrf905_Delay(100);
+ 189   1          TRX_CE=0;
+ 190   1              CSN=0;                                          // Spi enable for write a spi command
+ 191   1          nrf905_Delay(1);
+ 192   1              SpiWrite(RRP);
+ 193   1              for (i = 0 ;i < 4 ;i++)
+ 194   1              { 
+ 195   2                      TxRxBuf[i]=SpiRead();           // Read data and save to buffer       
+ 196   2              }
+ 197   1              CSN=1;
+ 198   1          nrf905_Delay(10);
+ 199   1              TRX_CE=1;                                                       
+ 200   1      }
+ 201          //-------------------------------------------------------------------------------------------------------
+ 202          void  RX(void)
+ 203          {
+ 204   1                SetRxMode();  
+ 205   1                        nrf905_Delay(10);
+ 206   1                        RxPacket();
+ 207   1                        if(TxRxBuf[0]==0x29)
+ 208   1                        {
+ 209   2                                      LED=0;
+ 210   2                                  nrf905_Delay(300);
+ 211   2                                      LED=1;
+ 212   2                                  nrf905_Delay(300);
+ 213   2                        }
+ 214   1      
+ 215   1      }
+ 216          //--------------------------------------------------------------------------------------------------------
+             ----------
+ 217          void main(void)
+ 218          {
+ 219   1              nRF905Init();
+ 220   1              Config905();
+ 221   1                      LED=1;
+ 222   1              while(1)
+ 223   1                      {
+ 224   2                              RX();
+ 225   2                         if(KEY ==0 )
+ 226   2                               {      
+ 227   3                                      while(KEY==0);
+ 228   3                                      tf = 1 ;
+C51 COMPILER V7.06   FASONG                                                                04/14/2010 23:39:16 PAGE 5   
+
+ 229   3                                      TxRxBuf[0]=0x29;
+ 230   3                                       }
+ 231   2                        
+ 232   2                     if (tf==1)
+ 233   2                              {
+ 234   3                      SetTxMode();
+ 235   3                                  TxPacket(TxRxBuf);
+ 236   3                                      LED=0;
+ 237   3                                  nrf905_Delay(300);
+ 238   3                                      LED=1;
+ 239   3                                  nrf905_Delay(300);          
+ 240   3                                      tf = 0; 
+ 241   3                              }       
+ 242   2      }
+ 243   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    399    ----
+   CONSTANT SIZE    =      8    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      6       3
+   IDATA SIZE       =     11    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

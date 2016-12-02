@@ -1,0 +1,978 @@
+                        .module Wendu_jieshou.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0000           _TxAddress::
+ 0000                   .blkb 2
+                        .area idata
+ 0000 CCCC              .byte 204,204
+                        .area data(ram, con, rel)
+ 0002                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0002                   .blkb 2
+                        .area idata
+ 0002 CCCC              .byte 204,204
+                        .area data(ram, con, rel)
+ 0004                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0004                   .dbsym e TxAddress _TxAddress A[4:4]c
+ 0004           _seg::
+ 0004                   .blkb 2
+                        .area idata
+ 0004 C0CF              .byte 192,207
+                        .area data(ram, con, rel)
+ 0006                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0006                   .blkb 2
+                        .area idata
+ 0006 A4B0              .byte 164,176
+                        .area data(ram, con, rel)
+ 0008                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0008                   .blkb 2
+                        .area idata
+ 0008 9992              .byte 153,146
+                        .area data(ram, con, rel)
+ 000A                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 000A                   .blkb 2
+                        .area idata
+ 000A 82F8              .byte 130,248
+                        .area data(ram, con, rel)
+ 000C                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 000C                   .blkb 2
+                        .area idata
+ 000C 8090              .byte 128,144
+                        .area data(ram, con, rel)
+ 000E                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 000E                   .dbsym e seg _seg A[10:10]c
+ 000E           _seg1::
+ 000E                   .blkb 2
+                        .area idata
+ 000E 404F              .byte 64,'O
+                        .area data(ram, con, rel)
+ 0010                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0010                   .blkb 2
+                        .area idata
+ 0010 2430              .byte 36,48
+                        .area data(ram, con, rel)
+ 0012                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0012                   .blkb 2
+                        .area idata
+ 0012 1912              .byte 25,18
+                        .area data(ram, con, rel)
+ 0014                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0014                   .blkb 2
+                        .area idata
+ 0014 0278              .byte 2,'x
+                        .area data(ram, con, rel)
+ 0016                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0016                   .blkb 2
+                        .area idata
+ 0016 0010              .byte 0,16
+                        .area data(ram, con, rel)
+ 0018                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0018                   .dbsym e seg1 _seg1 A[10:10]c
+ 0018           _RFConf::
+ 0018                   .blkb 2
+                        .area idata
+ 0018 004C              .byte 0,'L
+                        .area data(ram, con, rel)
+ 001A                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 001A                   .blkb 2
+                        .area idata
+ 001A 0C44              .byte 12,'D
+                        .area data(ram, con, rel)
+ 001C                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 001C                   .blkb 2
+                        .area idata
+ 001C 0404              .byte 4,4
+                        .area data(ram, con, rel)
+ 001E                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 001E                   .blkb 2
+                        .area idata
+ 001E CCCC              .byte 204,204
+                        .area data(ram, con, rel)
+ 0020                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0020                   .blkb 2
+                        .area idata
+ 0020 CCCC              .byte 204,204
+                        .area data(ram, con, rel)
+ 0022                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0022                   .blkb 1
+                        .area idata
+ 0022 58                .byte 'X
+                        .area data(ram, con, rel)
+ 0023                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0023                   .dbsym e RFConf _RFConf A[11:11]c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0000                   .dbfunc e Delay _Delay fV
+ 0000           ;              i -> R20,R21
+ 0000           ;              x -> R16,R17
+                        .even
+ 0000           _Delay::
+ 0000 4A93              st -y,R20
+ 0002 5A93              st -y,R21
+ 0004                   .dbline -1
+ 0004                   .dbline 100
+ 0004           ; //ICC-AVR application builder : 2007-8-11 20:37:32
+ 0004           ; // Target : M16
+ 0004           ; // Crystal: 8.0000Mhz
+ 0004           ; #include <iom16v.h>
+ 0004           ; #include <macros.h>
+ 0004           ; #define uint  unsigned int
+ 0004           ; #define uchar unsigned char
+ 0004           ; //---------------------------------NRF905Ä£Ê½¿ØÖÆ¶¨Òå---------------------------------
+ 0004           ; //#define  nrf905_TX_EN         PB0       //Êä³ö1
+ 0004           ; #define   Hign_nrf905_TX_EN    PORTB |= (1 << PB0);   
+ 0004           ; #define   Low_nrf905_TX_EN     PORTB &= ~(1 << PB0); 
+ 0004           ; //#define  nrf905_TRX_CE  PD4             //Êä³ö1
+ 0004           ; #define   Hign_nrf905_TRX_CE    PORTD |= (1 << PD4);   
+ 0004           ; #define   Low_nrf905_TRX_CE     PORTD &= ~(1 << PD4); 
+ 0004           ; //#define  nrf905_PWR     PB1             //Êä³ö1
+ 0004           ; #define   Hign_nrf905_PWR    PORTB |= (1 << PB1);   
+ 0004           ; #define   Low_nrf905_PWR     PORTB &= ~(1 << PB1); 
+ 0004           ; //--------------------------------NRF905-SPI¿Ú½Ó¿Ú¶¨Òå--------------------------
+ 0004           ; //#define  nrf905_MISO          PB6           //ÊäÈë0
+ 0004           ; //#define  nrf905_MOSI    PB5     //Êä³ö1
+ 0004           ; //#define  nrf905_SCK     PB7     //Êä³ö1
+ 0004           ; #define   Low_nrf905_SCK     PORTB &= ~(1 << PB7); 
+ 0004           ; //#define  nrf905_CSN     PB4         //Êä³ö1         
+ 0004           ; #define   Hign_nrf905_CSN    PORTB |= (1 << PB4);   
+ 0004           ; #define   Low_nrf905_CSN     PORTB &= ~(1 << PB4);                                            
+ 0004           ; //-------------------------------NRF905×´Ì¬Êä³ö¿Ú-------------------------------
+ 0004           ; //#define  nrf905_CD      PD3     //ÊäÈë0
+ 0004           ; #define   Hign_nrf905_CD    PORTD |= (1 << PD3);   
+ 0004           ; #define   Low_nrf905_CD     PORTD &= ~(1 << PD3); 
+ 0004           ; #define   Read_nrf905_CD    PINB & (1 << PD3);
+ 0004           ; //#define  nrf905_AM      PB3     //ÊäÈë0
+ 0004           ; #define   Hign_nrf905_AM    PORTB |= (1 << PB3);   
+ 0004           ; #define   Low_nrf905_AM     PORTB &= ~(1 << PB3); 
+ 0004           ; #define   Read_nrf905_AM    PINB & (1 << PB3);
+ 0004           ; //#define  nrf905_DR      PB2                 //ÊäÈë0
+ 0004           ; #define   Hign_nrf905_DR     PORTB |= (1 << PB2);   
+ 0004           ; #define   Low_nrf905_DR     PORTB &= ~(1 << PB2); 
+ 0004           ; #define   Read_nrf905_DR    PINB & (1 << PB2);   
+ 0004           ; //------------------------------ÊýÂë¹ÜÎ»Ñ¡--------------------------------------
+ 0004           ; //#define Display1   PA1                  //Êä³ö1
+ 0004           ; #define   Hign_Display1     PORTA |= (1 << PA1);   
+ 0004           ; #define   Low_Display1    PORTA &= ~(1 << PA1); 
+ 0004           ; //#define Display2      PA2           //Êä³ö1
+ 0004           ; #define   Hign_Display2     PORTA |= (1 << PA2);   
+ 0004           ; #define   Low_Display2    PORTA &= ~(1 << PA2); 
+ 0004           ; //#define Display3     PA3            //Êä³ö1
+ 0004           ; #define   Hign_Display3     PORTA |= (1 << PA3);   
+ 0004           ; #define   Low_Display3     PORTA &= ~(1 << PA3); 
+ 0004           ; //#define Display4      PA4           //Êä³ö1
+ 0004           ; #define   Hign_Display4     PORTA |= (1 << PA4);   
+ 0004           ; #define   Low_Display4     PORTA &= ~(1 << PA4);   
+ 0004           ; //-------------------------------BELL·äÃ÷Æ÷-------------------------------------
+ 0004           ; #define   Hign_BELL  PORTD |= (1 << PD5);   
+ 0004           ; #define   Low_BELL     PORTD &= ~(1 << PD5); 
+ 0004           ; //-------------------------------JDQ¼ÌµçÆ÷--------------------------------------
+ 0004           ; #define   Hign_JDQ  PORTD |= (1 << PD7)
+ 0004           ; #define   Low_JDQ     PORTD &= ~(1 << PD7) 
+ 0004           ; 
+ 0004           ; //----------------------------------NRF905-SPIÖ¸Áî------------------------------
+ 0004           ; #define WC    0x00
+ 0004           ; #define RRC   0x10
+ 0004           ; #define WTP   0x20
+ 0004           ; #define RTP   0x21
+ 0004           ; #define WTA   0x22
+ 0004           ; #define RTA   0x23
+ 0004           ; #define RRP   0x24
+ 0004           ; //---------------------------------·¢ËÍÊý¾Ý-------------------------------------
+ 0004           ; uchar TxRxBuffer[4];
+ 0004           ; //----------------------------------½ÓÊÕµØÖ·------------------------------------
+ 0004           ; uchar TxAddress[4]={0xcc,0xcc,0xcc,0xcc };    
+ 0004           ; uint temp[6];
+ 0004           ; uchar seg[10]={0xC0,0xCF,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};         //0~~9¶ÎÂë
+ 0004           ; uchar seg1[10]={0x40,0x4F,0x24,0x30,0x19,0x12,0x02,0x78,0x00,0x10}; 
+ 0004           ; //----------------------------------¼Ä´æÆ÷ÅäÖÃ----------------------------------
+ 0004           ; uchar RFConf[11]=
+ 0004           ; {
+ 0004           ;   0x00,                            //ÅäÖÃÃüÁî//
+ 0004           ;   0x4c,                           //CH_NO,ÅäÖÃÆµ¶ÎÔÚ430MHZ
+ 0004           ;   0x0C,                          //Êä³ö¹¦ÂÊÎª10db,²»ÖØ·¢£¬½ÚµçÎªÕý³£Ä£Ê½
+ 0004           ;   0x44,                         //µØÖ·¿í¶ÈÉèÖÃ£¬Îª4×Ö½Ú
+ 0004           ;   0x04,0x04,                   //½ÓÊÕ·¢ËÍÓÐÐ§Êý¾Ý³¤¶ÈÎª4×Ö½Ú
+ 0004           ;   0xCC,0xCC,0xCC,0xCC,        //½ÓÊÕµØÖ·
+ 0004           ;   0x58,                      //CRC³äÐí£¬8Î»CRCÐ£Ñé£¬Íâ²¿Ê±ÖÓÐÅºÅ²»Ê¹ÄÜ£¬16M¾§Õñ
+ 0004           ; };
+ 0004           ; //----------------------------------NRF905º¯ÊýÉêÃ÷------------------------------
+ 0004           ; void Delay(uint x);                                                  //ÑÓÊ±×Ó³ÌÐò                                                                                                                                                                                     
+ 0004           ; void Spi_initial();                            //SPI³õÊ¼»¯
+ 0004           ; uchar SpiReadSpiWrite(unsigned char cData);    //SPI¶ÁÐ´×Ó³ÌÐò
+ 0004           ; void system_Init(void);                                                  //ÏµÍ³³õÊ¼»¯
+ 0004           ; void Config905(void);                                            //NRF905³õÊ¼»¯×Ó³ÌÐò
+ 0004           ; void SetRxMode(void);                                            //
+ 0004           ; unsigned char CheckDR(void);
+ 0004           ; void RxPacket(void);
+ 0004           ; void  RX(void);
+ 0004           ; //-------------------------------´®¿Úº¯ÊýÉêÃ÷-----------------------------------
+ 0004           ; void StartUART(void);
+ 0004           ; void R_S_Byte(uchar R_Byte);
+ 0004           ; //----------------------------------100usÑÓÊ±×Ó³ÌÐò-----------------------------
+ 0004           ; void Delay(uint x)
+ 0004           ; {
+ 0004 09C0              rjmp L3
+ 0006           L2:
+ 0006                   .dbline 103
+ 0006           ;       uint i;
+ 0006           ;       while(x--)
+ 0006           ;       for(i=0;i<80;i++);
+ 0006 4427              clr R20
+ 0008 5527              clr R21
+ 000A 02C0              rjmp L8
+ 000C           L5:
+ 000C                   .dbline 103
+ 000C           L6:
+ 000C                   .dbline 103
+ 000C 4F5F              subi R20,255  ; offset = 1
+ 000E 5F4F              sbci R21,255
+ 0010           L8:
+ 0010                   .dbline 103
+ 0010 4035              cpi R20,80
+ 0012 E0E0              ldi R30,0
+ 0014 5E07              cpc R21,R30
+ 0016 D0F3              brlo L5
+ 0018           X0:
+ 0018           L3:
+ 0018                   .dbline 102
+ 0018 202E              mov R2,R16
+ 001A 312E              mov R3,R17
+ 001C 0150              subi R16,1
+ 001E 1040              sbci R17,0
+ 0020 2220              tst R2
+ 0022 89F7              brne L2
+ 0024 3320              tst R3
+ 0026 79F7              brne L2
+ 0028           X1:
+ 0028                   .dbline -2
+ 0028           L1:
+ 0028                   .dbline 0 ; func end
+ 0028 5991              ld R21,y+
+ 002A 4991              ld R20,y+
+ 002C 0895              ret
+ 002E                   .dbsym r i 20 i
+ 002E                   .dbsym r x 16 i
+ 002E                   .dbend
+ 002E                   .dbfunc e Spi_initial _Spi_initial fV
+                        .even
+ 002E           _Spi_initial::
+ 002E                   .dbline -1
+ 002E                   .dbline 107
+ 002E           ; }
+ 002E           ; //----------------------------------SPI³õÊ¼»¯-----------------------------------
+ 002E           ; void Spi_initial()
+ 002E           ; {
+ 002E                   .dbline 108
+ 002E           ;       SPCR   = (1<<SPE)|(1<<MSTR)|(0<<CPOL)|(0<<SPR0);// Ö÷»úÄ£Ê½£¬fck/16, SPI·½Ê½0
+ 002E 80E5              ldi R24,80
+ 0030 8DB9              out 0xd,R24
+ 0032                   .dbline -2
+ 0032           L9:
+ 0032                   .dbline 0 ; func end
+ 0032 0895              ret
+ 0034                   .dbend
+ 0034                   .dbfunc e SpiReadSpiWrite _SpiReadSpiWrite fc
+ 0034           ;          cData -> R16
+                        .even
+ 0034           _SpiReadSpiWrite::
+ 0034                   .dbline -1
+ 0034                   .dbline 112
+ 0034           ; }
+ 0034           ; //---------------------------------SPI¶ÁÐ´³ÌÐò----------------------------------      
+ 0034           ; uchar SpiReadSpiWrite(unsigned char cData)
+ 0034           ; {
+ 0034                   .dbline 113
+ 0034           ;       SPDR = cData;
+ 0034 0FB9              out 0xf,R16
+ 0036           L11:
+ 0036                   .dbline 115
+ 0036           ;       while(!(SPSR & (1<<SPIF) ))  // µÈ´ýSPI·¢ËÍÍê±Ï
+ 0036           ;       {};                     
+ 0036                   .dbline 115
+ 0036           L12:
+ 0036                   .dbline 114
+ 0036 779B              sbis 0xe,7
+ 0038 FECF              rjmp L11
+ 003A           X2:
+ 003A                   .dbline 115
+ 003A                   .dbline 116
+ 003A           ;       return SPDR;
+ 003A 0FB1              in R16,0xf
+ 003C                   .dbline -2
+ 003C           L10:
+ 003C                   .dbline 0 ; func end
+ 003C 0895              ret
+ 003E                   .dbsym r cData 16 c
+ 003E                   .dbend
+ 003E                   .dbfunc e system_Init _system_Init fV
+                        .even
+ 003E           _system_Init::
+ 003E                   .dbline -1
+ 003E                   .dbline 120
+ 003E           ; }
+ 003E           ; //--------------------------------ÏµÍ³×´Ì¬³õÊ¼»¯--------------------------------
+ 003E           ; void system_Init(void)                        
+ 003E           ; {
+ 003E                   .dbline 122
+ 003E           ; 
+ 003E           ;       Hign_nrf905_CSN;                        // SPIÊ¹ÄÜ
+ 003E C49A              sbi 0x18,4
+ 0040                   .dbline 122
+ 0040                   .dbline 123
+ 0040           ;       Low_nrf905_SCK;                         
+ 0040 C798              cbi 0x18,7
+ 0042                   .dbline 123
+ 0042                   .dbline 124
+ 0042           ;       Low_nrf905_DR;                          // DR=0
+ 0042 C298              cbi 0x18,2
+ 0044                   .dbline 124
+ 0044                   .dbline 125
+ 0044           ;       Low_nrf905_AM;                          // AM=0
+ 0044 C398              cbi 0x18,3
+ 0046                   .dbline 125
+ 0046                   .dbline 126
+ 0046           ;       Low_nrf905_CD;                          // CD=0
+ 0046 9398              cbi 0x12,3
+ 0048                   .dbline 126
+ 0048                   .dbline 127
+ 0048           ;       Hign_nrf905_PWR;                    // PWR=1
+ 0048 C19A              sbi 0x18,1
+ 004A                   .dbline 127
+ 004A                   .dbline 128
+ 004A           ;       Low_nrf905_TRX_CE;                      // nrf905_TRX_CE=0
+ 004A 9498              cbi 0x12,4
+ 004C                   .dbline 128
+ 004C                   .dbline 129
+ 004C           ;       Low_nrf905_TX_EN ;                      // nrf905_TX_EN=0
+ 004C C098              cbi 0x18,0
+ 004E                   .dbline 129
+ 004E                   .dbline -2
+ 004E           L14:
+ 004E                   .dbline 0 ; func end
+ 004E 0895              ret
+ 0050                   .dbend
+ 0050                   .dbfunc e Config905 _Config905 fV
+ 0050           ;              i -> R20
+                        .even
+ 0050           _Config905::
+ 0050 4A93              st -y,R20
+ 0052 5A93              st -y,R21
+ 0054                   .dbline -1
+ 0054                   .dbline 133
+ 0054           ; }
+ 0054           ; //--------------------------------NRF905¼Ä´æÆ÷³õÊ¼»¯º¯Êý------------------------
+ 0054           ; void Config905(void)
+ 0054           ; {
+ 0054                   .dbline 135
+ 0054           ;       uchar i;
+ 0054           ;       Low_nrf905_CSN;                         //SPIÊ¹ÄÜ                                                                                       
+ 0054 C498              cbi 0x18,4
+ 0056                   .dbline 135
+ 0056                   .dbline 136
+ 0056           ;       Delay(1);                                  
+ 0056 01E0              ldi R16,1
+ 0058 10E0              ldi R17,0
+ 005A D2DF              rcall _Delay
+ 005C                   .dbline 137
+ 005C           ;       for (i=0;i<11;i++)                      //Ð´RF905ÅäÖÃ×Ö
+ 005C 4427              clr R20
+ 005E 09C0              rjmp L19
+ 0060           L16:
+ 0060                   .dbline 138
+ 0060           ;       {
+ 0060                   .dbline 139
+ 0060           ;        SpiReadSpiWrite(RFConf[i]);
+ 0060 80E0              ldi R24,<_RFConf
+ 0062 90E0              ldi R25,>_RFConf
+ 0064 E42F              mov R30,R20
+ 0066 FF27              clr R31
+ 0068 E80F              add R30,R24
+ 006A F91F              adc R31,R25
+ 006C 0081              ldd R16,z+0
+ 006E E2DF              rcall _SpiReadSpiWrite
+ 0070                   .dbline 140
+ 0070           ;       }
+ 0070           L17:
+ 0070                   .dbline 137
+ 0070 4395              inc R20
+ 0072           L19:
+ 0072                   .dbline 137
+ 0072 4B30              cpi R20,11
+ 0074 A8F3              brlo L16
+ 0076           X3:
+ 0076                   .dbline 141
+ 0076           ;       Hign_nrf905_CSN;                                        // Disable Spi
+ 0076 C49A              sbi 0x18,4
+ 0078                   .dbline 141
+ 0078                   .dbline -2
+ 0078           L15:
+ 0078                   .dbline 0 ; func end
+ 0078 5991              ld R21,y+
+ 007A 4991              ld R20,y+
+ 007C 0895              ret
+ 007E                   .dbsym r i 20 c
+ 007E                   .dbend
+ 007E                   .dbfunc e SetRxMode _SetRxMode fV
+                        .even
+ 007E           _SetRxMode::
+ 007E                   .dbline -1
+ 007E                   .dbline 145
+ 007E           ; }
+ 007E           ; //------------------------------ÉèÖÃ½ÓÊÕÄ£Ê½¼¤·¢--------------------------------
+ 007E           ; void SetRxMode(void)
+ 007E           ; {
+ 007E                   .dbline 146
+ 007E           ;       Low_nrf905_TX_EN;
+ 007E C098              cbi 0x18,0
+ 0080                   .dbline 146
+ 0080                   .dbline 147
+ 0080           ;       Hign_nrf905_TRX_CE;
+ 0080 949A              sbi 0x12,4
+ 0082                   .dbline 147
+ 0082                   .dbline 148
+ 0082           ;       Delay(10);                                      // delay for mode change(>=650us)
+ 0082 0AE0              ldi R16,10
+ 0084 10E0              ldi R17,0
+ 0086 BCDF              rcall _Delay
+ 0088                   .dbline -2
+ 0088           L20:
+ 0088                   .dbline 0 ; func end
+ 0088 0895              ret
+ 008A                   .dbend
+ 008A                   .dbfunc e CheckDR _CheckDR fc
+                        .even
+ 008A           _CheckDR::
+ 008A                   .dbline -1
+ 008A                   .dbline 152
+ 008A           ; }
+ 008A           ; //-----------------------------ÅÐ¶ÏÊÇ·ñÊÕµ½Êý¾Ý---------------------------------
+ 008A           ; unsigned char CheckDR(void)           //¼ì²éÊÇ·ñÓÐÐÂÊý¾Ý´«Èë 
+ 008A           ; {
+ 008A                   .dbline 153
+ 008A           ;       if (PINB & (1 << PB2))
+ 008A B29B              sbis 0x16,2
+ 008C 02C0              rjmp L22
+ 008E           X4:
+ 008E                   .dbline 154
+ 008E           ;       {
+ 008E                   .dbline 155
+ 008E           ;               return 1;                               //ÊÕµ½Êý¾Ý
+ 008E 01E0              ldi R16,1
+ 0090 01C0              rjmp L21
+ 0092           L22:
+ 0092                   .dbline 158
+ 0092           ;       }
+ 0092           ;       else
+ 0092           ;       {
+ 0092                   .dbline 159
+ 0092           ;               return 0;
+ 0092 0027              clr R16
+ 0094                   .dbline -2
+ 0094           L21:
+ 0094                   .dbline 0 ; func end
+ 0094 0895              ret
+ 0096                   .dbend
+ 0096                   .dbfunc e RxPacket _RxPacket fV
+ 0096           ;              i -> R20
+                        .even
+ 0096           _RxPacket::
+ 0096 4A93              st -y,R20
+ 0098 5A93              st -y,R21
+ 009A                   .dbline -1
+ 009A                   .dbline 164
+ 009A           ;       }
+ 009A           ; }
+ 009A           ; //-----------------------------------¶Á½ÓÊÕÊý¾Ý°ü-------------------------------
+ 009A           ; void RxPacket(void)                                                   //¶ÁÊý¾Ý
+ 009A           ; {
+ 009A                   .dbline 166
+ 009A           ;       uchar i;
+ 009A           ;     Low_nrf905_TRX_CE;
+ 009A 9498              cbi 0x12,4
+ 009C                   .dbline 166
+ 009C                   .dbline 167
+ 009C           ;       Low_nrf905_CSN;                                             // Ê¹ÄÜSPI
+ 009C C498              cbi 0x18,4
+ 009E                   .dbline 167
+ 009E                   .dbline 168
+ 009E           ;     Delay(1);
+ 009E 01E0              ldi R16,1
+ 00A0 10E0              ldi R17,0
+ 00A2 AEDF              rcall _Delay
+ 00A4                   .dbline 169
+ 00A4           ;       SpiReadSpiWrite(RRP);                              // Ð´ÈëÊý¾Ý½ÓÊÕ»º³åÇøÊý¾ÝÃüÁî
+ 00A4 04E2              ldi R16,36
+ 00A6 C6DF              rcall _SpiReadSpiWrite
+ 00A8                   .dbline 170
+ 00A8           ;       for (i = 0 ;i < 4 ;i++)
+ 00A8 4427              clr R20
+ 00AA 0AC0              rjmp L28
+ 00AC           L25:
+ 00AC                   .dbline 171
+ 00AC           ;       {   
+ 00AC                   .dbline 172
+ 00AC           ;       TxRxBuffer[i]=SpiReadSpiWrite(0);         // ¶ÁÈ¡Êý¾Ý½ÓÊÕ»º³åÇøÊý¾Ý       
+ 00AC 0027              clr R16
+ 00AE C2DF              rcall _SpiReadSpiWrite
+ 00B0 80E0              ldi R24,<_TxRxBuffer
+ 00B2 90E0              ldi R25,>_TxRxBuffer
+ 00B4 E42F              mov R30,R20
+ 00B6 FF27              clr R31
+ 00B8 E80F              add R30,R24
+ 00BA F91F              adc R31,R25
+ 00BC 0083              std z+0,R16
+ 00BE                   .dbline 173
+ 00BE           ;       }
+ 00BE           L26:
+ 00BE                   .dbline 170
+ 00BE 4395              inc R20
+ 00C0           L28:
+ 00C0                   .dbline 170
+ 00C0 4430              cpi R20,4
+ 00C2 A0F3              brlo L25
+ 00C4           X5:
+ 00C4                   .dbline 174
+ 00C4           ;       Hign_nrf905_CSN;
+ 00C4 C49A              sbi 0x18,4
+ 00C6                   .dbline 174
+ 00C6                   .dbline 175
+ 00C6           ;     Delay(2);                            //
+ 00C6 02E0              ldi R16,2
+ 00C8 10E0              ldi R17,0
+ 00CA 9ADF              rcall _Delay
+ 00CC                   .dbline 176
+ 00CC           ;       Hign_nrf905_TRX_CE;                                                     
+ 00CC 949A              sbi 0x12,4
+ 00CE                   .dbline 176
+ 00CE                   .dbline -2
+ 00CE           L24:
+ 00CE                   .dbline 0 ; func end
+ 00CE 5991              ld R21,y+
+ 00D0 4991              ld R20,y+
+ 00D2 0895              ret
+ 00D4                   .dbsym r i 20 c
+ 00D4                   .dbend
+ 00D4                   .dbfunc e RX _RX fV
+                        .even
+ 00D4           _RX::
+ 00D4                   .dbline -1
+ 00D4                   .dbline 180
+ 00D4           ; }
+ 00D4           ; //--------------------------------ÉèÖÃ½ÓÊÕÄ£Ê½----------------------------------
+ 00D4           ; void  RX(void)
+ 00D4           ; {
+ 00D4                   .dbline 181
+ 00D4           ;     SetRxMode();                                //ÉèÖÃNRF905½ÓÊÕÄ£Ê½
+ 00D4 D4DF              rcall _SetRxMode
+ 00D6           L30:
+ 00D6                   .dbline 182
+ 00D6           ;     while (CheckDR()==0);              //µÈ´ý½ÓÊÕÍê³É
+ 00D6           L31:
+ 00D6                   .dbline 182
+ 00D6 D9DF              rcall _CheckDR
+ 00D8 0023              tst R16
+ 00DA E9F3              breq L30
+ 00DC           X6:
+ 00DC                   .dbline 183
+ 00DC           ;       RxPacket();                     //¶ÁÈ¡½ÓÊÕÊý¾Ý»º³åÇø
+ 00DC DCDF              rcall _RxPacket
+ 00DE                   .dbline 184
+ 00DE           ;       Delay(10);
+ 00DE 0AE0              ldi R16,10
+ 00E0 10E0              ldi R17,0
+ 00E2 8EDF              rcall _Delay
+ 00E4                   .dbline -2
+ 00E4           L29:
+ 00E4                   .dbline 0 ; func end
+ 00E4 0895              ret
+ 00E6                   .dbend
+ 00E6                   .dbfunc e dis_zhuye _dis_zhuye fV
+                        .even
+ 00E6           _dis_zhuye::
+ 00E6                   .dbline -1
+ 00E6                   .dbline 189
+ 00E6           ; }
+ 00E6           ; 
+ 00E6           ; //----------------------------ÎÂ¶ÈLEDÔÊ¾½çÃæ-----------------------------------
+ 00E6           ; void  dis_zhuye()
+ 00E6           ; {
+ 00E6                   .dbline 190
+ 00E6           ;        PORTC=seg[TxRxBuffer[2]];
+ 00E6 80E0              ldi R24,<_seg
+ 00E8 90E0              ldi R25,>_seg
+ 00EA E0910E00          lds R30,_TxRxBuffer+2
+ 00EE FF27              clr R31
+ 00F0 E80F              add R30,R24
+ 00F2 F91F              adc R31,R25
+ 00F4 2080              ldd R2,z+0
+ 00F6 25BA              out 0x15,R2
+ 00F8                   .dbline 191
+ 00F8           ;        Hign_Display4;
+ 00F8 DC9A              sbi 0x1b,4
+ 00FA                   .dbline 191
+ 00FA                   .dbline 192
+ 00FA           ;        Hign_Display3;
+ 00FA DB9A              sbi 0x1b,3
+ 00FC                   .dbline 192
+ 00FC                   .dbline 193
+ 00FC           ;        Hign_Display2;
+ 00FC DA9A              sbi 0x1b,2
+ 00FE                   .dbline 193
+ 00FE                   .dbline 194
+ 00FE           ;        Low_Display1;
+ 00FE D998              cbi 0x1b,1
+ 0100                   .dbline 194
+ 0100                   .dbline 195
+ 0100           ;        Delay(80);
+ 0100 00E5              ldi R16,80
+ 0102 10E0              ldi R17,0
+ 0104 7DDF              rcall _Delay
+ 0106                   .dbline 196
+ 0106           ;        Hign_Display1;
+ 0106 D99A              sbi 0x1b,1
+ 0108                   .dbline 196
+ 0108                   .dbline 198
+ 0108           ; //------------------------------------------------------------------------------
+ 0108           ;        PORTC=seg1[TxRxBuffer[1]];
+ 0108 80E0              ldi R24,<_seg1
+ 010A 90E0              ldi R25,>_seg1
+ 010C E0910D00          lds R30,_TxRxBuffer+1
+ 0110 FF27              clr R31
+ 0112 E80F              add R30,R24
+ 0114 F91F              adc R31,R25
+ 0116 2080              ldd R2,z+0
+ 0118 25BA              out 0x15,R2
+ 011A                   .dbline 199
+ 011A           ;        Low_Display2;
+ 011A DA98              cbi 0x1b,2
+ 011C                   .dbline 199
+ 011C                   .dbline 200
+ 011C           ;        Delay(80);
+ 011C 00E5              ldi R16,80
+ 011E 10E0              ldi R17,0
+ 0120 6FDF              rcall _Delay
+ 0122                   .dbline 201
+ 0122           ;        Hign_Display2;
+ 0122 DA9A              sbi 0x1b,2
+ 0124                   .dbline 201
+ 0124                   .dbline 203
+ 0124           ; //------------------------------------------------ ---------------------------
+ 0124           ;        PORTC=seg[TxRxBuffer[0]];
+ 0124 80E0              ldi R24,<_seg
+ 0126 90E0              ldi R25,>_seg
+ 0128 E0910C00          lds R30,_TxRxBuffer
+ 012C FF27              clr R31
+ 012E E80F              add R30,R24
+ 0130 F91F              adc R31,R25
+ 0132 2080              ldd R2,z+0
+ 0134 25BA              out 0x15,R2
+ 0136                   .dbline 204
+ 0136           ;        Low_Display3;
+ 0136 DB98              cbi 0x1b,3
+ 0138                   .dbline 204
+ 0138                   .dbline 205
+ 0138           ;        Delay(80);
+ 0138 00E5              ldi R16,80
+ 013A 10E0              ldi R17,0
+ 013C 61DF              rcall _Delay
+ 013E                   .dbline 206
+ 013E           ;        Hign_Display3;
+ 013E DB9A              sbi 0x1b,3
+ 0140                   .dbline 206
+ 0140                   .dbline 208
+ 0140           ; //----------------------------------------------------------------------------- 
+ 0140           ;        PORTC=0xc6;
+ 0140 86EC              ldi R24,198
+ 0142 85BB              out 0x15,R24
+ 0144                   .dbline 209
+ 0144           ;        Low_Display4;
+ 0144 DC98              cbi 0x1b,4
+ 0146                   .dbline 209
+ 0146                   .dbline 210
+ 0146           ;        Delay(80);
+ 0146 00E5              ldi R16,80
+ 0148 10E0              ldi R17,0
+ 014A 5ADF              rcall _Delay
+ 014C                   .dbline 211
+ 014C           ;        Hign_Display4;  
+ 014C DC9A              sbi 0x1b,4
+ 014E                   .dbline 211
+ 014E                   .dbline -2
+ 014E           L33:
+ 014E                   .dbline 0 ; func end
+ 014E 0895              ret
+ 0150                   .dbend
+ 0150                   .dbfunc e StartUART _StartUART fV
+                        .even
+ 0150           _StartUART::
+ 0150                   .dbline -1
+ 0150                   .dbline 216
+ 0150           ; //------------------------------------------------------------------------------      
+ 0150           ; }
+ 0150           ; //-------------------------------´®¿Ú³õÊ¼»¯-------------------------------------
+ 0150           ; void StartUART(void)
+ 0150           ; {
+ 0150                   .dbline 217
+ 0150           ;        UCSRA=0x00;    
+ 0150 2224              clr R2
+ 0152 2BB8              out 0xb,R2
+ 0154                   .dbline 218
+ 0154           ;        UCSRB=0x18;    
+ 0154 88E1              ldi R24,24
+ 0156 8AB9              out 0xa,R24
+ 0158                   .dbline 219
+ 0158           ;        UCSRC=0x06;    
+ 0158 86E0              ldi R24,6
+ 015A 80BD              out 0x20,R24
+ 015C                   .dbline 220
+ 015C           ;        UBRRL=0x67;
+ 015C 87E6              ldi R24,103
+ 015E 89B9              out 0x9,R24
+ 0160                   .dbline 221
+ 0160           ;        UBRRH=0x00;
+ 0160 20BC              out 0x20,R2
+ 0162                   .dbline 222
+ 0162           ;        UCSRA=UCSRA|0x08;      
+ 0162 5B9A              sbi 0xb,3
+ 0164                   .dbline -2
+ 0164           L36:
+ 0164                   .dbline 0 ; func end
+ 0164 0895              ret
+ 0166                   .dbend
+ 0166                   .dbfunc e R_S_Byte _R_S_Byte fV
+ 0166           ;         R_Byte -> R16
+                        .even
+ 0166           _R_S_Byte::
+ 0166                   .dbline -1
+ 0166                   .dbline 226
+ 0166           ; }
+ 0166           ; //------------------------------´®¿Ú·¢ËÍ----------------------------------------
+ 0166           ; void R_S_Byte(uchar R_Byte)
+ 0166           ; {     
+ 0166                   .dbline 227
+ 0166           ;      UDR= R_Byte;  
+ 0166 0CB9              out 0xc,R16
+ 0168                   .dbline -2
+ 0168           L37:
+ 0168                   .dbline 0 ; func end
+ 0168 0895              ret
+ 016A                   .dbsym r R_Byte 16 c
+ 016A                   .dbend
+ 016A                   .dbfunc e main _main fV
+ 016A           ;              i -> R20
+                        .even
+ 016A           _main::
+ 016A                   .dbline -1
+ 016A                   .dbline 231
+ 016A           ; }
+ 016A           ; //------------------------------Ö÷º¯Êý------------------------------------------
+ 016A           ; void main(void)
+ 016A           ; {  
+ 016A                   .dbline 233
+ 016A           ;       uchar i;
+ 016A           ;       DDRD=0xb2;                //
+ 016A 82EB              ldi R24,178
+ 016C 81BB              out 0x11,R24
+ 016E                   .dbline 234
+ 016E           ;       DDRB=0xB3;                //
+ 016E 83EB              ldi R24,179
+ 0170 87BB              out 0x17,R24
+ 0172                   .dbline 235
+ 0172           ;       DDRA=0x1e;       //
+ 0172 8EE1              ldi R24,30
+ 0174 8ABB              out 0x1a,R24
+ 0176                   .dbline 236
+ 0176           ;       DDRC=0xff;              //LED¶Ë¿ÚÉèÖÃ
+ 0176 8FEF              ldi R24,255
+ 0178 84BB              out 0x14,R24
+ 017A                   .dbline 237
+ 017A           ;       PORTA = 0xff;
+ 017A 8BBB              out 0x1b,R24
+ 017C                   .dbline 238
+ 017C           ;       Hign_BELL;      
+ 017C 959A              sbi 0x12,5
+ 017E                   .dbline 238
+ 017E                   .dbline 239
+ 017E           ;       Hign_JDQ ;                      
+ 017E 979A              sbi 0x12,7
+ 0180                   .dbline 241
+ 0180           ; //------------------------------------------------------------------------------                                                                                      
+ 0180           ;       Spi_initial();                  //SPI³õÊ¼»¯                                                                                                                       
+ 0180 56DF              rcall _Spi_initial
+ 0182                   .dbline 242
+ 0182           ;       system_Init();                             //ÏµÍ³×´Ì¬³õÊ¼»¯                                                                                             
+ 0182 5DDF              rcall _system_Init
+ 0184                   .dbline 243
+ 0184           ;       Config905();                              //NRF905³õÊ¼»¯        
+ 0184 65DF              rcall _Config905
+ 0186                   .dbline 246
+ 0186           ; //------------------------------------------------------------------------------                                                        
+ 0186           ; //------------------------------------------------------------------------------
+ 0186           ;       StartUART();                            //´®¿Ú³õÊ¼»¯9600²¨ÌØÂÊ
+ 0186 E4DF              rcall _StartUART
+ 0188                   .dbline 247
+ 0188           ;       Delay(500);
+ 0188 04EF              ldi R16,500
+ 018A 11E0              ldi R17,1
+ 018C 39DF              rcall _Delay
+ 018E 54C0              rjmp L40
+ 0190           L39:
+ 0190                   .dbline 250
+ 0190           ; //------------------------------------------------------------------------------
+ 0190           ;       while(1)
+ 0190           ;       {
+ 0190                   .dbline 251
+ 0190           ;       RX();                                   //½ÓÊÕÊý¾Ý
+ 0190 A1DF              rcall _RX
+ 0192                   .dbline 252
+ 0192           ;       if(TxRxBuffer[0])
+ 0192 20900C00          lds R2,_TxRxBuffer
+ 0196 2220              tst R2
+ 0198 C1F1              breq L42
+ 019A           X7:
+ 019A                   .dbline 253
+ 019A           ;               {
+ 019A                   .dbline 254
+ 019A           ;               temp[2]=((TxRxBuffer[2]<<4)|TxRxBuffer[1]);             //ÕûÊýÎ»
+ 019A 20900D00          lds R2,_TxRxBuffer+1
+ 019E 3324              clr R3
+ 01A0 40900E00          lds R4,_TxRxBuffer+2
+ 01A4 5524              clr R5
+ 01A6 440C              lsl R4
+ 01A8 551C              rol R5
+ 01AA 440C              lsl R4
+ 01AC 551C              rol R5
+ 01AE 440C              lsl R4
+ 01B0 551C              rol R5
+ 01B2 440C              lsl R4
+ 01B4 551C              rol R5
+ 01B6 4228              or R4,R2
+ 01B8 5328              or R5,R3
+ 01BA 50920500          sts _temp+4+1,R5
+ 01BE 40920400          sts _temp+4,R4
+ 01C2                   .dbline 255
+ 01C2           ;               temp[1]=TxRxBuffer[0];                                                  //Ð¡ÊýÎ»
+ 01C2 20900C00          lds R2,_TxRxBuffer
+ 01C6 3324              clr R3
+ 01C8 30920300          sts _temp+2+1,R3
+ 01CC 20920200          sts _temp+2,R2
+ 01D0                   .dbline 256
+ 01D0           ;               temp[0]=TxRxBuffer[3];                                              //·ûºÅÎ»
+ 01D0 20900F00          lds R2,_TxRxBuffer+3
+ 01D4 3324              clr R3
+ 01D6 30920100          sts _temp+1,R3
+ 01DA 20920000          sts _temp,R2
+ 01DE                   .dbline 259
+ 01DE           ;               //temp[4]=TxRxBuffer[2];                                                //Ê®Î»
+ 01DE           ;               //temp[5]=TxRxBuffer[1];                                                //¸öÎ»
+ 01DE           ;       for(i=0;i<3;i++)
+ 01DE 4427              clr R20
+ 01E0 12C0              rjmp L52
+ 01E2           L49:
+ 01E2                   .dbline 260
+ 01E2           ;               {
+ 01E2                   .dbline 261
+ 01E2           ;               R_S_Byte(temp[2-i]);      //´®¿ÚÏÔÊ¾ÎÂ¶È
+ 01E2 242E              mov R2,R20
+ 01E4 3324              clr R3
+ 01E6 E2E0              ldi R30,2
+ 01E8 F0E0              ldi R31,0
+ 01EA E219              sub R30,R2
+ 01EC F309              sbc R31,R3
+ 01EE EE0F              lsl R30
+ 01F0 FF1F              rol R31
+ 01F2 80E0              ldi R24,<_temp
+ 01F4 90E0              ldi R25,>_temp
+ 01F6 E80F              add R30,R24
+ 01F8 F91F              adc R31,R25
+ 01FA 0081              ldd R16,z+0
+ 01FC B4DF              rcall _R_S_Byte
+ 01FE                   .dbline 262
+ 01FE           ;               Delay(20);
+ 01FE 04E1              ldi R16,20
+ 0200 10E0              ldi R17,0
+ 0202 FEDE              rcall _Delay
+ 0204                   .dbline 263
+ 0204           ;               }
+ 0204           L50:
+ 0204                   .dbline 259
+ 0204 4395              inc R20
+ 0206           L52:
+ 0206                   .dbline 259
+ 0206 4330              cpi R20,3
+ 0208 60F3              brlo L49
+ 020A           X8:
+ 020A                   .dbline 265
+ 020A           ;               
+ 020A           ;       }
+ 020A           L42:
+ 020A                   .dbline 266
+ 020A           ;       if((temp[2]>=53)||(temp[2]<=32))//´óÓÚ35¶ÈÊ±±¨¾¯£¬0x35×ª»»³É10½øÖÆÎª53
+ 020A 80910400          lds R24,_temp+4
+ 020E 90910500          lds R25,_temp+4+1
+ 0212 8533              cpi R24,53
+ 0214 E0E0              ldi R30,0
+ 0216 9E07              cpc R25,R30
+ 0218 48F4              brsh L57
+ 021A           X9:
+ 021A 80E2              ldi R24,32
+ 021C 90E0              ldi R25,0
+ 021E 20900400          lds R2,_temp+4
+ 0222 30900500          lds R3,_temp+4+1
+ 0226 8215              cp R24,R2
+ 0228 9305              cpc R25,R3
+ 022A 18F0              brlo L53
+ 022C           X10:
+ 022C           L57:
+ 022C                   .dbline 268
+ 022C           ;                                                                       //µÍÓÚ20¶ÈÊ±Ò²±¨¾¯,0x20,×ª»»³É10½øÖÆÎª  32                                                                                                                                                                                                                                                      
+ 022C           ;       {
+ 022C                   .dbline 269
+ 022C           ;               Low_BELL;  //´ò¿ª·äÃ÷Æ÷±¨¾¯
+ 022C 9598              cbi 0x12,5
+ 022E                   .dbline 269
+ 022E                   .dbline 270
+ 022E           ;               Low_JDQ;   //´ò¿ª¼ÌµçÆ÷¡£¿ÉÒÔ½øÐÐÏà¹ØµçÆ÷¿ª¹Ø²Ù×÷
+ 022E 9798              cbi 0x12,7
+ 0230                   .dbline 271
+ 0230           ;       }
+ 0230 02C0              rjmp L54
+ 0232           L53:
+ 0232                   .dbline 273
+ 0232           ;       else
+ 0232           ;       {
+ 0232                   .dbline 274
+ 0232           ;               Hign_BELL ;//¹Ø±Õ·äÃ÷Æ÷±¨¾¯
+ 0232 959A              sbi 0x12,5
+ 0234                   .dbline 274
+ 0234                   .dbline 275
+ 0234           ;               Hign_JDQ;  //¹Ø±Õ¼ÌµçÆ÷
+ 0234 979A              sbi 0x12,7
+ 0236                   .dbline 276
+ 0236           ;       }
+ 0236           L54:
+ 0236                   .dbline 277
+ 0236           ;       dis_zhuye();
+ 0236 57DF              rcall _dis_zhuye
+ 0238                   .dbline 278
+ 0238           ;       }
+ 0238           L40:
+ 0238                   .dbline 249
+ 0238 ABCF              rjmp L39
+ 023A           X11:
+ 023A                   .dbline -2
+ 023A           L38:
+ 023A                   .dbline 0 ; func end
+ 023A 0895              ret
+ 023C                   .dbsym r i 20 c
+ 023C                   .dbend
+                        .area bss(ram, con, rel)
+ 0000                   .dbfile F:\JASK\ÎÞÏß×ÊÁÏ¼¯½õ\¿ª·¢±¸·Ý\JASKÏµÁÐÆÀ¹À°å0906\JASK2001ÏµÁÐ°¸Àý²Î¿¼´úÂë\M16-RF905¿ª·¢°ü\ÎÞÏßÎÂ¶È¼à¿ØÏµÍ³\JIESHOU-LED\Wendu_jieshou.c
+ 0000           _temp::
+ 0000                   .blkb 12
+ 000C                   .dbsym e temp _temp A[12:6]i
+ 000C           _TxRxBuffer::
+ 000C                   .blkb 4
+ 0010                   .dbsym e TxRxBuffer _TxRxBuffer A[4:4]c
+ 0010           ; }

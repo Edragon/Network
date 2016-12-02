@@ -1,0 +1,744 @@
+
+
+HI-TECH Software PICC Macro Assembler V8.05PL1
+Serial number: HCPIC-88888                            Sat Jun 28 23:55:50 2008
+
+Licensed to: ONE TWO
+     1                           	processor	16F877A
+     2                           	opt	pw 79
+     3                           	psect	__Z88888RS_,global,delta=1
+     4                           	psect	rdata_0,global,class=BANK0,space=1,delta
+      +                          =1
+     5                           	psect	idata_0,global,class=CODE,delta=2
+     6                           	psect	text1,local,class=CODE,delta=2
+     7                           	psect	text7,local,class=CODE,delta=2
+     8                           	psect	text9,local,class=CODE,delta=2
+     9                           	psect	text11,local,class=CODE,delta=2
+    10  0000                     
+    11  0000                     
+    12  0000                     
+    13  0000                     
+    14  0000                     
+    15  0000                     
+    16  0000                     
+    17  0000                     
+    18  0000                     
+    19  0000                     
+    20                           
+    21                           	psect	__Z88888RS_
+    22  0190                     
+    23  0190                     
+    24                           
+    25                           	psect	rdata_0
+    26  0023                     _TxRxBuf
+    27  0023                     	ds	1
+    28  0024                     	ds	1
+    29  0025                     	ds	1
+    30  0026                     	ds	1
+    31  0027                     	ds	1
+    32  0028                     	ds	1
+    33  0029                     	ds	1
+    34  002A                     	ds	1
+    35  002B                     	ds	1
+    36  002C                     	ds	1
+    37  002D                     	ds	1
+    38  002E                     	ds	1
+    39  002F                     	ds	1
+    40  0030                     	ds	1
+    41  0031                     	ds	1
+    42  0032                     	ds	1
+    43  0033                     	ds	1
+    44  0034                     	ds	1
+    45  0035                     	ds	1
+    46  0036                     	ds	1
+    47  0037                     	ds	1
+    48  0038                     	ds	1
+    49  0039                     	ds	1
+    50  003A                     	ds	1
+    51  003B                     	ds	1
+    52  003C                     	ds	1
+    53  003D                     	ds	1
+    54  003E                     	ds	1
+    55  003F                     	ds	1
+    56  0040                     	ds	1
+    57  0041                     	ds	1
+    58  0042                     	ds	1
+    59  0043                     _TxAddress
+    60  0043                     	ds	1
+    61  0044                     	ds	1
+    62  0045                     	ds	1
+    63  0046                     	ds	1
+    64  0047                     _RFConf
+    65  0047                     	ds	1
+    66  0048                     	ds	1
+    67  0049                     	ds	1
+    68  004A                     	ds	1
+    69  004B                     	ds	1
+    70  004C                     	ds	1
+    71  004D                     	ds	1
+    72  004E                     	ds	1
+    73  004F                     	ds	1
+    74  0050                     	ds	1
+    75  0051                     	ds	1
+    76                           
+    77                           	psect	idata_0
+    78  07D1  3401               	retlw	1
+    79  07D2  3402               	retlw	2
+    80  07D3  3403               	retlw	3
+    81  07D4  3404               	retlw	4
+    82  07D5  3405               	retlw	5
+    83  07D6  3406               	retlw	6
+    84  07D7  3407               	retlw	7
+    85  07D8  3408               	retlw	8
+    86  07D9  3409               	retlw	9
+    87  07DA  3410               	retlw	16
+    88  07DB  3411               	retlw	17
+    89  07DC  3412               	retlw	18
+    90  07DD  3413               	retlw	19
+    91  07DE  3414               	retlw	20
+    92  07DF  3415               	retlw	21
+    93  07E0  3416               	retlw	22
+    94  07E1  3417               	retlw	23
+    95  07E2  3418               	retlw	24
+    96  07E3  3419               	retlw	25
+    97  07E4  3420               	retlw	32
+    98  07E5  3421               	retlw	33
+    99  07E6  3422               	retlw	34
+   100  07E7  3423               	retlw	35
+   101  07E8  3424               	retlw	36
+   102  07E9  3425               	retlw	37
+   103  07EA  3426               	retlw	38
+   104  07EB  3427               	retlw	39
+   105  07EC  3428               	retlw	40
+   106  07ED  3429               	retlw	41
+   107  07EE  3430               	retlw	48
+   108  07EF  3431               	retlw	49
+   109  07F0  3432               	retlw	50
+   110  07F1  34CC               	retlw	-52
+   111  07F2  34CC               	retlw	-52
+   112  07F3  34CC               	retlw	-52
+   113  07F4  34CC               	retlw	-52
+   114  07F5  3400               	retlw	0
+   115  07F6  344C               	retlw	76
+   116  07F7  342C               	retlw	44
+   117  07F8  3444               	retlw	68
+   118  07F9  3420               	retlw	32
+   119  07FA  3420               	retlw	32
+   120  07FB  34CC               	retlw	-52
+   121  07FC  34CC               	retlw	-52
+   122  07FD  34CC               	retlw	-52
+   123  07FE  34CC               	retlw	-52
+   124  07FF  3458               	retlw	88
+   125                           
+   126                           	psect	text1
+   127                           ;fasong.c: 72: void Spi_initial()
+   128                           ;fasong.c: 73: {
+   129  072F                     _Spi_initial
+   130                           ;fasong.c: 74: INTCON=0x00;
+   131  072F  018B               	clrf	11	;volatile
+   132                           ;fasong.c: 75: PIR1=0x00;
+   133  0730  1283               	bcf	3,5
+   134  0731  1303               	bcf	3,6	;carry unused
+   135  0732  018C               	clrf	12	;volatile
+   136                           ;fasong.c: 76: SSPCON=0x20;
+   137  0733  3020               	movlw	32
+   138  0734  0094               	movwf	20	;volatile
+   139                           ;fasong.c: 77: SSPSTAT=0xc0;
+   140  0735  30C0               	movlw	-64
+   141  0736  1683               	bsf	3,5
+   142  0737  0094               	movwf	20	;volatile
+   143                           ;fasong.c: 78: ADCON1=0x07;
+   144  0738  3007               	movlw	7
+   145  0739  009F               	movwf	31	;volatile
+   146                           ;fasong.c: 79: SSPIF=0;
+   147  073A  1283               	bcf	3,5
+   148  073B  118C               	bcf	12,3
+   149                           ;fasong.c: 80: }
+   150  073C  0008               	return
+   151                           ;fasong.c: 82: unsigned char SpiReadSpiWrite(un
+      +                          signed char DATA)
+   152                           ;fasong.c: 83: {
+   153  073D                     _SpiReadSpiWrite
+   154                           ;	_DATA assigned to ?a_SpiReadSpiWrite+0
+   155  0000                     _SpiReadSpiWrite$DATA	set	?a_SpiReadSpiWrite
+   156                           ;	_b assigned to ?a_SpiReadSpiWrite+1
+   157  0000                     _SpiReadSpiWrite$b	set	?a_SpiReadSpiWrite+1
+   158                           ;_DATA stored from w
+   159  073D  0183               	clrf	3	;select bank 0
+   160  073E  00A1               	movwf	?a_SpiReadSpiWrite
+   161                           ;fasong.c: 84: unsigned char b;
+   162  073F  272F               	fcall	_Spi_initial
+   163                           ;fasong.c: 86: SSPBUF=DATA;
+   164  0740  0821               	movf	?a_SpiReadSpiWrite,w
+   165  0741  0093               	movwf	19	;volatile
+   166  0742                     l12
+   167                           ;fasong.c: 87: do
+   168                           ;fasong.c: 88: {
+   169  0742  1D8C               	btfss	12,3
+   170  0743  2F42               	goto	l12
+   171                           ;fasong.c: 92: SSPIF=0;
+   172  0744  118C               	bcf	12,3
+   173                           ;fasong.c: 93: b=SSPBUF;
+   174  0745  0813               	movf	19,w	;volatile
+   175  0746  00A2               	movwf	?a_SpiReadSpiWrite+1
+   176                           ;fasong.c: 95: }
+   177  0747  0008               	return
+   178  0748                     _Delay
+   179                           ;	_x assigned to ?a_Delay+0
+   180  0000                     _Delay$x	set	?a_Delay
+   181                           ;	_i assigned to ?a_Delay+1
+   182  0000                     _Delay$i	set	?a_Delay+1
+   183                           ;_x stored from w
+   184  0748  0183               	clrf	3	;select bank 0
+   185  0749  00A1               	movwf	?a_Delay
+   186                           ;fasong.c: 67: unsigned char i;
+   187  074A  2F51               	goto	l2
+   188  074B                     l3
+   189                           ;fasong.c: 69: for(i=0;i<80;i++);
+   190  074B  01A2               	clrf	?a_Delay+1
+   191  074C                     l5
+   192  074C  0AA2               	incf	?a_Delay+1
+   193  074D  3050               	movlw	80
+   194  074E  0222               	subwf	?a_Delay+1,w
+   195  074F  1C03               	btfss	3,0
+   196  0750  2F4C               	goto	l5
+   197  0751                     l2
+   198  0751  1283               	bcf	3,5
+   199  0752  1303               	bcf	3,6	;carry unused
+   200  0753  03A1               	decf	?a_Delay
+   201  0754  0F21               	incfsz	?a_Delay,w
+   202  0755  2F4B               	goto	l3
+   203  0756  0008               	return
+   204                           ;fasong.c: 115: void Config905(void)
+   205                           ;fasong.c: 116: {
+   206  0757                     _Config905
+   207                           ;	_i assigned to ?a_Config905+0
+   208  0000                     _Config905$i	set	?a_Config905
+   209                           ;fasong.c: 117: unsigned char i;
+   210  0757  0183               	clrf	3	;select bank 0
+   211  0758  1007               	bcf	7,0
+   212                           ;fasong.c: 119: Delay(1);
+   213  0759  3001               	movlw	1
+   214  075A  2748               	fcall	_Delay
+   215                           ;fasong.c: 121: for (i=0;i<11;i++)
+   216  075B  01A0               	clrf	?a_Config905
+   217  075C                     l15
+   218                           ;fasong.c: 122: {
+   219                           ;fasong.c: 123: SpiReadSpiWrite(RFConf[i]);
+   220  075C  0820               	movf	?a_Config905,w
+   221  075D  3E47               	addlw	_RFConf
+   222  075E  0084               	movwf	4
+   223  075F  1383               	bcf	3,7
+   224  0760  0800               	movf	0,w
+   225  0761  273D               	fcall	_SpiReadSpiWrite
+   226                           ;fasong.c: 124: }
+   227  0762  0AA0               	incf	?a_Config905
+   228  0763  300B               	movlw	11
+   229  0764  0220               	subwf	?a_Config905,w
+   230  0765  1C03               	btfss	3,0
+   231  0766  2F5C               	goto	l15
+   232                           ;fasong.c: 125: RC0=1;
+   233  0767  1407               	bsf	7,0
+   234                           ;fasong.c: 126: }
+   235  0768  0008               	return
+   236                           ;fasong.c: 128: void TxPacket(void)
+   237                           ;fasong.c: 129: {
+   238  0769                     _TxPacket
+   239                           ;	_i assigned to ?a_TxPacket+0
+   240  0000                     _TxPacket$i	set	?a_TxPacket
+   241                           ;fasong.c: 130: unsigned char i;
+   242  0769  0183               	clrf	3	;select bank 0
+   243  076A  1007               	bcf	7,0
+   244                           ;fasong.c: 132: Delay(1);
+   245  076B  3001               	movlw	1
+   246  076C  2748               	fcall	_Delay
+   247                           ;fasong.c: 133: SpiReadSpiWrite(0x20);
+   248  076D  3020               	movlw	32
+   249  076E  273D               	fcall	_SpiReadSpiWrite
+   250                           ;fasong.c: 134: for (i=0;i<32;i++)
+   251  076F  01A0               	clrf	?a_TxPacket
+   252  0770                     l19
+   253                           ;fasong.c: 135: {
+   254                           ;fasong.c: 136: SpiReadSpiWrite(TxRxBuf[i]);
+   255  0770  0820               	movf	?a_TxPacket,w
+   256  0771  3E23               	addlw	_TxRxBuf
+   257  0772  0084               	movwf	4
+   258  0773  1383               	bcf	3,7
+   259  0774  0800               	movf	0,w
+   260  0775  273D               	fcall	_SpiReadSpiWrite
+   261                           ;fasong.c: 137: }
+   262  0776  0AA0               	incf	?a_TxPacket
+   263  0777  3020               	movlw	32
+   264  0778  0220               	subwf	?a_TxPacket,w
+   265  0779  1C03               	btfss	3,0
+   266  077A  2F70               	goto	l19
+   267                           ;fasong.c: 138: RC0=1;
+   268  077B  1407               	bsf	7,0
+   269                           ;fasong.c: 139: Delay(1);
+   270  077C  3001               	movlw	1
+   271  077D  2748               	fcall	_Delay
+   272                           ;fasong.c: 140: RC0=0;
+   273  077E  1007               	bcf	7,0
+   274                           ;fasong.c: 141: SpiReadSpiWrite(0x22);
+   275  077F  3022               	movlw	34
+   276  0780  273D               	fcall	_SpiReadSpiWrite
+   277                           ;fasong.c: 142: for (i=0;i<4;i++)
+   278  0781  01A0               	clrf	?a_TxPacket
+   279  0782                     l22
+   280                           ;fasong.c: 143: {
+   281                           ;fasong.c: 144: SpiReadSpiWrite(TxAddress[i]);
+   282  0782  0820               	movf	?a_TxPacket,w
+   283  0783  3E43               	addlw	_TxAddress
+   284  0784  0084               	movwf	4
+   285  0785  1383               	bcf	3,7
+   286  0786  0800               	movf	0,w
+   287  0787  273D               	fcall	_SpiReadSpiWrite
+   288                           ;fasong.c: 145: }
+   289  0788  0AA0               	incf	?a_TxPacket
+   290  0789  3004               	movlw	4
+   291  078A  0220               	subwf	?a_TxPacket,w
+   292  078B  1C03               	btfss	3,0
+   293  078C  2F82               	goto	l22
+   294                           ;fasong.c: 146: RC0=1;
+   295  078D  1407               	bsf	7,0
+   296                           ;fasong.c: 147: RC2=1;
+   297  078E  1507               	bsf	7,2
+   298                           ;fasong.c: 148: Delay(1);
+   299  078F  3001               	movlw	1
+   300  0790  2748               	fcall	_Delay
+   301                           ;fasong.c: 149: RC2=0;
+   302  0791  1107               	bcf	7,2
+   303                           ;fasong.c: 150: }
+   304  0792  0008               	return
+   305                           ;fasong.c: 152: void SetTxMode(void)
+   306                           ;fasong.c: 153: {
+   307  0793                     _SetTxMode
+   308                           ;fasong.c: 154: RC2=0;
+   309  0793  0183               	clrf	3	;select bank 0
+   310  0794  1107               	bcf	7,2
+   311                           ;fasong.c: 155: RC1=1;
+   312  0795  1487               	bsf	7,1
+   313                           ;fasong.c: 156: Delay(1);
+   314  0796  3001               	movlw	1
+   315  0797  2F48               	ljmp	_Delay
+   316                           ;fasong.c: 97: void system_Init(void)
+   317                           ;fasong.c: 98: {
+   318  0798                     _system_Init
+   319                           ;fasong.c: 99: TRISA=0x00;
+   320  0798  1683               	bsf	3,5
+   321  0799  1303               	bcf	3,6	;carry unused
+   322  079A  0185               	clrf	5	;volatile
+   323                           ;fasong.c: 100: TRISB=0x0D;
+   324  079B  300D               	movlw	13
+   325  079C  0086               	movwf	6	;volatile
+   326                           ;fasong.c: 101: TRISC=0x90;
+   327  079D  3090               	movlw	-112
+   328  079E  0087               	movwf	7	;volatile
+   329                           ;fasong.c: 102: TRISD=0x00;
+   330  079F  0188               	clrf	8	;volatile
+   331                           ;fasong.c: 103: TRISE=0x00;
+   332  07A0  0189               	clrf	9	;volatile
+   333                           ;fasong.c: 104: ADCON1=0x07;
+   334  07A1  3007               	movlw	7
+   335  07A2  009F               	movwf	31	;volatile
+   336                           ;fasong.c: 105: RC0=1;
+   337  07A3  1283               	bcf	3,5
+   338  07A4  1407               	bsf	7,0
+   339                           ;fasong.c: 106: RC3=0;
+   340  07A5  1187               	bcf	7,3
+   341                           ;fasong.c: 107: RB0=0;
+   342  07A6  1006               	bcf	6,0
+   343                           ;fasong.c: 108: RB3=0;
+   344  07A7  1186               	bcf	6,3
+   345                           ;fasong.c: 109: RB2=0;
+   346  07A8  1106               	bcf	6,2
+   347                           ;fasong.c: 110: RB1=1;
+   348  07A9  1486               	bsf	6,1
+   349                           ;fasong.c: 111: RC2=0;
+   350  07AA  1107               	bcf	7,2
+   351                           ;fasong.c: 112: RC1=0;
+   352  07AB  1087               	bcf	7,1
+   353                           ;fasong.c: 113: }
+   354  07AC  0008               	return
+   355                           ;fasong.c: 165: void StartUART(void)
+   356                           ;fasong.c: 166: {
+   357  07AD                     _StartUART
+   358                           ;fasong.c: 167: TXSTA=0x04;
+   359  07AD  3004               	movlw	4
+   360  07AE  1683               	bsf	3,5
+   361  07AF  1303               	bcf	3,6	;carry unused
+   362  07B0  0098               	movwf	24	;volatile
+   363                           ;fasong.c: 168: SPBRG=51;
+   364  07B1  3033               	movlw	51
+   365  07B2  0099               	movwf	25	;volatile
+   366                           ;fasong.c: 169: PIE1=0;
+   367  07B3  018C               	clrf	12	;volatile
+   368                           ;fasong.c: 170: RCSTA=0x80;
+   369  07B4  3080               	movlw	-128
+   370  07B5  1283               	bcf	3,5
+   371  07B6  0098               	movwf	24	;volatile
+   372                           ;fasong.c: 171: TRISC=TRISC|0X80;
+   373  07B7  1683               	bsf	3,5
+   374  07B8  1787               	bsf	7,7	;volatile
+   375                           ;fasong.c: 172: TRISC=TRISC&0XBF;
+   376  07B9  1307               	bcf	7,6	;volatile
+   377                           ;fasong.c: 173: TXEN=1;
+   378  07BA  1698               	bsf	24,5
+   379                           ;fasong.c: 174: }
+   380  07BB  1283               	bcf	3,5
+   381  07BC  0008               	return
+   382                           ;fasong.c: 181: main()
+   383                           ;fasong.c: 182: {
+   384  07BD                     _main
+   385                           ;fasong.c: 184: PORTE=0xff;
+   386  07BD  30FF               	movlw	-1
+   387  07BE  1283               	bcf	3,5
+   388  07BF  1303               	bcf	3,6	;carry unused
+   389  07C0  0089               	movwf	9	;volatile
+   390                           ;fasong.c: 185: PORTD=0xbf;
+   391  07C1  30BF               	movlw	-65
+   392  07C2  0088               	movwf	8	;volatile
+   393                           ;fasong.c: 186: StartUART();
+   394  07C3  27AD               	fcall	_StartUART
+   395                           ;fasong.c: 187: system_Init();
+   396  07C4  2798               	fcall	_system_Init
+   397                           ;fasong.c: 188: Config905();
+   398  07C5  2757               	fcall	_Config905
+   399                           ;fasong.c: 189: RB7=0; RB6=0; RB5=0; RB4=0;
+   400  07C6  1386               	bcf	6,7
+   401  07C7  1306               	bcf	6,6
+   402  07C8  1286               	bcf	6,5
+   403  07C9  1206               	bcf	6,4
+   404  07CA                     l31
+   405                           ;fasong.c: 190: while(1)
+   406                           ;fasong.c: 191: {
+   407                           ;fasong.c: 161: SetTxMode();
+   408  07CA  2793  120A  118A   	fcall	_SetTxMode
+   409                           ;fasong.c: 162: TxPacket();
+   410  07CD  2769  120A  118A   	fcall	_TxPacket
+   411                           ;fasong.c: 194: }
+   412  07D0  2FCA               	goto	l31
+   413                           
+   414                           	psect	text7
+   415                           ;fasong.c: 159: void TX(void)
+   416                           ;fasong.c: 160: {
+   417  0727                     _TX
+   418                           ;fasong.c: 161: SetTxMode();
+   419  0727  120A  118A  2793   	fcall	_SetTxMode
+      +       120A  118A         
+   420                           ;fasong.c: 162: TxPacket();
+   421  072C  120A  118A  2F69   	ljmp	_TxPacket
+   422                           
+   423                           	psect	text9
+   424                           ;fasong.c: 176: void R_S_Byte(unsigned char R_B
+      +                          yte)
+   425                           ;fasong.c: 177: {
+   426  0723                     _R_S_Byte
+   427                           ;	_R_Byte assigned to ?a_R_S_Byte+0
+   428  0000                     _R_S_Byte$R_Byte	set	?a_R_S_Byte
+   429                           ;_R_Byte stored from w
+   430  0723  0183               	clrf	3	;select bank 0
+   431  0724  00A0               	movwf	?a_R_S_Byte
+   432                           ;fasong.c: 178: TXREG= R_Byte;
+   433  0725  0099               	movwf	25	;volatile
+   434                           ;fasong.c: 179: }
+   435  0726  0008               	return
+   436                           
+   437                           	psect	text11
+   438  0000                     
+   439  0000                     
+   440  0000                     
+   441  0000                     
+   442  0000                     
+   443  0000                     
+   444  0000                     
+   445  0000                     
+   446  0000                     
+   447  0000                     
+   448  0000                     
+   449  0000                     
+   450  0000                     
+   451  0000                     
+   452  0000                     
+   453  0000                     
+   454  0000                     
+   455  0000                     
+   456  0000                     
+   457  0000                     
+   458  0000                     
+   459  0000                     
+   460  0000                     
+   461  0000                     
+   462  0000                     
+   463  0000                     
+   464  0000                     
+   465  0000                     
+   466  0000                     
+   467  0000                     
+   468  0000                     
+   469  0000                     
+   470  0000                     
+   471  0000                     
+   472  0000                     
+   473  0000                     
+   474  0000                     
+   475  0000                     
+   476  0000                     
+   477  0000                     
+   478  0000                     
+   479  0000                     
+   480  0000                     
+   481  0000                     
+   482  0000                     
+   483  0000                     
+   484  0000                     
+   485  0000                     
+   486  0000                     
+   487  0000                     
+   488  0000                     
+   489  0000                     
+   490  0000                     
+   491  0000                     
+   492  0000                     
+   493  0000                     
+   494  0000                     
+   495  0000                     
+   496  0000                     
+   497  0000                     
+   498  0000                     
+   499  0000                     
+   500  0000                     
+   501  0000                     
+   502  0000                     
+   503  0000                     
+   504  0000                     
+   505  0000                     
+   506  0000                     
+   507  0000                     
+   508  0000                     
+   509  0000                     
+   510  0000                     
+   511  0000                     
+   512  0000                     
+   513  0000                     
+   514  0000                     
+   515  0000                     
+   516  0000                     
+   517  0000                     
+   518  0000                     
+   519  0000                     
+   520  0000                     
+   521  0000                     
+   522  0000                     
+   523  0000                     
+   524  0000                     
+   525  0000                     
+   526  0000                     
+   527  0000                     
+   528  0000                     
+   529  0000                     
+   530  0000                     
+   531  0000                     
+   532  0000                     
+   533  0000                     
+   534  0000                     
+   535  0000                     
+   536  0000                     
+   537  0000                     
+   538  0000                     
+   539  0000                     
+   540  0000                     
+   541  0000                     
+   542  0000                     
+   543  0000                     
+   544  0000                     
+   545  0000                     
+   546  0000                     
+   547  0000                     
+   548  0000                     
+   549  0000                     
+   550  0000                     
+   551  0000                     
+   552  0000                     
+   553  0000                     
+   554  0000                     
+   555  0000                     
+   556  0000                     
+   557  0000                     
+   558  0000                     
+   559  0000                     
+   560  0000                     
+   561  0000                     
+   562  0000                     
+   563  0000                     
+   564  0000                     
+   565  0000                     
+   566  0000                     
+   567  0000                     
+   568  0000                     
+   569  0000                     
+   570  0000                     
+   571  0000                     
+   572  0000                     
+   573  0000                     
+   574  0000                     
+   575  0000                     
+   576  0000                     
+   577  0000                     
+   578  0000                     
+   579  0000                     
+   580  0000                     
+   581  0000                     
+   582  0000                     
+   583  0000                     
+   584  0000                     
+   585  0000                     
+   586  0000                     
+   587  0000                     
+   588  0000                     
+   589  0000                     
+   590  0000                     
+   591  0000                     
+   592  0000                     
+   593  0000                     
+   594  0000                     
+   595  0000                     
+   596  0000                     
+   597  0000                     
+   598  0000                     
+   599  0000                     
+   600  0000                     
+   601  0000                     
+   602  0000                     
+   603  0000                     
+   604  0000                     
+   605  0000                     
+   606  0000                     
+   607  0000                     
+   608  0000                     
+   609  0000                     
+   610  0000                     
+   611  0000                     
+   612  0000                     
+   613  0000                     
+   614  0000                     
+   615  0000                     
+   616  0000                     
+   617  0000                     
+   618  0000                     
+   619  0000                     
+   620  0000                     
+   621  0000                     
+   622  0000                     
+   623  0000                     
+   624  0000                     
+   625  0000                     
+   626  0000                     
+   627  0000                     
+   628  0000                     
+   629  0000                     
+   630  0000                     
+   631  0000                     
+   632  0000                     
+   633  0000                     
+   634  0000                     
+   635  0000                     
+   636  0000                     
+   637  0000                     
+   638  0000                     
+   639  0000                     
+   640  0000                     
+   641  0000                     
+   642  0000                     
+   643  0000                     
+   644  0000                     
+   645  0000                     
+   646  0000                     
+   647  0000                     
+   648  0000                     
+   649  0000                     
+   650  0000                     
+   651  0000                     
+   652  0000                     
+   653  0000                     
+   654  0000                     
+   655  0000                     
+   656  0000                     
+   657  0000                     
+   658  0000                     
+   659  0000                     
+   660  0000                     
+   661  0000                     
+   662  0000                     
+   663  0000                     
+   664  0000                     
+   665  0000                     
+   666  0000                     
+   667  0000                     
+   668  0000                     
+   669  0000                     
+   670  0000                     
+   671  0000                     
+   672  0000                     
+   673  0000                     
+   674  0000                     
+   675  0000                     
+   676  0000                     
+   677  0000                     
+   678  0000                     
+   679  0000                     
+   680  0000                     
+   681  0000                     
+   682  0000                     
+   683  0000                     
+   684  0000                     
+   685  0000                     
+   686  0000                     
+   687  0000                     
+   688  0000                     
+   689  0000                     
+   690  0000                     
+   691  0000                     
+   692  0000                     
+   693  0000                     
+   694  0000                     
+   695  0000                     
+   696  0000                     
+   697  0000                     
+   698  0000                     
+   699  0000                     
+   700  0000                     
+   701  0000                     
+   702  0000                     
+   703  0000                     
+   704  0000                     
+   705  0000                     
+   706  0000                     
+   707  0000                     
+   708  0000                     
+   709  0000                     
+   710  0000                     
+   711  0000                     
+   712  0000                     
+   713  0000                     
+
+
+HI-TECH Software PICC Macro Assembler V8.05PL1
+Symbol Table                                          Sat Jun 28 23:55:50 2008
+
+                   l2 0751                     l3 074B  
+                   l5 074C            ?a_R_S_Byte 0020  
+                  l12 0742                    l22 0782  
+                  l31 07CA                    l15 075C  
+                  l19 0770                    _TX 0727  
+                  fsr 0004           _system_Init 0798  
+              _RFConf 0047     ?a_SpiReadSpiWrite 0021  
+         ?a_Config905 0020            ?a_TxPacket 0020  
+                _main 07BD             _Config905 0757  
+                start 0004               _TxRxBuf 0023  
+               _Delay 0748             _TxAddress 0043  
+           _SetTxMode 0793              _R_S_Byte 0723  
+     _SpiReadSpiWrite 073D                 status 0003  
+           copy_bank0 0004             _StartUART 07AD  
+            _TxPacket 0769           _Spi_initial 072F  
+             ?a_Delay 0021  

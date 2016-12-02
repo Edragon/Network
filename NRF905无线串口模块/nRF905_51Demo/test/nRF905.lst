@@ -1,0 +1,250 @@
+C51 COMPILER V8.08   NRF905                                                                06/19/2009 21:54:10 PAGE 1   
+
+
+C51 COMPILER V8.08, COMPILATION OF MODULE NRF905
+OBJECT MODULE PLACED IN nRF905.obj
+COMPILER INVOKED BY: d:\Keil\C51\BIN\C51.EXE nRF905\nRF905.C BROWSE DEBUG OBJECTEXTEND PRINT(.\nRF905.lst) OBJECT(nRF905
+                    -.obj)
+
+line level    source
+
+   1          #include "nRF905.h"
+   2          
+   3          
+   4          #define uchar unsigned char 
+   5          #define uint  unsigned int
+   6          
+   7          unsigned char TxAddress[4]={TX_ADDR_Byte0,TX_ADDR_Byte1,TX_ADDR_Byte2,TX_ADDR_Byte3};
+   8          
+   9          RFConfig RxTxConf =
+  10          {
+  11                  10,
+  12                  RFConfig_Byte0,         RFConfig_Byte1,         RFConfig_Byte2,         RFConfig_Byte3,         RFConfig_Byte4,
+  13                  RFConfig_Byte5,         RFConfig_Byte6,         RFConfig_Byte7,         RFConfig_Byte8,         RFConfig_Byte9  
+  14          };
+  15          
+  16          
+  17          static void Delay(uchar n)
+  18          {
+  19   1              uint i;
+  20   1              while(n--)
+  21   1              for(i=0;i<80;i++);      
+  22   1      }
+  23          
+  24          
+  25          
+  26          
+  27          /*******************************************************************************************/
+  28          //function InitIO();            初始化IO
+  29          /*******************************************************************************************/
+  30          void nRF905Init(void)
+  31          {
+  32   1              /*SPI init*/
+  33   1              SpiInit();
+  34   1              //CSN=1;                                                // Spi  disable                                         
+  35   1              //SCK=0;                                                // Spi clock line init high
+  36   1              DR=1;                                           // Init DR for input
+  37   1              AM=1;                                           // Init AM for input
+  38   1              PWR_UP=1;                                       // nRF905 power on
+  39   1              Delay(4);
+  40   1              TRX_CE=0;                                       // Set nRF905 in standby mode
+  41   1              TX_EN=0;                                        // set radio in Rx mode 
+  42   1      
+  43   1              //====================
+  44   1              /*
+  45   1              TX_EN_DDR       = 1;
+  46   1              TRX_CE_DDR      = 1;
+  47   1              PWR_UP_DDR      = 1;
+  48   1              DR_DDR          = 0;
+  49   1              CD_DDR          = 0;
+  50   1              */
+  51   1              //====================
+  52   1      }
+  53          
+  54          
+C51 COMPILER V8.08   NRF905                                                                06/19/2009 21:54:10 PAGE 2   
+
+  55          /*******************************************************************************************/
+  56          //function WriteTxAddress();    写入目标地址
+  57          /*******************************************************************************************/
+  58          void WriteTxAddress(void)
+  59          {
+  60   1              unsigned char i;
+  61   1              unsigned char len= (RxTxConf.buf[2]>>4);
+  62   1              CSN=0;                                          // Spi enable for write a spi command   
+  63   1              SpiWrite(WTA);                          // Write address command
+  64   1              //for (i=0;i<TX_AWF;i++) 
+  65   1              for (i=0;i<len;i++)
+  66   1              {
+  67   2                      SpiWrite(TxAddress[i]);
+  68   2              }       
+  69   1              CSN=1;                                          // Spi disable
+  70   1      }
+  71          
+  72          
+  73          /*******************************************************************************************/
+  74          //function Config905();                 //配置905寄存器
+  75          /*******************************************************************************************/
+  76          void Config905(void)
+  77          {
+  78   1              uchar i;                                        
+  79   1              CSN=0;                                          // Spi enable for write a spi command
+  80   1              SpiWrite(WC);                           // Write config command写放配置命令
+  81   1              for (i=0;i<RxTxConf.n;i++)      // Write configration words  写放配置字
+  82   1              {
+  83   2                      SpiWrite(RxTxConf.buf[i]);
+  84   2              }
+  85   1              CSN=1;                                          // Disable Spi
+  86   1      
+  87   1              WriteTxAddress();
+  88   1      }
+  89          
+  90          
+  91          
+  92          
+  93          /*******************************************************************************************/
+  94          //function SetTxMode();                 设置为发送模式
+  95          /*******************************************************************************************/
+  96          void SetTxMode(void)                            
+  97          {       
+  98   1              TRX_CE=0;
+  99   1              TX_EN=1;
+ 100   1              Delay(1);                                       // delay for mode change(>=650us)
+ 101   1      }                               
+ 102          
+ 103          /*******************************************************************************************/
+ 104          //function SetRxMode();                 设置为接收模式
+ 105          /*******************************************************************************************/
+ 106          void SetRxMode(void)
+ 107          {
+ 108   1              TX_EN=0;
+ 109   1              TRX_CE=1;
+ 110   1              Delay(1);                                       // delay for mode change(>=650us)                               
+ 111   1      }
+ 112          
+ 113          
+ 114          
+ 115          
+ 116          //发送数据包
+C51 COMPILER V8.08   NRF905                                                                06/19/2009 21:54:10 PAGE 3   
+
+ 117          /*******************************************************************************************/
+ 118          void TxPacket(unsigned char *TxBuf)
+ 119          {
+ 120   1              uchar i;
+ 121   1      
+ 122   1              CSN=0;                                          // Spi enable for write a spi command   
+ 123   1              SpiWrite(WTP);                          // Write payload command
+ 124   1              //for (i=0;i<TX_PW;i++)
+ 125   1              for (i=0;i<RxTxConf.buf[4];i++)
+ 126   1              {
+ 127   2                      SpiWrite(TxBuf[i]);             // Write 32 bytes Tx data
+ 128   2              }
+ 129   1              CSN=1;                                          // Spi disable                                          
+ 130   1      
+ 131   1              TRX_CE=1;                                       // Set TRX_CE high,start Tx data transmission
+ 132   1              Delay(1);                                       // while (DR!=1);
+ 133   1              TRX_CE=0;                                       // Set TRX_CE low
+ 134   1      }
+ 135          
+ 136          /*
+ 137          *******************************************************************************************
+ 138          *       读取数据包
+ 139          *       返回值:         1-成功接收到数据                0-没有接收到数据
+ 140          *******************************************************************************************
+ 141          */
+ 142          unsigned char RxPacket(unsigned char *RxBuf)
+ 143          {
+ 144   1              uchar i;
+ 145   1              if (DR)         //DR 高电平             有接收到数据
+ 146   1              {
+ 147   2                      TRX_CE=0;                                       // Set nRF905 in standby mode   
+ 148   2      
+ 149   2                      CSN=0;                                          // Spi enable for write a spi command
+ 150   2                      SpiWrite(RRP);                          // Read payload command 
+ 151   2                      //for (i = 0 ;i < RX_PW ;i++)
+ 152   2                      for (i = 0 ;i < RxTxConf.buf[3] ;i++)
+ 153   2                      {
+ 154   3                              RxBuf[i]=SpiRead();             // Read data and save to buffer         
+ 155   3                      }
+ 156   2                      CSN=1;                                          // Disable spi
+ 157   2                      while(DR);//||AM);      
+ 158   2      
+ 159   2                      TRX_CE=1;
+ 160   2      
+ 161   2                      return 1;
+ 162   2              }
+ 163   1              else
+ 164   1              {
+ 165   2                      return 0;
+ 166   2              }
+ 167   1      }
+ 168          /*******************************************************************************************/
+ 169          /*
+ 170          #ifdef SET_CHNO_ENABLE
+ 171                  void SetFrequence(unsigned int fre)
+ 172                  {
+ 173                          unsigned char k;
+ 174          
+ 175                      CSN=0;                                      // Spi enable for write a spi command
+ 176                          SpiWrite(WC);                           // Write config command写放配置命令
+ 177                          k = (fre/2)&0xff;
+ 178                          SpiWrite(k);                            //写入CH_NO高8位
+C51 COMPILER V8.08   NRF905                                                                06/19/2009 21:54:10 PAGE 4   
+
+ 179                          if ( (fre&0x01)==1)
+ 180                          {
+ 181                                  k = RFConfig_Byte1 | 0x01;      //最低位置位
+ 182                          }
+ 183                          else
+ 184                          {
+ 185                                  k = RFConfig_Byte1 & 0xfe;      //最低位清零
+ 186                          }       
+ 187                          SpiWrite(k);                            //写入CH_NO最低位
+ 188                          CSN=1;                                  // Disable Spi
+ 189                  }
+ 190          
+ 191          #endif
+ 192           */
+ 193          
+ 194          
+ 195          /*******************************************************************************************/
+ 196          /*
+ 197          #ifdef SETST_BYMODE_ENABLE
+ 198                  void SetST_BYmode(void)
+ 199                  {
+ 200                          TX_EN=0;
+ 201                          TRX_CE=0;
+ 202                          Delay(1);                                       // delay for mode change(>=650us)                               
+ 203                  }
+ 204          #endif
+ 205          */
+ 206          /*******************************************************************************************/
+ 207          /*
+ 208          #ifdef SETRF_PA_PWR_ENABLE
+ 209                  //RF-Configure-Register byte:1
+ 210                  code unsigned char RF_byte1[4]={0x00,0x04,0x08,0x0c};
+ 211                  //不同的发射功率
+ 212                  void SetRF_PA_PWR(unsigned char i)      //SPI->设置发射功率
+ 213                  {
+ 214                          SPI_CSN=0;                                              // Spi enable for write a spi command
+ 215                          SpiWrite(0x01);                         // Write config command写放配置命令 从1号字节开始写
+ 216                          SpiWrite(RF_byte1[i]);
+ 217                          SPI_CSN=1;                                              // Disable Spi
+ 218                  }
+ 219          #endif
+ 220           */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    262    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     15      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

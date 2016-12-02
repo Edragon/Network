@@ -1,0 +1,113 @@
+C51 COMPILER V8.08   MAIN                                                                  06/19/2009 21:54:06 PAGE 1   
+
+
+C51 COMPILER V8.08, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: d:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include "def.h"
+   2          #include "./SPI/SPI.h"
+   3          #include "./nRF905/nRF905.h"
+   4          
+   5          unsigned char TxBuf[28]={0};
+   6          unsigned char RxBuf[28]={0};
+   7          unsigned char tf=0;
+   8          
+   9          
+  10          void Delay(unsigned char n)
+  11          {
+  12   1              unsigned char i;
+  13   1              while(n--)
+  14   1              for(i=0;i<80;i++);      
+  15   1      }
+  16          
+  17          
+  18          void main()
+  19          {
+  20   1           unsigned char led1_count=0;
+  21   1               unsigned char led2_count=0;
+  22   1               //================NRF905初始化
+  23   1           nRF905Init();
+  24   1      
+  25   1              //================
+  26   1              Config905();                            // Config nRF905 module
+  27   1              TxBuf[0] = 1;
+  28   1              TxBuf[1] = 1;
+  29   1              SetTxMode();            // Set Tx Mode
+  30   1              TxPacket(TxBuf);                                // Transmit Tx buffer data
+  31   1              LED1 = 0;
+  32   1              LED2 = 0;
+  33   1      
+  34   1              Delay(500);                             // delay for led light  
+  35   1              LED1 = 1;
+  36   1              LED2 = 1;
+  37   1              TxBuf[0] = 0xff;
+  38   1              TxBuf[1] = 0xff;
+  39   1      
+  40   1                                              // led close
+  41   1              SetRxMode();    // Set nRF905 in Rx mode
+  42   1      
+  43   1              while(1)
+  44   1              {
+  45   2              
+  46   2                         if(KEY1 ==0 ) { TxBuf[0] = 1 ;tf = 1 ; led1_count=15; }
+  47   2                         if(KEY2 ==0 ) { TxBuf[1] = 1 ;tf = 1 ; led2_count=15;}
+  48   2                              
+  49   2                              if (tf==1)
+  50   2                              {       
+  51   3                                      SetTxMode();                    // Set Tx Mode
+  52   3                                      TxPacket(TxBuf);                                // Transmit Tx buffer data
+  53   3                                      TxBuf[0] = 0xff;
+  54   3                                      TxBuf[1] = 0xff;
+  55   3                                      SetRxMode();                    // Set nRF905 in Rx mode
+C51 COMPILER V8.08   MAIN                                                                  06/19/2009 21:54:06 PAGE 2   
+
+  56   3                                      tf=0;
+  57   3                              }
+  58   2                  
+  59   2      
+  60   2                      if (RxPacket(RxBuf) == 1)       //返回1 表明有数据包接收到
+  61   2                      {
+  62   3                              if (RxBuf[0]==1)
+  63   3                              {
+  64   4                                      led1_count=15;
+  65   4                              }
+  66   3                              if (RxBuf[1]==1)
+  67   3                              {
+  68   4                                      led2_count=15;
+  69   4                              }
+  70   3                      }
+  71   2      
+  72   2                      //LED显示延时
+  73   2                      if (led1_count>0)       
+  74   2                      {
+  75   3                              led1_count--;
+  76   3                              LED1 = 0;
+  77   3                      }
+  78   2                      else LED1 = 1;
+  79   2      
+  80   2                      if (led2_count>0)
+  81   2                      {
+  82   3                              led2_count--;
+  83   3                              LED2 = 0;
+  84   3                      }
+  85   2                      else LED2 = 1;
+  86   2              }
+  87   1      
+  88   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    182    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     57       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

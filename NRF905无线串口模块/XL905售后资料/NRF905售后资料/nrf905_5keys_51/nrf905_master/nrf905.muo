@@ -1,0 +1,9 @@
+*** TKStudio Project Config (C)ZLG-MCU By YinHandong[Òüº®¶¬]
+*** Do not modify !
+
+ACTCFG <DebugRel>
+TARGOPT 1,()
+  OPTFFF <.\nrf905_89c52.c> {2,3,-1,-1,22,29,674,470,139,5357}
+  OPTDF 0
+  OPTPES 1,0,0,0,0,0,0,
+EndOpt

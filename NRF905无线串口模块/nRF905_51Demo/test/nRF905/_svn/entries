@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2009-10-01T13:48:12.868305Z"
+   url="http://192.168.133.82:8080/firmware/NetUSB905/firmware/nRF905"
+   last-author="misswhile"
+   kind="dir"
+   repos="http://192.168.133.82:8080/firmware/NetUSB905"
+   revision="2"/>
+<entry
+   committed-rev="3"
+   name="nRF905.C"
+   text-time="2007-10-11T12:08:38.000000Z"
+   committed-date="2009-10-02T14:20:58.953013Z"
+   checksum="557f8facef696a3cca38823ecd00d924"
+   last-author="misswhile"
+   kind="file"
+   revision="3"/>
+<entry
+   committed-rev="2"
+   name="nRF905.h"
+   text-time="2007-10-10T13:49:10.000000Z"
+   committed-date="2009-10-01T13:48:12.868305Z"
+   checksum="af033db99127493edb2f6d62d160fb82"
+   last-author="misswhile"
+   kind="file"/>
+</wc-entries>

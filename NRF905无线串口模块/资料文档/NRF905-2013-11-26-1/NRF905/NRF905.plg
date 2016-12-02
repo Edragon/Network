@@ -1,0 +1,15 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\internal_data\NRF905\NRF905-2013-11-26-1\NRF905\NRF905.uvproj
+Project File Date:  11/26/2013
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling Main.c...
+linking...
+Program Size: data=39.0 xdata=0 code=648
+creating hex file from "NRF905"...
+"NRF905" - 0 Error(s), 0 Warning(s).

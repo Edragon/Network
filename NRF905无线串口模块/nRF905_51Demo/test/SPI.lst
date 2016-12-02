@@ -1,0 +1,122 @@
+C51 COMPILER V8.08   SPI                                                                   06/19/2009 21:54:14 PAGE 1   
+
+
+C51 COMPILER V8.08, COMPILATION OF MODULE SPI
+OBJECT MODULE PLACED IN SPI.obj
+COMPILER INVOKED BY: d:\Keil\C51\BIN\C51.EXE SPI\SPI.c BROWSE DEBUG OBJECTEXTEND PRINT(.\SPI.lst) OBJECT(SPI.obj)
+
+line level    source
+
+   1          #include "SPI.h"
+   2          
+   3          unsigned  char DATA_BUF;
+   4          #define DATA7   ((DATA_BUF&BYTE_BIT7) != 0)
+   5          #define DATA0   ((DATA_BUF&BYTE_BIT0) != 0)
+   6          //sbit  flag    =DATA_BUF^7;    //考虑到某些不支持 sbit 类型
+   7          //sbit  flag1   =DATA_BUF^0;
+   8          
+   9                    /*
+  10          
+  11          //<附带主机指令的SPI写操作>
+  12          void SpiCmdWrite(unsigned char command,unsigned char WriteBuf[],unsigned char len)
+  13          {
+  14                  unsigned char i;                                        
+  15          
+  16                  SPI_CSN=0;                                              // Spi enable for write a spi command
+  17                  SpiWrite(command);                              // Write config command写放配置命令
+  18                  for (i=0;i<len;i++)     // Write configration words  写放配置字
+  19                  {
+  20                          SpiWrite(WriteBuf[i]);
+  21                  }
+  22                  SPI_CSN=1;                                              // Disable Spi
+  23          }
+  24          
+  25          //<附带主机指令的SPI读操作>
+  26          void SpiCmdRead(unsigned char command,unsigned char ReadBuf[],unsigned char len)
+  27          {
+  28          
+  29                  unsigned char i;
+  30                  SPI_CSN=0;                                              // Spi enable for write a spi command
+  31                  SpiWrite(command);                              // Read payload command 
+  32                  for (i = 0 ;i < len ;i++)
+  33                  {
+  34                          ReadBuf[i]=SpiRead();           // Read data and save to buffer         
+  35                  }
+  36                  SPI_CSN=1;                                              // Disable spi
+  37          
+  38          }
+  39          */
+  40          
+  41          
+  42          void SpiInit(void)
+  43          {
+  44   1      //      SPI_MOSI_DDR = 1;
+  45   1      //      SPI_MISO_DDR = 0;
+  46   1      //      SPI_SCK_DDR  = 1;
+  47   1      //      SPI_CSN_DDR  = 1;
+  48   1      
+  49   1              CSN=1;  // Spi  disable 
+  50   1              SCK=0;  // Spi clock line init low      
+  51   1      }
+  52          
+  53          
+  54          unsigned char SpiRead(void)
+  55          {
+C51 COMPILER V8.08   SPI                                                                   06/19/2009 21:54:14 PAGE 2   
+
+  56   1              unsigned char i;
+  57   1              for (i=0;i<8;i++)
+  58   1              {
+  59   2                      DATA_BUF=DATA_BUF<<1;
+  60   2                      SCK=1;
+  61   2                      //OED&=0XFD;                    //      DATA=1;         //设置为输入状态
+  62   2                      if (MISO)       //读取最高位，保存至最末尾，通过左移位完成整个字节
+  63   2                      {
+  64   3                              DATA_BUF|=BYTE_BIT0;
+  65   3                      }
+  66   2                      else
+  67   2                      {
+  68   3                              DATA_BUF&=~BYTE_BIT0;
+  69   3                      }
+  70   2                      //OED|=0X02;
+  71   2                      SCK=0;
+  72   2               }
+  73   1               return DATA_BUF;
+  74   1      }
+  75          
+  76          void SpiWrite(unsigned char send)
+  77          {
+  78   1              unsigned char i;
+  79   1              DATA_BUF=send;
+  80   1              for (i=0;i<8;i++)
+  81   1              {
+  82   2                      if (DATA7)      //总是发送最高位
+  83   2                      {
+  84   3                              MOSI=1;
+  85   3                      }
+  86   2                      else
+  87   2                      {
+  88   3                              MOSI=0;
+  89   3                      }
+  90   2                      SCK=1;
+  91   2                      DATA_BUF=DATA_BUF<<1;
+  92   2                      SCK=0;
+  93   2              }
+  94   1      }
+  95          
+  96          
+  97          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     65    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

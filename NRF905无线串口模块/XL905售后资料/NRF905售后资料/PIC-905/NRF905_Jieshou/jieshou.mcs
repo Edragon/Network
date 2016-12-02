@@ -1,0 +1,12 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=F:\mplabProgram\PIC-NRF905\232Weirless\NRF905_Jieshou\jieshou.obj
+Folder=Intermediary
+[File001]
+Location=F:\mplabProgram\PIC-NRF905\232Weirless\NRF905_Jieshou\jieshou.cce
+Folder=Intermediary
+[File002]
+Location=jieshou.cof
+Folder=Output

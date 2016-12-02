@@ -1,0 +1,21 @@
+Comment  	Designator	 Footprint	 LibRef   Quantity
+  
+"SMA"	           "ANT"	"SMA"		 "ANT"
+"33pF"	           "C1, C6"	"0603"	         "Cap"	   "2"
+"100nF"	            "C2"	"0603"	         "Cap"	   "1"
+"4.7uF"	            "C3"	"0603"	         "Cap"	   "1"
+"10nF"	            "C4"	"0603"	         "Cap"	   "1"
+"4.7nF"	            "C5"	"0603"	         "Cap"	   "1"
+"18pF"	          "C7, C8"	"0603"	         "Cap"	   "2"
+"not fitted"	  "C9, C13"	"0603"	         "Cap"	   "2"
+"6.8pF"             "C10"	"0603"	         "Cap"	   "1"
+"180pF"        	    "C11"	"0603"	         "Cap"	   "1"
+"3.3nF"  	    "C12"	"0603"	         "Cap"	   "1"
+"15pF"         	  "C14, C15"	"0603"	         "Cap"	   "2"
+"12nH"	            "L1"	"0603"	      "Inductor"   "1"
+"39nH"	          "L2, L3"	"0603"	      "Inductor"   "2"
+
+"22K"	           "R1"	        "0603"	        "Res1"	   "1"
+"1M"	           "R2"	        "0603"	        "Res1"	   "1"
+"NRF905"	   "U1"	    "QFN32-0.5MM"	"NRF905"   "1"
+"16MHZ"	            "Y1"	 "XTAL-SMD"	"XTAL"	   "1"

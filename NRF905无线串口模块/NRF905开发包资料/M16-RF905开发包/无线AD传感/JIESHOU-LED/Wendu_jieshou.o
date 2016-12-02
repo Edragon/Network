@@ -1,0 +1,348 @@
+XL
+H 4 areas 13 global symbols
+M Wendu_jieshou.c
+A text size 1AE flags 0
+dbfile F:\PROTELDXP\123\无线参考程序\开发板备份\JASK2001软件开发包\M16-NRF905开发包\无线AD传感\JIESHOU-LED\Wendu_jieshou.c
+dbfunc e Delay 0 fV
+dbsym r i 14 i
+dbsym r x 10 i
+dbline FFFFFFFF 4
+dbline 63 4
+dbline 66 6
+dbline 66 C
+dbline 66 C
+dbline 66 10
+dbline 65 18
+dbline FFFFFFFE 26
+dbline 0 26
+dbfunc e Spi_initial 2C fV
+dbline FFFFFFFF 2C
+dbline 6A 2C
+dbline 6B 2C
+dbline FFFFFFFE 30
+dbline 0 30
+dbfunc e SpiReadSpiWrite 32 fc
+dbsym r cData 10 c
+dbline FFFFFFFF 32
+dbline 6F 32
+dbline 70 32
+dbline 72 34
+dbline 72 34
+dbline 71 34
+dbline 72 38
+dbline 73 38
+dbline FFFFFFFE 3A
+dbline 0 3A
+dbfunc e system_Init 3C fV
+dbline FFFFFFFF 3C
+dbline 77 3C
+dbline 79 3C
+dbline 79 3E
+dbline 7A 3E
+dbline 7A 40
+dbline 7B 40
+dbline 7B 42
+dbline 7C 42
+dbline 7C 44
+dbline 7D 44
+dbline 7D 46
+dbline 7E 46
+dbline 7E 48
+dbline 7F 48
+dbline 7F 4A
+dbline 80 4A
+dbline 80 4C
+dbline FFFFFFFE 4C
+dbline 0 4C
+dbfunc e Config905 4E fV
+dbsym r i 14 c
+dbline FFFFFFFF 52
+dbline 84 52
+dbline 86 52
+dbline 86 54
+dbline 87 54
+dbline 88 5A
+dbline 89 5E
+dbline 8A 5E
+dbline 8B 6E
+dbline 88 6E
+dbline 88 70
+dbline 8C 74
+dbline 8C 76
+dbline FFFFFFFE 76
+dbline 0 76
+dbfunc e SetRxMode 7C fV
+dbline FFFFFFFF 7C
+dbline 90 7C
+dbline 91 7C
+dbline 91 7E
+dbline 92 7E
+dbline 92 80
+dbline 93 80
+dbline FFFFFFFE 86
+dbline 0 86
+dbfunc e CheckDR 88 fc
+dbline FFFFFFFF 88
+dbline 97 88
+dbline 98 88
+dbline 99 8C
+dbline 9A 8C
+dbline 9D 90
+dbline 9E 90
+dbline FFFFFFFE 92
+dbline 0 92
+dbfunc e RxPacket 94 fV
+dbsym r i 14 c
+dbline FFFFFFFF 98
+dbline A3 98
+dbline A5 98
+dbline A5 9A
+dbline A6 9A
+dbline A6 9C
+dbline A7 9C
+dbline A8 A2
+dbline A9 A6
+dbline AA AA
+dbline AB AA
+dbline AC BC
+dbline A9 BC
+dbline A9 BE
+dbline AD C2
+dbline AD C4
+dbline AE C4
+dbline AF CA
+dbline AF CC
+dbline FFFFFFFE CC
+dbline 0 CC
+dbfunc e RX D2 fV
+dbline FFFFFFFF D2
+dbline B3 D2
+dbline B4 D2
+dbline B5 D4
+dbline B5 D4
+dbline B6 DA
+dbline B7 DC
+dbline FFFFFFFE E2
+dbline 0 E2
+dbfunc e StartUART E4 fV
+dbline FFFFFFFF E4
+dbline BB E4
+dbline BC E4
+dbline BD E8
+dbline BE EC
+dbline BF F0
+dbline C0 F4
+dbline C1 F6
+dbline FFFFFFFE F8
+dbline 0 F8
+dbfunc e R_S_Byte FA fV
+dbsym r R_Byte 10 c
+dbline FFFFFFFF FA
+dbline C5 FA
+dbline C6 FA
+dbline FFFFFFFE FC
+dbline 0 FC
+dbfunc e dis_zhuye FE fV
+dbline FFFFFFFF FE
+dbline CA FE
+dbline CB FE
+dbline CC 110
+dbline CC 112
+dbline CD 112
+dbline CD 114
+dbline CE 114
+dbline CE 116
+dbline CF 116
+dbline CF 118
+dbline D0 118
+dbline D1 11E
+dbline D1 120
+dbline D3 120
+dbline D4 132
+dbline D4 134
+dbline D5 134
+dbline D6 13A
+dbline D6 13C
+dbline D8 13C
+dbline D9 14E
+dbline D9 150
+dbline DA 150
+dbline DB 156
+dbline DB 158
+dbline DD 158
+dbline DE 15C
+dbline DE 15E
+dbline DF 15E
+dbline E0 164
+dbline E0 166
+dbline FFFFFFFE 166
+dbline 0 166
+dbfunc e main 168 fV
+dbsym l i 1 c
+dbline FFFFFFFF 168
+dbline E4 168
+dbline E6 168
+dbline E7 16C
+dbline E8 170
+dbline E9 174
+dbline EA 178
+dbline EB 17A
+dbline EB 17C
+dbline EC 17C
+dbline EE 17E
+dbline EF 180
+dbline F0 182
+dbline F1 184
+dbline F2 186
+dbline F5 18E
+dbline F6 18E
+dbline F7 190
+dbline F8 1A8
+dbline F9 1A8
+dbline FA 1AA
+dbline 102 1AA
+dbline F4 1AA
+dbline FFFFFFFE 1AC
+dbline 0 1AC
+S _main Def0168
+S _RX Def00D2
+S _dis_zhuye Def00FE
+S _SpiReadSpiWrite Def0032
+S _Delay Def0000
+S _Config905 Def004E
+S _R_S_Byte Def00FA
+S _RxPacket Def0094
+S _StartUART Def00E4
+S _CheckDR Def0088
+S _Spi_initial Def002C
+S _SetRxMode Def007C
+S _system_Init Def003C
+A data size 23 flags 20
+dbfile F:\PROTELDXP\123\无线参考程序\开发板备份\JASK2001软件开发包\M16-NRF905开发包\无线AD传感\JIESHOU-LED\Wendu_jieshou.c
+dbsym e TxAddress 0 A[4:4]c
+dbsym e seg 4 A[10:10]c
+dbsym e seg1 E A[10:10]c
+dbsym e RFConf 18 A[11:11]c
+S _RFConf Def0018
+S _seg Def0004
+S _seg1 Def000E
+S _TxAddress Def0000
+A idata size 23 flags 0
+A bss size 10 flags 20
+dbfile F:\PROTELDXP\123\无线参考程序\开发板备份\JASK2001软件开发包\M16-NRF905开发包\无线AD传感\JIESHOU-LED\Wendu_jieshou.c
+dbsym e temp 0 A[12:6]i
+dbsym e TxRxBuffer C A[4:4]c
+S _temp Def0000
+S _TxRxBuffer Def000C
+T 00 00 CC CC
+R 00 00 02 00
+T 02 00 CC CC
+R 00 00 02 00
+T 04 00 C0 CF
+R 00 00 02 00
+T 06 00 A4 B0
+R 00 00 02 00
+T 08 00 99 92
+R 00 00 02 00
+T 0A 00 82 F8
+R 00 00 02 00
+T 0C 00 80 90
+R 00 00 02 00
+T 0E 00 40 4F
+R 00 00 02 00
+T 10 00 24 30
+R 00 00 02 00
+T 12 00 19 12
+R 00 00 02 00
+T 14 00 02 78
+R 00 00 02 00
+T 16 00 00 10
+R 00 00 02 00
+T 18 00 00 4C
+R 00 00 02 00
+T 1A 00 0C 44
+R 00 00 02 00
+T 1C 00 04 04
+R 00 00 02 00
+T 1E 00 CC CC
+R 00 00 02 00
+T 20 00 CC CC
+R 00 00 02 00
+T 22 00 58
+R 00 00 02 00
+T 00 00 4A 93 5A 93 09 C0 44 27 55 27 02 C0 4F 5F
+R 00 00 00 00
+T 0E 00 5F 4F 40 35 E0 E0 5E 07 D0 F3 18 01 01 50
+R 00 00 00 00
+T 1C 00 10 40 22 20 91 F7 33 20 81 F7 59 91 49 91
+R 00 00 00 00
+T 2A 00 08 95
+R 00 00 00 00
+T 2C 00 80 E5 8D B9 08 95
+R 00 00 00 00
+T 32 00 0F B9 77 9B FE CF 0F B1 08 95
+R 00 00 00 00
+T 3C 00 C4 9A C7 98 C2 98 C3 98 93 98 C1 9A 94 98
+R 00 00 00 00
+T 4A 00 C0 98 08 95
+R 00 00 00 00
+T 4E 00 4A 93 5A 93 C4 98 01 E0 10 E0 D3 DF 44 27
+R 00 00 00 00
+T 5C 00 09 C0 80 E0 90 E0 E4 2F FF 27 E8 0F F9 1F
+R 00 00 00 00 20 04 01 00 18 00 40 06 01 00 18 00
+T 6A 00 00 81 E2 DF 43 95 4B 30 A8 F3 C4 9A 59 91
+R 00 00 00 00
+T 78 00 49 91 08 95
+R 00 00 00 00
+T 7C 00 C0 98 94 9A 0A E0 10 E0 BD DF 08 95
+R 00 00 00 00
+T 88 00 B2 9B 02 C0 01 E0 01 C0 00 27 08 95
+R 00 00 00 00
+T 94 00 4A 93 5A 93 94 98 C4 98 01 E0 10 E0 AF DF
+R 00 00 00 00
+T A2 00 04 E2 C6 DF 44 27 0A C0 00 27 C2 DF 80 E0
+R 00 00 00 00 20 0E 03 00 0C 00
+T B0 00 90 E0 E4 2F FF 27 E8 0F F9 1F 00 83 43 95
+R 00 00 00 00 40 02 03 00 0C 00
+T BE 00 44 30 A0 F3 C4 9A 02 E0 10 E0 9B DF 94 9A
+R 00 00 00 00
+T CC 00 59 91 49 91 08 95
+R 00 00 00 00
+T D2 00 D4 DF D9 DF 00 23 E9 F3 DC DF 0A E0 10 E0
+R 00 00 00 00
+T E0 00 8F DF 08 95
+R 00 00 00 00
+T E4 00 22 24 2B B8 88 E1 8A B9 86 E0 80 BD 87 E6
+R 00 00 00 00
+T F2 00 89 B9 20 BC 5B 9A 08 95
+R 00 00 00 00
+T FA 00 0C B9 08 95
+R 00 00 00 00
+T FE 00 80 E0 90 E0 E0 91
+R 00 00 00 00 20 02 01 00 0E 00 40 04 01 00 0E 00
+T 04 01 0D 00 FF 27 E8 0F F9 1F 20 80 25 BA DC 9A
+R 00 00 00 00 00 02 03 00
+T 12 01 DB 9A DA 9A D9 98 00 E5 10 E0 71 DF D9 9A
+R 00 00 00 00
+T 20 01 80 E0 90 E0 E0 91
+R 00 00 00 00 20 02 01 00 04 00 40 04 01 00 04 00
+T 26 01 0E 00 FF 27 E8 0F F9 1F 20 80 25 BA DA 98
+R 00 00 00 00 00 02 03 00
+T 34 01 00 E5 10 E0 63 DF DA 9A 80 E0 90 E0 E0 91
+R 00 00 00 00 20 0A 01 00 04 00 40 0C 01 00 04 00
+T 42 01 0F 00 FF 27 E8 0F F9 1F 20 80 25 BA DB 98
+R 00 00 00 00 00 02 03 00
+T 50 01 00 E5 10 E0 55 DF DB 9A 81 EC 85 BB DC 98
+R 00 00 00 00
+T 5E 01 00 E5 10 E0 4E DF DC 9A 08 95
+R 00 00 00 00
+T 68 01 82 EB 81 BB 83 EB 87 BB 8E E1 8A BB 8F EF
+R 00 00 00 00
+T 76 01 84 BB 8B BB 95 9A 97 9A 56 DF 5D DF 65 DF
+R 00 00 00 00
+T 84 01 AF DF 04 EF 11 E0 3A DF 0E C0 A1 DF 20 90
+R 00 00 00 00
+T 92 01 0C 00 22 20 41 F4 20 90 0D 00 22 20 21 F4
+R 00 00 00 00 00 02 03 00 00 0A 03 00
+T A0 01 20 90 0E 00 22 20 09 F0 AA DF F1 CF 08 95
+R 00 00 00 00 00 04 03 00

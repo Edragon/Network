@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.5.4	//
+!_TAG_REVISION_NAME	MCHPTags	//
+!_TAG_REVISION_VERSION	6.0.1	//
+AM::RB3	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	16;"	d	line:16	file:
+CD::RB2	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	15;"	d	line:15	file:
+CSN::RC0	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	13;"	d	line:13	file:
+CheckDR	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	33;"	p	line:33	file:	signature:(void)
+Config905	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	101;"	f	line:101	signature:(void)
+Config905	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	31;"	p	line:31	file:	signature:(void)
+DR::RB0	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	17;"	d	line:17	file:
+Delay	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	27;"	p	line:27	file:	signature:(uchar n)
+Delay	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	52;"	f	line:52	signature:(uchar n)
+MISO::RC4	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	10;"	d	line:10	file:
+MOSI::RC5	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	11;"	d	line:11	file:
+PWR::RB1	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	8;"	d	line:8	file:
+RFConf	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	39;"	v	line:39
+RRC::0x10	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	20;"	d	line:20	file:
+RRP::0x24	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	25;"	d	line:25	file:
+RTA::0x23	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	24;"	d	line:24	file:
+RTP::0x21	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	22;"	d	line:22	file:
+RX	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	137;"	f	line:137	signature:(void)
+RX	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	35;"	p	line:35	file:	signature:(void)
+R_S_Byte	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	157;"	f	line:157	signature:(uchar R_Byte)
+R_S_Byte	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	37;"	p	line:37	file:	signature:(uchar R_Byte)
+RxPacket	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	120;"	f	line:120	signature:(void)
+RxPacket	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	34;"	p	line:34	file:	signature:(void)
+SCK::RC3	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	12;"	d	line:12	file:
+SetRxMode	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	112;"	f	line:112	signature:(void)
+SetRxMode	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	32;"	p	line:32	file:	signature:(void)
+SpiReadSpiWrite	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	29;"	p	line:29	file:	signature:(uchar DATA)
+SpiReadSpiWrite	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	71;"	f	line:71	signature:(uchar DATA)
+Spi_initial	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	28;"	p	line:28	file:
+Spi_initial	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	59;"	f	line:59
+StartUART	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	146;"	f	line:146	signature:(void)
+StartUART	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	36;"	p	line:36	file:	signature:( void )
+TRX_CE::RC2	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	7;"	d	line:7	file:
+TX_EN::RC1	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	6;"	d	line:6	file:
+TxRxBuffer	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	50;"	v	line:50
+WC::0x00	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	19;"	d	line:19	file:
+WTA::0x22	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	23;"	d	line:23	file:
+WTP::0x20	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	21;"	d	line:21	file:
+b	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	73;"	l	line:73
+i	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	103;"	l	line:103
+i	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	122;"	l	line:122
+i	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	164;"	l	line:164
+k	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	54;"	l	line:54
+main	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	162;"	f	line:162	signature:(void)
+nRF905Init	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	30;"	p	line:30	file:	signature:(void)
+system_Init	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	83;"	f	line:83	signature:(void)
+uchar::unsignedchar	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	3;"	d	line:3	file:
+uint::unsignedint	F:\mplabProgram\Pic-Nrf905\232Weirless\NRF905_Jieshou\jieshou.c	4;"	d	line:4	file:

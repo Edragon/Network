@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>RF905-Yaokong/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>110</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>723</ColumnWidth1><ColumnWidth2>193</ColumnWidth2><ColumnWidth3>48</ColumnWidth3></Build>
+      <TerminalIO/>
+      <Profiling/>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-32749-10432</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>RF905-Yaokong</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-13825-11810</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>F:\JASK\&#x65e0;&#x7eBF;&#x7A0B;&#x5e8F;&#x8D44;&#x6599;&#x5927;&#x5168;\905&#x7A0B;&#x5e8F;&#x5927;&#x5168;\RF905-&#x65e0;&#x7eBF;&#x8C03;&#x8BD5;&#x677F;&#x5F00;&#x53D1;&#x5305;\&#x65B0;&#x5eFA;&#x6587;&#x4eF6;&#x5939;\RF905-149\1-RF905-Yaokong\RF905-Yaokong.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>662</SelStart><SelEnd>662</SelEnd></Tab><ActiveTab>0</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-003be890><key>iaridepm1</key></Toolbar-003be890></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>532</Bottom><Right>184</Right><x>-2</x><y>-2</y><xscreen>186</xscreen><yscreen>145</yscreen><sizeHorzCX>145313</sizeHorzCX><sizeHorzCY>201389</sizeHorzCY><sizeVertCX>145313</sizeVertCX><sizeVertCY>741667</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>143</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>145</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>201389</sizeHorzCY><sizeVertCX>145313</sizeVertCX><sizeVertCY>201389</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

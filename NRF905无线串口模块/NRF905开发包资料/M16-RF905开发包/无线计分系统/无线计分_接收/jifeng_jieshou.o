@@ -1,0 +1,455 @@
+XL
+H 4 areas 1B global symbols
+M jifeng_jieshou.c
+S push_gset1 Ref0000
+S mod16s Ref0000
+S div16s Ref0000
+S pop_gset1 Ref0000
+A text size 27C flags 0
+dbfile C:\DOCUME~1\Administrator\桌面\JASK2001软件开发包\M16-NRF905开发包\无线计分系统\NRF905_接收\jifeng_jieshou.c
+dbfunc e Delay 0 fV
+dbsym r i 14 i
+dbsym r x 10 i
+dbline FFFFFFFF 4
+dbline 67 4
+dbline 6A 6
+dbline 6A C
+dbline 6A C
+dbline 6A 10
+dbline 69 18
+dbline FFFFFFFE 26
+dbline 0 2A
+dbfunc e Spi_initial 2C fV
+dbline FFFFFFFF 2C
+dbline 6E 2C
+dbline 6F 2C
+dbline FFFFFFFE 30
+dbline 0 30
+dbfunc e SpiReadSpiWrite 32 fc
+dbsym r cData 10 c
+dbline FFFFFFFF 32
+dbline 73 32
+dbline 74 32
+dbline 76 34
+dbline 76 34
+dbline 75 34
+dbline 76 38
+dbline 77 38
+dbline FFFFFFFE 3A
+dbline 0 3A
+dbfunc e system_Init 3C fV
+dbline FFFFFFFF 3C
+dbline 7B 3C
+dbline 7D 3C
+dbline 7D 3E
+dbline 7E 3E
+dbline 7E 40
+dbline 7F 40
+dbline 7F 42
+dbline 80 42
+dbline 80 44
+dbline 81 44
+dbline 81 46
+dbline 82 46
+dbline 82 48
+dbline 83 48
+dbline 83 4A
+dbline 84 4A
+dbline 84 4C
+dbline FFFFFFFE 4C
+dbline 0 4C
+dbfunc e Config905 4E fV
+dbsym r i 14 c
+dbline FFFFFFFF 52
+dbline 88 52
+dbline 8A 52
+dbline 8A 54
+dbline 8B 54
+dbline 8C 5A
+dbline 8D 5E
+dbline 8E 5E
+dbline 8F 6E
+dbline 8C 6E
+dbline 8C 70
+dbline 90 74
+dbline 90 76
+dbline FFFFFFFE 76
+dbline 0 7A
+dbfunc e TxPacket 7C fV
+dbsym r i 14 c
+dbline FFFFFFFF 80
+dbline 94 80
+dbline 96 80
+dbline 96 82
+dbline 97 82
+dbline 98 88
+dbline 99 8C
+dbline 9A 90
+dbline 9B 90
+dbline 9C A0
+dbline 99 A0
+dbline 99 A2
+dbline 9D A6
+dbline 9D A8
+dbline 9E A8
+dbline 9F AE
+dbline 9F B0
+dbline A0 B0
+dbline A1 B4
+dbline A2 B8
+dbline A3 B8
+dbline A4 C8
+dbline A1 C8
+dbline A1 CA
+dbline A5 CE
+dbline A5 D0
+dbline A6 D0
+dbline A6 D2
+dbline A7 D2
+dbline A8 D8
+dbline A8 DA
+dbline FFFFFFFE DA
+dbline 0 DE
+dbfunc e SetTxMode E0 fV
+dbline FFFFFFFF E0
+dbline AC E0
+dbline AD E0
+dbline AD E2
+dbline AE E2
+dbline AE E4
+dbline AF E4
+dbline FFFFFFFE EA
+dbline 0 EA
+dbfunc e SetRxMode EC fV
+dbline FFFFFFFF EC
+dbline B3 EC
+dbline B4 EC
+dbline B4 EE
+dbline B5 EE
+dbline B5 F0
+dbline B6 F0
+dbline FFFFFFFE F6
+dbline 0 F6
+dbfunc e TX F8 fV
+dbline FFFFFFFF F8
+dbline BA F8
+dbline BB F8
+dbline BC FA
+dbline FFFFFFFE FC
+dbline 0 FC
+dbfunc e CheckDR FE fc
+dbline FFFFFFFF FE
+dbline C0 FE
+dbline C1 FE
+dbline C2 102
+dbline C3 102
+dbline C6 106
+dbline C7 106
+dbline FFFFFFFE 108
+dbline 0 108
+dbfunc e RxPacket 10A fV
+dbsym r i 14 c
+dbline FFFFFFFF 10E
+dbline CC 10E
+dbline CE 10E
+dbline CE 110
+dbline CF 110
+dbline CF 112
+dbline D0 112
+dbline D1 118
+dbline D2 11C
+dbline D3 120
+dbline D4 120
+dbline D5 132
+dbline D2 132
+dbline D2 134
+dbline D6 138
+dbline D6 13A
+dbline D7 13A
+dbline D8 140
+dbline D8 142
+dbline FFFFFFFE 142
+dbline 0 146
+dbfunc e RX 148 fV
+dbline FFFFFFFF 148
+dbline DC 148
+dbline DD 148
+dbline DF 14A
+dbline E0 14C
+dbline FFFFFFFE 152
+dbline 0 152
+dbfunc e StartUART 154 fV
+dbline FFFFFFFF 154
+dbline E4 154
+dbline E5 154
+dbline E6 158
+dbline E7 15C
+dbline E8 160
+dbline E9 164
+dbline EA 166
+dbline FFFFFFFE 168
+dbline 0 168
+dbfunc e R_S_Byte 16A fV
+dbsym r R_Byte 10 c
+dbline FFFFFFFF 16A
+dbline EE 16A
+dbline EF 16A
+dbline FFFFFFFE 16C
+dbline 0 16C
+dbfunc e dis_zhuye 16E fV
+dbline FFFFFFFF 16E
+dbline F3 16E
+dbline F5 16E
+dbline F6 18A
+dbline F6 18C
+dbline F7 18C
+dbline F7 18E
+dbline F8 18E
+dbline F8 190
+dbline F9 190
+dbline F9 192
+dbline FA 192
+dbline FB 198
+dbline FB 19A
+dbline FD 19A
+dbline FE 1B6
+dbline FE 1B8
+dbline FF 1B8
+dbline 100 1BE
+dbline 100 1C0
+dbline 102 1C0
+dbline 103 1DC
+dbline 103 1DE
+dbline 104 1DE
+dbline 105 1E4
+dbline 105 1E6
+dbline 107 1E6
+dbline 108 202
+dbline 108 204
+dbline 109 204
+dbline 10A 20A
+dbline 10A 20C
+dbline FFFFFFFE 20C
+dbline 0 20C
+dbfunc e main 20E fV
+dbsym l i 1 i
+dbline FFFFFFFF 20E
+dbline 10E 20E
+dbline 110 20E
+dbline 111 212
+dbline 112 216
+dbline 113 21A
+dbline 114 21E
+dbline 115 220
+dbline 115 222
+dbline 116 222
+dbline 118 224
+dbline 119 226
+dbline 11A 228
+dbline 11C 22A
+dbline 11D 22C
+dbline 120 234
+dbline 121 234
+dbline 122 236
+dbline 123 23E
+dbline 124 23E
+dbline 125 244
+dbline 126 244
+dbline 127 24E
+dbline 128 24E
+dbline 129 256
+dbline 12A 256
+dbline 12B 260
+dbline 12C 260
+dbline 12D 268
+dbline 12E 268
+dbline 12F 26E
+dbline 130 272
+dbline 131 272
+dbline 132 272
+dbline 133 274
+dbline 133 276
+dbline 134 276
+dbline 136 278
+dbline 11F 278
+dbline FFFFFFFE 27A
+dbline 0 27A
+S _main Def020E
+S _RX Def0148
+S _TX Def00F8
+S _dis_zhuye Def016E
+S _SpiReadSpiWrite Def0032
+S _Delay Def0000
+S _Config905 Def004E
+S _R_S_Byte Def016A
+S _RxPacket Def010A
+S _TxPacket Def007C
+S _StartUART Def0154
+S _CheckDR Def00FE
+S _Spi_initial Def002C
+S _SetRxMode Def00EC
+S _SetTxMode Def00E0
+S _system_Init Def003C
+A data size 23 flags 20
+dbfile C:\DOCUME~1\Administrator\桌面\JASK2001软件开发包\M16-NRF905开发包\无线计分系统\NRF905_接收\jifeng_jieshou.c
+dbsym e TxAddress 0 A[4:4]c
+dbsym e seg 4 A[10:10]c
+dbsym e seg1 E A[10:10]c
+dbsym e RFConf 18 A[11:11]c
+S _RFConf Def0018
+S _seg Def0004
+S _seg1 Def000E
+S _TxAddress Def0000
+A idata size 23 flags 0
+A bss size 6 flags 20
+dbfile C:\DOCUME~1\Administrator\桌面\JASK2001软件开发包\M16-NRF905开发包\无线计分系统\NRF905_接收\jifeng_jieshou.c
+dbsym e count2 0 c
+dbsym e count1 1 c
+dbsym e TxRxBuffer 2 A[4:4]c
+S _TxRxBuffer Def0002
+S _count1 Def0001
+S _count2 Def0000
+T 00 00 CC CC
+R 00 00 02 00
+T 02 00 CC CC
+R 00 00 02 00
+T 04 00 C0 CF
+R 00 00 02 00
+T 06 00 A4 B0
+R 00 00 02 00
+T 08 00 99 92
+R 00 00 02 00
+T 0A 00 82 F8
+R 00 00 02 00
+T 0C 00 80 90
+R 00 00 02 00
+T 0E 00 40 4F
+R 00 00 02 00
+T 10 00 24 30
+R 00 00 02 00
+T 12 00 19 12
+R 00 00 02 00
+T 14 00 02 78
+R 00 00 02 00
+T 16 00 00 10
+R 00 00 02 00
+T 18 00 00 4C
+R 00 00 02 00
+T 1A 00 0C 44
+R 00 00 02 00
+T 1C 00 04 04
+R 00 00 02 00
+T 1E 00 CC CC
+R 00 00 02 00
+T 20 00 CC CC
+R 00 00 02 00
+T 22 00 58
+R 00 00 02 00
+T 00 00 0E 94 00 00 09 C0 44 27 55 27 02 C0 4F 5F
+R 00 00 00 00 12 04 00 00
+T 0E 00 5F 4F 40 35 E0 E0 5E 07 D0 F3 18 01 01 50
+R 00 00 00 00
+T 1C 00 10 40 22 20 91 F7 33 20 81 F7 0E 94 00 00
+R 00 00 00 00 12 0E 03 00
+T 2A 00 08 95
+R 00 00 00 00
+T 2C 00 80 E5 8D B9 08 95
+R 00 00 00 00
+T 32 00 0F B9 77 9B FE CF 0F B1 08 95
+R 00 00 00 00
+T 3C 00 C4 9A C7 98 C2 98 C3 98 93 98 C1 9A 94 98
+R 00 00 00 00
+T 4A 00 C0 98 08 95
+R 00 00 00 00
+T 4E 00 0E 94 00 00 C4 98 01 E0 10 E0 D3 DF 44 27
+R 00 00 00 00 12 04 00 00
+T 5C 00 09 C0 80 E0 90 E0 E4 2F FF 27 E8 0F F9 1F
+R 00 00 00 00 20 04 01 00 18 00 40 06 01 00 18 00
+T 6A 00 00 81 E2 DF 43 95 4B 30 A8 F3 C4 9A 0E 94
+R 00 00 00 00
+T 78 00 00 00 08 95
+R 00 00 00 00 12 02 03 00
+T 7C 00 0E 94 00 00 C4 98 01 E0 10 E0 BC DF 00 E2
+R 00 00 00 00 12 04 00 00
+T 8A 00 D3 DF 44 27 09 C0 80 E0 90 E0 E4 2F FF 27
+R 00 00 00 00 20 08 03 00 02 00 40 0A 03 00 02 00
+T 98 00 E8 0F F9 1F 00 81 C9 DF 43 95 44 30 A8 F3
+R 00 00 00 00
+T A6 00 C4 9A 01 E0 10 E0 A9 DF C4 98 02 E2 BF DF
+R 00 00 00 00
+T B4 00 44 27 09 C0 80 E0 90 E0 E4 2F FF 27 E8 0F
+R 00 00 00 00 20 06 01 00 00 00 40 08 01 00 00 00
+T C2 00 F9 1F 00 81 B5 DF 43 95 44 30 A8 F3 C4 9A
+R 00 00 00 00
+T D0 00 94 9A 01 E0 10 E0 94 DF 94 98 0E 94 00 00
+R 00 00 00 00 12 0E 03 00
+T DE 00 08 95
+R 00 00 00 00
+T E0 00 94 98 C0 9A 02 E0 10 E0 8B DF 08 95
+R 00 00 00 00
+T EC 00 C0 98 94 9A 0A E0 10 E0 85 DF 08 95
+R 00 00 00 00
+T F8 00 F3 DF C0 DF 08 95
+R 00 00 00 00
+T FE 00 B2 9B 02 C0 01 E0 01 C0 00 27 08 95
+R 00 00 00 00
+T 0A 01 0E 94 00 00 94 98 C4 98 01 E0 10 E0 74 DF
+R 00 00 00 00 12 04 00 00
+T 18 01 04 E2 8B DF 44 27 0A C0 00 27 87 DF 80 E0
+R 00 00 00 00 20 0E 03 00 02 00
+T 26 01 90 E0 E4 2F FF 27 E8 0F F9 1F 00 83 43 95
+R 00 00 00 00 40 02 03 00 02 00
+T 34 01 44 30 A0 F3 C4 9A 02 E0 10 E0 60 DF 94 9A
+R 00 00 00 00
+T 42 01 0E 94 00 00 08 95
+R 00 00 00 00 12 04 03 00
+T 48 01 D1 DF DF DF 0A E0 10 E0 57 DF 08 95
+R 00 00 00 00
+T 54 01 22 24 2B B8 88 E1 8A B9 86 E0 80 BD 83 E3
+R 00 00 00 00
+T 62 01 89 B9 20 BC 5B 9A 08 95
+R 00 00 00 00
+T 6A 01 0C B9 08 95
+R 00 00 00 00
+T 6E 01 2A E0 30 E0 00 91 00 00 11 27 0E 94 00 00
+R 00 00 00 00 00 08 03 00 12 0E 02 00
+T 7C 01 F8 01 80 E0 90 E0 E8 0F F9 1F 20 80 25 BA
+R 00 00 00 00 20 04 01 00 04 00 40 06 01 00 04 00
+T 8A 01 DC 9A DB 9A DA 9A D9 98 00 E5 10 E0 34 DF
+R 00 00 00 00
+T 98 01 D9 9A 2A E0 30 E0 00 91 00 00 11 27 0E 94
+R 00 00 00 00 00 0A 03 00
+T A6 01 00 00 F8 01 80 E0
+R 00 00 00 00 12 02 01 00 20 06 01 00 04 00
+T AC 01 90 E0 E8 0F F9 1F 20 80 25 BA DA 98 00 E5
+R 00 00 00 00 40 02 01 00 04 00
+T BA 01 10 E0 21 DF DA 9A 2A E0 30 E0 00 91 01 00
+R 00 00 00 00 00 0E 03 00
+T C8 01 11 27 0E 94 00 00 F8 01 80 E0
+R 00 00 00 00 12 06 02 00 20 0A 01 00 04 00
+T D2 01 90 E0 E8 0F F9 1F 20 80 25 BA DB 98 00 E5
+R 00 00 00 00 40 02 01 00 04 00
+T E0 01 10 E0 0E DF DB 9A 2A E0 30 E0 00 91 01 00
+R 00 00 00 00 00 0E 03 00
+T EE 01 11 27 0E 94 00 00 F8 01 80 E0
+R 00 00 00 00 12 06 01 00 20 0A 01 00 04 00
+T F8 01 90 E0 E8 0F F9 1F 20 80 25 BA DC 98 00 E5
+R 00 00 00 00 40 02 01 00 04 00
+T 06 02 10 E0 FB DE DC 9A 08 95
+R 00 00 00 00
+T 0E 02 82 EB 81 BB 83 EB 87 BB 8E E1 8A BB 8F EF
+R 00 00 00 00
+T 1C 02 84 BB 8B BB 95 9A 97 9A 03 DF 0A DF 12 DF
+R 00 00 00 00
+T 2A 02 94 DF 04 EF 11 E0 E7 DE 22 C0 89 DF 20 90
+R 00 00 00 00
+T 38 02 02 00 22 20 D1 F0 82 2D 89 32 29 F4 80 91
+R 00 00 00 00 00 02 03 00
+T 46 02 01 00 8E 5F 80 93 01 00 80 91 02 00 80 33
+R 00 00 00 00 00 02 03 00 00 08 03 00 00 0C 03 00
+T 54 02 29 F4 80 91 00 00 8D 5F 80 93 00 00 80 91
+R 00 00 00 00 00 06 03 00 00 0C 03 00
+T 62 02 02 00 81 33 29 F4 22 24 20 92 01 00 20 92
+R 00 00 00 00 00 02 03 00 00 0C 03 00
+T 70 02 00 00 7D DF 95 9A 97 9A DD CF 08 95
+R 00 00 00 00 00 02 03 00

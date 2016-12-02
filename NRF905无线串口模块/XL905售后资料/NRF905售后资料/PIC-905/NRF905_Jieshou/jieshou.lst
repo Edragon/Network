@@ -1,0 +1,732 @@
+
+
+HI-TECH Software PICC Macro Assembler V8.05PL1
+Serial number: HCPIC-88888                            Sat Jun 28 23:52:07 2008
+
+Licensed to: ONE TWO
+     1                           	processor	16F877A
+     2                           	opt	pw 79
+     3                           	psect	__Z88888RS_,global,delta=1
+     4                           	psect	rdata_0,global,class=BANK0,space=1,delta
+      +                          =1
+     5                           	psect	idata_0,global,class=CODE,delta=2
+     6                           	psect	text9,local,class=CODE,delta=2
+     7                           	psect	text11,local,class=CODE,delta=2
+     8                           	psect	rbss_0,global,class=BANK0,space=1,delta=
+      +                          1
+     9  0000                     
+    10  0000                     
+    11  0000                     
+    12  0000                     
+    13  0000                     
+    14  0000                     
+    15  0000                     
+    16  0000                     
+    17  0000                     
+    18  0000                     
+    19                           
+    20                           	psect	__Z88888RS_
+    21  0190                     
+    22  0190                     
+    23                           
+    24                           	psect	rdata_0
+    25  0045                     _RFConf
+    26  0045                     	ds	1
+    27  0046                     	ds	1
+    28  0047                     	ds	1
+    29  0048                     	ds	1
+    30  0049                     	ds	1
+    31  004A                     	ds	1
+    32  004B                     	ds	1
+    33  004C                     	ds	1
+    34  004D                     	ds	1
+    35  004E                     	ds	1
+    36  004F                     	ds	1
+    37                           
+    38                           	psect	idata_0
+    39  07F5  3400               	retlw	0
+    40  07F6  344C               	retlw	76
+    41  07F7  342C               	retlw	44
+    42  07F8  3444               	retlw	68
+    43  07F9  3420               	retlw	32
+    44  07FA  3420               	retlw	32
+    45  07FB  34CC               	retlw	-52
+    46  07FC  34CC               	retlw	-52
+    47  07FD  34CC               	retlw	-52
+    48  07FE  34CC               	retlw	-52
+    49  07FF  3458               	retlw	88
+    50                           
+    51                           	psect	text9
+    52                           ;jieshou.c: 162: void R_S_Byte(unsigned char R_
+      +                          Byte)
+    53                           ;jieshou.c: 163: {
+    54  072C                     _R_S_Byte
+    55                           ;	_R_Byte assigned to ?a_R_S_Byte+0
+    56  0000                     _R_S_Byte$R_Byte	set	?a_R_S_Byte
+    57                           ;_R_Byte stored from w
+    58  072C  0183               	clrf	3	;select bank 0
+    59  072D  00C2               	movwf	?a_R_S_Byte
+    60                           ;jieshou.c: 164: TXREG= R_Byte;
+    61  072E  0099               	movwf	25	;volatile
+    62                           ;jieshou.c: 165: }
+    63  072F  0008               	return
+    64                           ;jieshou.c: 106: void Config905(void)
+    65                           ;jieshou.c: 107: {
+    66  0730                     _Config905
+    67                           ;	_i assigned to ?a_Config905+0
+    68  0000                     _Config905$i	set	?a_Config905
+    69                           ;jieshou.c: 108: unsigned char i;
+    70  0730  0183               	clrf	3	;select bank 0
+    71  0731  1007               	bcf	7,0
+    72                           ;jieshou.c: 110: for (i=0;i<11;i++)
+    73  0732  01C2               	clrf	?a_Config905
+    74  0733                     l15
+    75                           ;jieshou.c: 111: {
+    76                           ;jieshou.c: 112: SpiReadSpiWrite(RFConf[i]);
+    77  0733  0842               	movf	?a_Config905,w
+    78  0734  3E45               	addlw	_RFConf
+    79  0735  0084               	movwf	4
+    80  0736  1383               	bcf	3,7
+    81  0737  0800               	movf	0,w
+    82  0738  2750               	fcall	_SpiReadSpiWrite
+    83                           ;jieshou.c: 113: }
+    84  0739  0AC2               	incf	?a_Config905
+    85  073A  300B               	movlw	11
+    86  073B  0242               	subwf	?a_Config905,w
+    87  073C  1C03               	btfss	3,0
+    88  073D  2F33               	goto	l15
+    89                           ;jieshou.c: 114: RC0=1;
+    90  073E  1407               	bsf	7,0
+    91                           ;jieshou.c: 115: }
+    92  073F  0008               	return
+    93                           ;jieshou.c: 64: void Spi_initial()
+    94                           ;jieshou.c: 65: {
+    95  0740                     _Spi_initial
+    96                           ;jieshou.c: 66: TRISC=TRISC&0xDF;
+    97  0740  1683               	bsf	3,5
+    98  0741  1303               	bcf	3,6	;carry unused
+    99  0742  1287               	bcf	7,5	;volatile
+   100                           ;jieshou.c: 67: TRISC=TRISC&0xF7;
+   101  0743  1187               	bcf	7,3	;volatile
+   102                           ;jieshou.c: 68: TRISC=TRISC|0x10;
+   103  0744  1607               	bsf	7,4	;volatile
+   104                           ;jieshou.c: 69: INTCON=0x00;
+   105  0745  018B               	clrf	11	;volatile
+   106                           ;jieshou.c: 70: PIR1=0x00;
+   107  0746  1283               	bcf	3,5
+   108  0747  018C               	clrf	12	;volatile
+   109                           ;jieshou.c: 71: SSPCON=0x20;
+   110  0748  3020               	movlw	32
+   111  0749  0094               	movwf	20	;volatile
+   112                           ;jieshou.c: 72: SSPSTAT=0xc0;
+   113  074A  30C0               	movlw	-64
+   114  074B  1683               	bsf	3,5
+   115  074C  0094               	movwf	20	;volatile
+   116                           ;jieshou.c: 73: SSPIF=0;
+   117  074D  1283               	bcf	3,5
+   118  074E  118C               	bcf	12,3
+   119                           ;jieshou.c: 74: }
+   120  074F  0008               	return
+   121                           ;jieshou.c: 76: unsigned char SpiReadSpiWrite(u
+      +                          nsigned char DATA)
+   122                           ;jieshou.c: 77: {
+   123  0750                     _SpiReadSpiWrite
+   124                           ;	_DATA assigned to ?a_SpiReadSpiWrite+0
+   125  0000                     _SpiReadSpiWrite$DATA	set	?a_SpiReadSpiWrite
+   126                           ;	_b assigned to ?a_SpiReadSpiWrite+1
+   127  0000                     _SpiReadSpiWrite$b	set	?a_SpiReadSpiWrite+1
+   128                           ;_DATA stored from w
+   129  0750  0183               	clrf	3	;select bank 0
+   130  0751  00C3               	movwf	?a_SpiReadSpiWrite
+   131                           ;jieshou.c: 78: unsigned char b;
+   132  0752  2740               	fcall	_Spi_initial
+   133                           ;jieshou.c: 80: SSPBUF=DATA;
+   134  0753  0843               	movf	?a_SpiReadSpiWrite,w
+   135  0754  0093               	movwf	19	;volatile
+   136                           ;jieshou.c: 82: while(SSPIF==0);
+   137  0755                     l10
+   138  0755  1D8C               	btfss	12,3
+   139  0756  2F55               	goto	l10
+   140                           ;jieshou.c: 83: SSPIF=0;
+   141  0757  118C               	bcf	12,3
+   142                           ;jieshou.c: 84: b=SSPBUF;
+   143  0758  0813               	movf	19,w	;volatile
+   144  0759  00C4               	movwf	?a_SpiReadSpiWrite+1
+   145                           ;jieshou.c: 86: }
+   146  075A  0008               	return
+   147  075B                     _Delay
+   148                           ;	_n assigned to ?a_Delay+0
+   149  0000                     _Delay$n	set	?a_Delay
+   150                           ;	_k assigned to ?a_Delay+1
+   151  0000                     _Delay$k	set	?a_Delay+1
+   152                           ;_n stored from w
+   153  075B  0183               	clrf	3	;select bank 0
+   154  075C  00C3               	movwf	?a_Delay
+   155                           ;jieshou.c: 59: unsigned char k;
+   156  075D  2F64               	goto	l2
+   157  075E                     l3
+   158                           ;jieshou.c: 61: for(k=0;k<80;k++);
+   159  075E  01C4               	clrf	?a_Delay+1
+   160  075F                     l5
+   161  075F  0AC4               	incf	?a_Delay+1
+   162  0760  3050               	movlw	80
+   163  0761  0244               	subwf	?a_Delay+1,w
+   164  0762  1C03               	btfss	3,0
+   165  0763  2F5F               	goto	l5
+   166  0764                     l2
+   167  0764  1283               	bcf	3,5
+   168  0765  1303               	bcf	3,6	;carry unused
+   169  0766  03C3               	decf	?a_Delay
+   170  0767  0F43               	incfsz	?a_Delay,w
+   171  0768  2F5E               	goto	l3
+   172  0769  0008               	return
+   173                           ;jieshou.c: 117: void SetRxMode(void)
+   174                           ;jieshou.c: 118: {
+   175  076A                     _SetRxMode
+   176                           ;jieshou.c: 119: RC1=0;
+   177  076A  0183               	clrf	3	;select bank 0
+   178  076B  1087               	bcf	7,1
+   179                           ;jieshou.c: 120: Delay(1);
+   180  076C  3001               	movlw	1
+   181  076D  275B               	fcall	_Delay
+   182                           ;jieshou.c: 121: RC2=1;
+   183  076E  1507               	bsf	7,2
+   184                           ;jieshou.c: 122: Delay(1);
+   185  076F  3001               	movlw	1
+   186  0770  2F5B               	ljmp	_Delay
+   187                           ;jieshou.c: 125: void RxPacket(void)
+   188                           ;jieshou.c: 126: {
+   189  0771                     _RxPacket
+   190                           ;	_i assigned to ?a_RxPacket+0
+   191  0000                     _RxPacket$i	set	?a_RxPacket
+   192                           ;jieshou.c: 127: unsigned char i;
+   193  0771  3001               	movlw	1
+   194  0772  275B               	fcall	_Delay
+   195                           ;jieshou.c: 129: RC2=0;
+   196  0773  1107               	bcf	7,2
+   197                           ;jieshou.c: 130: RC0=0;
+   198  0774  1007               	bcf	7,0
+   199                           ;jieshou.c: 131: Delay(1);
+   200  0775  3001               	movlw	1
+   201  0776  275B               	fcall	_Delay
+   202                           ;jieshou.c: 132: SpiReadSpiWrite(0x24);
+   203  0777  3024               	movlw	36
+   204  0778  2750               	fcall	_SpiReadSpiWrite
+   205                           ;jieshou.c: 133: for (i = 0 ;i < 32 ;i++)
+   206  0779  01C2               	clrf	?a_RxPacket
+   207  077A                     l20
+   208                           ;jieshou.c: 134: {
+   209                           ;jieshou.c: 135: TxRxBuffer[i]=SpiReadSpiWrite(
+      +                          0);
+   210  077A  0842               	movf	?a_RxPacket,w
+   211  077B  3E20               	addlw	_TxRxBuffer
+   212  077C  0084               	movwf	4
+   213  077D  1383               	bcf	3,7
+   214  077E  3000               	movlw	0
+   215  077F  2750               	fcall	_SpiReadSpiWrite
+   216  0780  1383               	bcf	3,7
+   217  0781  0080               	movwf	0
+   218                           ;jieshou.c: 136: }
+   219  0782  0AC2               	incf	?a_RxPacket
+   220  0783  3020               	movlw	32
+   221  0784  0242               	subwf	?a_RxPacket,w
+   222  0785  1C03               	btfss	3,0
+   223  0786  2F7A               	goto	l20
+   224                           ;jieshou.c: 137: RC0=1 ;
+   225  0787  1407               	bsf	7,0
+   226                           ;jieshou.c: 138: while (RB3||RB0);
+   227  0788                     l23
+   228  0788  1D86               	btfss	6,3
+   229  0789  1806               	btfsc	6,0
+   230  078A  2F88               	goto	l23
+   231                           ;jieshou.c: 139: RC2=1;
+   232  078B  1507               	bsf	7,2
+   233                           ;jieshou.c: 140: }
+   234  078C  0008               	return
+   235                           ;jieshou.c: 142: void RX(void)
+   236                           ;jieshou.c: 143: {
+   237  078D                     _RX
+   238                           ;jieshou.c: 144: SetRxMode();
+   239  078D  276A  120A  118A   	fcall	_SetRxMode
+   240                           ;jieshou.c: 145: while(RB0==0);
+   241  0790                     l27
+   242  0790  1C06               	btfss	6,0
+   243  0791  2F90               	goto	l27
+   244                           ;jieshou.c: 146: Delay(1);
+   245  0792  3001               	movlw	1
+   246  0793  275B               	fcall	_Delay
+   247                           ;jieshou.c: 147: RxPacket();
+   248  0794  2771               	fcall	_RxPacket
+   249                           ;jieshou.c: 148: Delay(1);
+   250  0795  3001               	movlw	1
+   251  0796  2F5B               	ljmp	_Delay
+   252                           ;jieshou.c: 88: void system_Init(void)
+   253                           ;jieshou.c: 89: {
+   254  0797                     _system_Init
+   255                           ;jieshou.c: 90: TRISA=0x00;
+   256  0797  1683               	bsf	3,5
+   257  0798  1303               	bcf	3,6	;carry unused
+   258  0799  0185               	clrf	5	;volatile
+   259                           ;jieshou.c: 91: TRISB=0x0D;
+   260  079A  300D               	movlw	13
+   261  079B  0086               	movwf	6	;volatile
+   262                           ;jieshou.c: 92: TRISC=0x90;
+   263  079C  3090               	movlw	-112
+   264  079D  0087               	movwf	7	;volatile
+   265                           ;jieshou.c: 93: TRISD=0x00;
+   266  079E  0188               	clrf	8	;volatile
+   267                           ;jieshou.c: 94: TRISE=0x00;
+   268  079F  0189               	clrf	9	;volatile
+   269                           ;jieshou.c: 95: ADCON1=0x07;
+   270  07A0  3007               	movlw	7
+   271  07A1  009F               	movwf	31	;volatile
+   272                           ;jieshou.c: 96: RC0=1;
+   273  07A2  1283               	bcf	3,5
+   274  07A3  1407               	bsf	7,0
+   275                           ;jieshou.c: 97: RC3=0;
+   276  07A4  1187               	bcf	7,3
+   277                           ;jieshou.c: 98: RB0=0;
+   278  07A5  1006               	bcf	6,0
+   279                           ;jieshou.c: 99: RB3=0;
+   280  07A6  1186               	bcf	6,3
+   281                           ;jieshou.c: 100: RB2=0;
+   282  07A7  1106               	bcf	6,2
+   283                           ;jieshou.c: 101: RB1=1;
+   284  07A8  1486               	bsf	6,1
+   285                           ;jieshou.c: 102: RC2=0;
+   286  07A9  1107               	bcf	7,2
+   287                           ;jieshou.c: 103: RC1=0;
+   288  07AA  1087               	bcf	7,1
+   289                           ;jieshou.c: 104: }
+   290  07AB  0008               	return
+   291                           ;jieshou.c: 151: void StartUART(void)
+   292                           ;jieshou.c: 152: {
+   293  07AC                     _StartUART
+   294                           ;jieshou.c: 153: TXSTA=0x04;
+   295  07AC  3004               	movlw	4
+   296  07AD  1683               	bsf	3,5
+   297  07AE  1303               	bcf	3,6	;carry unused
+   298  07AF  0098               	movwf	24	;volatile
+   299                           ;jieshou.c: 154: SPBRG=103;
+   300  07B0  3067               	movlw	103
+   301  07B1  0099               	movwf	25	;volatile
+   302                           ;jieshou.c: 155: PIE1=0;
+   303  07B2  018C               	clrf	12	;volatile
+   304                           ;jieshou.c: 156: RCSTA=0x80;
+   305  07B3  3080               	movlw	-128
+   306  07B4  1283               	bcf	3,5
+   307  07B5  0098               	movwf	24	;volatile
+   308                           ;jieshou.c: 157: TRISC=TRISC|0X80;
+   309  07B6  1683               	bsf	3,5
+   310  07B7  1787               	bsf	7,7	;volatile
+   311                           ;jieshou.c: 158: TRISC=TRISC&0XBF;
+   312  07B8  1307               	bcf	7,6	;volatile
+   313                           ;jieshou.c: 159: TXEN=1;
+   314  07B9  1698               	bsf	24,5
+   315                           ;jieshou.c: 160: }
+   316  07BA  1283               	bcf	3,5
+   317  07BB  0008               	return
+   318                           ;jieshou.c: 167: void main(void)
+   319                           ;jieshou.c: 168: {
+   320  07BC                     _main
+   321                           ;	_count assigned to ?a_main+0
+   322  0000                     _main$count	set	?a_main
+   323                           ;	_i assigned to ?a_main+1
+   324  0000                     _main$i	set	?a_main+1
+   325                           ;jieshou.c: 169: char i,count;
+   326  07BC  30FF               	movlw	-1
+   327  07BD  1283               	bcf	3,5
+   328  07BE  1303               	bcf	3,6	;carry unused
+   329  07BF  0089               	movwf	9	;volatile
+   330                           ;jieshou.c: 171: PORTD=0xff;
+   331  07C0  0088               	movwf	8	;volatile
+   332                           ;jieshou.c: 173: StartUART();
+   333  07C1  27AC               	fcall	_StartUART
+   334                           ;jieshou.c: 174: system_Init();
+   335  07C2  2797               	fcall	_system_Init
+   336                           ;jieshou.c: 175: Delay(10);
+   337  07C3  300A               	movlw	10
+   338  07C4  275B               	fcall	_Delay
+   339                           ;jieshou.c: 176: Config905();
+   340  07C5  2730               	fcall	_Config905
+   341                           ;jieshou.c: 177: RB7=0;RB6=0;RB5=0;RB4=0;
+   342  07C6  1386               	bcf	6,7
+   343  07C7  1306               	bcf	6,6
+   344  07C8  1286               	bcf	6,5
+   345  07C9  1206               	bcf	6,4
+   346                           ;jieshou.c: 193: }
+   347  07CA  2FD1               	goto	l34
+   348  07CB                     l43
+   349                           ;jieshou.c: 195: {
+   350                           ;jieshou.c: 197: PORTD= 0xbf;
+   351  07CB  30BF               	movlw	-65
+   352  07CC  2FD0               	goto	L2
+   353                           ;jieshou.c: 198: break;
+   354  07CD                     l44
+   355                           ;jieshou.c: 199: case 0x02:
+   356                           ;jieshou.c: 201: PORTD= 0xf7;
+   357  07CD  30F7               	movlw	-9
+   358  07CE  2FD0               	goto	L2
+   359                           ;jieshou.c: 202: break;
+   360  07CF                     l45
+   361                           ;jieshou.c: 203: case 0x03:
+   362                           ;jieshou.c: 204: PORTD= 0xfe;
+   363  07CF  30FE               	movlw	-2
+   364  07D0                     L2
+   365  07D0  0088               	movwf	8	;volatile
+   366                           ;jieshou.c: 205: break;
+   367                           ;jieshou.c: 206: default: break;
+   368  07D1                     l34
+   369                           ;jieshou.c: 178: while(1)
+   370                           ;jieshou.c: 179: {
+   371  07D1  278D  120A  118A   	fcall	_RX
+   372                           ;jieshou.c: 181: if(TxRxBuffer[0])
+   373  07D4  08A0               	movf	_TxRxBuffer
+   374  07D5  1903               	btfsc	3,2
+   375  07D6  2FE5               	goto	l36
+   376                           ;jieshou.c: 182: {
+   377  07D7  01C1               	clrf	?a_main+1
+   378  07D8                     l37
+   379                           ;jieshou.c: 184: {
+   380                           ;jieshou.c: 185: R_S_Byte(TxRxBuffer[i]);
+   381  07D8  0841               	movf	?a_main+1,w
+   382  07D9  3E20               	addlw	_TxRxBuffer
+   383  07DA  0084               	movwf	4
+   384  07DB  1383               	bcf	3,7
+   385  07DC  0800               	movf	0,w
+   386  07DD  272C               	fcall	_R_S_Byte
+   387                           ;jieshou.c: 186: Delay(20);
+   388  07DE  3014               	movlw	20
+   389  07DF  275B               	fcall	_Delay
+   390                           ;jieshou.c: 187: }
+   391  07E0  0AC1               	incf	?a_main+1
+   392  07E1  3020               	movlw	32
+   393  07E2  0241               	subwf	?a_main+1,w
+   394  07E3  1C03               	btfss	3,0
+   395  07E4  2FD8               	goto	l37
+   396  07E5                     l36
+   397                           ;jieshou.c: 188: }
+   398  07E5  0AC0               	incf	?a_main
+   399                           ;jieshou.c: 190: if(count==4)
+   400  07E6  0840               	movf	?a_main,w
+   401  07E7  3A04               	xorlw	4
+   402  07E8  1903               	btfsc	3,2
+   403                           ;jieshou.c: 191: {
+   404  07E9  01C0               	clrf	?a_main
+   405  07EA  0840               	movf	?a_main,w
+   406  07EB  3A01               	xorlw	1
+   407  07EC  1903               	btfsc	3,2
+   408  07ED  2FCB               	goto	l43
+   409  07EE  3A03               	xorlw	3
+   410  07EF  1903               	btfsc	3,2
+   411  07F0  2FCD               	goto	l44
+   412  07F1  3A01               	xorlw	1
+   413  07F2  1903               	btfsc	3,2
+   414  07F3  2FCF               	goto	l45
+   415  07F4  2FD1               	goto	l34
+   416                           
+   417                           	psect	text11
+   418  0000                     
+   419  0000                     
+   420  0000                     
+   421  0000                     
+   422  0000                     
+   423  0000                     
+   424  0000                     
+   425  0000                     
+   426  0000                     
+   427  0000                     
+   428  0000                     
+   429  0000                     
+   430  0000                     
+   431  0000                     
+   432  0000                     
+   433  0000                     
+   434  0000                     
+   435  0000                     
+   436  0000                     
+   437  0000                     
+   438  0000                     
+   439  0000                     
+   440  0000                     
+   441  0000                     
+   442  0000                     
+   443  0000                     
+   444  0000                     
+   445  0000                     
+   446  0000                     
+   447  0000                     
+   448  0000                     
+   449  0000                     
+   450  0000                     
+   451  0000                     
+   452  0000                     
+   453  0000                     
+   454  0000                     
+   455  0000                     
+   456  0000                     
+   457  0000                     
+   458  0000                     
+   459  0000                     
+   460  0000                     
+   461  0000                     
+   462  0000                     
+   463  0000                     
+   464  0000                     
+   465  0000                     
+   466  0000                     
+   467  0000                     
+   468  0000                     
+   469  0000                     
+   470  0000                     
+   471  0000                     
+   472  0000                     
+   473  0000                     
+   474  0000                     
+   475  0000                     
+   476  0000                     
+   477  0000                     
+   478  0000                     
+   479  0000                     
+   480  0000                     
+   481  0000                     
+   482  0000                     
+   483  0000                     
+   484  0000                     
+   485  0000                     
+   486  0000                     
+   487  0000                     
+   488  0000                     
+   489  0000                     
+   490  0000                     
+   491  0000                     
+   492  0000                     
+   493  0000                     
+   494  0000                     
+   495  0000                     
+   496  0000                     
+   497  0000                     
+   498  0000                     
+   499  0000                     
+   500  0000                     
+   501  0000                     
+   502  0000                     
+   503  0000                     
+   504  0000                     
+   505  0000                     
+   506  0000                     
+   507  0000                     
+   508  0000                     
+   509  0000                     
+   510  0000                     
+   511  0000                     
+   512  0000                     
+   513  0000                     
+   514  0000                     
+   515  0000                     
+   516  0000                     
+   517  0000                     
+   518  0000                     
+   519  0000                     
+   520  0000                     
+   521  0000                     
+   522  0000                     
+   523  0000                     
+   524  0000                     
+   525  0000                     
+   526  0000                     
+   527  0000                     
+   528  0000                     
+   529  0000                     
+   530  0000                     
+   531  0000                     
+   532  0000                     
+   533  0000                     
+   534  0000                     
+   535  0000                     
+   536  0000                     
+   537  0000                     
+   538  0000                     
+   539  0000                     
+   540  0000                     
+   541  0000                     
+   542  0000                     
+   543  0000                     
+   544  0000                     
+   545  0000                     
+   546  0000                     
+   547  0000                     
+   548  0000                     
+   549  0000                     
+   550  0000                     
+   551  0000                     
+   552  0000                     
+   553  0000                     
+   554  0000                     
+   555  0000                     
+   556  0000                     
+   557  0000                     
+   558  0000                     
+   559  0000                     
+   560  0000                     
+   561  0000                     
+   562  0000                     
+   563  0000                     
+   564  0000                     
+   565  0000                     
+   566  0000                     
+   567  0000                     
+   568  0000                     
+   569  0000                     
+   570  0000                     
+   571  0000                     
+   572  0000                     
+   573  0000                     
+   574  0000                     
+   575  0000                     
+   576  0000                     
+   577  0000                     
+   578  0000                     
+   579  0000                     
+   580  0000                     
+   581  0000                     
+   582  0000                     
+   583  0000                     
+   584  0000                     
+   585  0000                     
+   586  0000                     
+   587  0000                     
+   588  0000                     
+   589  0000                     
+   590  0000                     
+   591  0000                     
+   592  0000                     
+   593  0000                     
+   594  0000                     
+   595  0000                     
+   596  0000                     
+   597  0000                     
+   598  0000                     
+   599  0000                     
+   600  0000                     
+   601  0000                     
+   602  0000                     
+   603  0000                     
+   604  0000                     
+   605  0000                     
+   606  0000                     
+   607  0000                     
+   608  0000                     
+   609  0000                     
+   610  0000                     
+   611  0000                     
+   612  0000                     
+   613  0000                     
+   614  0000                     
+   615  0000                     
+   616  0000                     
+   617  0000                     
+   618  0000                     
+   619  0000                     
+   620  0000                     
+   621  0000                     
+   622  0000                     
+   623  0000                     
+   624  0000                     
+   625  0000                     
+   626  0000                     
+   627  0000                     
+   628  0000                     
+   629  0000                     
+   630  0000                     
+   631  0000                     
+   632  0000                     
+   633  0000                     
+   634  0000                     
+   635  0000                     
+   636  0000                     
+   637  0000                     
+   638  0000                     
+   639  0000                     
+   640  0000                     
+   641  0000                     
+   642  0000                     
+   643  0000                     
+   644  0000                     
+   645  0000                     
+   646  0000                     
+   647  0000                     
+   648  0000                     
+   649  0000                     
+   650  0000                     
+   651  0000                     
+   652  0000                     
+   653  0000                     
+   654  0000                     
+   655  0000                     
+   656  0000                     
+   657  0000                     
+   658  0000                     
+   659  0000                     
+   660  0000                     
+   661  0000                     
+   662  0000                     
+   663  0000                     
+   664  0000                     
+   665  0000                     
+   666  0000                     
+   667  0000                     
+   668  0000                     
+   669  0000                     
+   670  0000                     
+   671  0000                     
+   672  0000                     
+   673  0000                     
+   674  0000                     
+   675  0000                     
+   676  0000                     
+   677  0000                     
+   678  0000                     
+   679  0000                     
+   680  0000                     
+   681  0000                     
+   682  0000                     
+   683  0000                     
+   684  0000                     
+   685  0000                     
+   686  0000                     
+   687  0000                     
+   688  0000                     
+   689  0000                     
+   690  0000                     
+   691  0000                     
+   692  0000                     
+   693  0000                     
+   694                           
+   695                           	psect	rbss_0
+   696  0020                     _TxRxBuffer
+   697  0020                     	ds	32
+
+
+HI-TECH Software PICC Macro Assembler V8.05PL1
+Symbol Table                                          Sat Jun 28 23:52:07 2008
+
+              ?a_main 0040                     l2 0764  
+                   l3 075E                     l5 075F  
+          ?a_R_S_Byte 0042                    l10 0755  
+                  l20 077A                    l23 0788  
+                  l15 0733                    l34 07D1  
+                  l43 07CB                    l27 0790  
+                  l44 07CD                    l36 07E5  
+                  l45 07CF                    l37 07D8  
+                  _RX 078D                    fsr 0004  
+         _system_Init 0797                _RFConf 0045  
+   ?a_SpiReadSpiWrite 0043           ?a_Config905 0042  
+          ?a_RxPacket 0042                  _main 07BC  
+           _Config905 0730                  start 0004  
+          _TxRxBuffer 0020                 _Delay 075B  
+           _SetRxMode 076A              _R_S_Byte 072C  
+     _SpiReadSpiWrite 0750                 status 0003  
+           copy_bank0 0008             _StartUART 07AC  
+            _RxPacket 0771            clear_bank0 0004  
+         _Spi_initial 0740               ?a_Delay 0043  

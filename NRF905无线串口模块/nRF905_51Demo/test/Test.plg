@@ -1,0 +1,15 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+E:\Ä£¿éÀý³ÌDEMO\nRF905_51Demo\test\Test.uv2
+Project File Date:  10/17/2007
+
+<h2>Output:</h2>
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+compiling nRF905.C...
+nRF905\nRF905.C - 0 Error(s), 0 Warning(s).
+compiling SPI.c...
+SPI\SPI.c - 0 Error(s), 0 Warning(s).

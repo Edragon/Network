@@ -1,0 +1,97 @@
+#include "SPI.h"
+
+unsigned  char DATA_BUF;
+#define DATA7	((DATA_BUF&BYTE_BIT7) != 0)
+#define DATA0   ((DATA_BUF&BYTE_BIT0) != 0)
+//sbit	flag	=DATA_BUF^7;	//考虑到某些不支持 sbit 类型
+//sbit	flag1	=DATA_BUF^0;
+
+	  /*
+
+//<附带主机指令的SPI写操作>
+void SpiCmdWrite(unsigned char command,unsigned char WriteBuf[],unsigned char len)
+{
+	unsigned char i;					
+
+	SPI_CSN=0;						// Spi enable for write a spi command
+	SpiWrite(command);				// Write config command写放配置命令
+	for (i=0;i<len;i++)	// Write configration words  写放配置字
+	{
+		SpiWrite(WriteBuf[i]);
+	}
+	SPI_CSN=1;						// Disable Spi
+}
+
+//<附带主机指令的SPI读操作>
+void SpiCmdRead(unsigned char command,unsigned char ReadBuf[],unsigned char len)
+{
+
+	unsigned char i;
+	SPI_CSN=0;						// Spi enable for write a spi command
+	SpiWrite(command);				// Read payload command	
+	for (i = 0 ;i < len ;i++)
+	{
+		ReadBuf[i]=SpiRead();		// Read data and save to buffer		
+	}
+	SPI_CSN=1;						// Disable spi
+
+}
+*/
+
+
+void SpiInit(void)
+{
+//	SPI_MOSI_DDR = 1;
+//	SPI_MISO_DDR = 0;
+//	SPI_SCK_DDR  = 1;
+//	SPI_CSN_DDR  = 1;
+
+	CSN=1;	// Spi 	disable	
+	SCK=0;	// Spi clock line init low	
+}
+
+
+unsigned char SpiRead(void)
+{
+	unsigned char i;
+	for (i=0;i<8;i++)
+	{
+		DATA_BUF=DATA_BUF<<1;
+		SCK=1;
+		//OED&=0XFD;			//	DATA=1;		//设置为输入状态
+		if (MISO)	//读取最高位，保存至最末尾，通过左移位完成整个字节
+		{
+			DATA_BUF|=BYTE_BIT0;
+		}
+		else
+		{
+			DATA_BUF&=~BYTE_BIT0;
+		}
+		//OED|=0X02;
+		SCK=0;
+	 }
+	 return DATA_BUF;
+}
+
+void SpiWrite(unsigned char send)
+{
+	unsigned char i;
+	DATA_BUF=send;
+	for (i=0;i<8;i++)
+	{
+		if (DATA7)	//总是发送最高位
+		{
+			MOSI=1;
+		}
+		else
+		{
+			MOSI=0;
+		}
+		SCK=1;
+		DATA_BUF=DATA_BUF<<1;
+		SCK=0;
+	}
+}
+
+
+

@@ -1,0 +1,29 @@
+<html>
+<body>
+<pre>
+<h1>礦ision2 Build Log</h1>
+<h2>Project:</h2>
+F:\JASK\无线程序资料大全\905程序大全\RF905-无线调试板开发包\新建文件夹\51-RF905评估代码(C语言)\FASONG.uv2
+Project File Date:  05/20/2009
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling Fasong.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDR?FASONG
+Program Size: data=29.0 xdata=0 code=610
+creating hex file from "FASONG"...
+"FASONG" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling Fasong.c...
+FASONG.C(105): error C141: syntax error near '--'
+Target not created
+Build target 'Target 1'
+compiling Fasong.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?CHECKDR?FASONG
+Program Size: data=29.0 xdata=0 code=615
+creating hex file from "FASONG"...
+"FASONG" - 0 Error(s), 1 Warning(s).

@@ -1,0 +1,254 @@
+_TX 727 0 CODE
+__S0 2100 0
+__S1 190 0
+__H__Z88888RS_ 190 0
+__L__Z88888RS_ 190 0
+_SetTxMode 793 0 CODE
+_main 7BD 0 CODE
+_exit 4 0 CODE
+start 4 0 CODE
+__Hintsave_0 190 0
+__Lintsave_0 190 0
+__Hintcode 4 0 CODE
+__Lintcode 4 0 CODE
+__Hintsave_1 190 0
+__Lintsave_1 190 0
+_Delay 748 0 CODE
+__Hintsave_2 190 0
+__Lintsave_2 190 0
+__Hintsave 190 0
+__Lintsave 190 0
+__Hintsave_3 190 0
+__Lintsave_3 190 0
+__Hcode 190 0
+__Lcode 190 0
+_RFConf 47 0 BANK0
+__Hstrings 34 0 STRING
+__Lstrings 34 0 STRING
+__Htemp 71 0 BANK0
+?a_R_S_Byte 20 0 BANK0
+__Ltemp 70 0 BANK0
+__Hinit D 0 CODE
+__Linit 4 0 CODE
+powerup 0 0 CODE
+__Htext 190 0
+__Ltext 190 0
+_TxAddress 43 0 BANK0
+__Hpowerup 4 0 CODE
+__Lpowerup 0 0 CODE
+__Hvectors 34 0 CODE
+__Lvectors 34 0 CODE
+__Hclrtext 1E 0 CODE
+__Lclrtext 11 0 CODE
+used_code_ptr 1 0
+string_table 1E 0 ENTRY
+?a_TxPacket 20 0 BANK0
+_TxRxBuf 23 0 BANK0
+__Hidloc 2000 0 IDLOC
+__Lidloc 2000 0 IDLOC
+_SpiReadSpiWrite 73D 0 CODE
+__Hpstrings 34 0 CODE
+__Lpstrings 34 0 CODE
+__Hend_init 11 0 CODE
+__Lend_init D 0 CODE
+__Hnvram 52 0 BANK0
+__Lnvram 52 0 BANK0
+?a_Delay 21 0 BANK0
+code_ptr 52 0 BANK0
+__Hfloat_text0 34 0 CODE
+__Lfloat_text0 34 0 CODE
+__Hcode_ptr 54 0 BANK0
+__Lcode_ptr 52 0 BANK0
+_Spi_initial 72F 0 CODE
+__Hinit23 D 0 CODE
+__Linit23 D 0 CODE
+__Hfloat_text1 34 0 CODE
+__Lfloat_text1 34 0 CODE
+__Brbit_0 20 FFFFFF20 BANK0
+__Hrbit_0 100 FFFFFF20 BANK0
+__Lrbit_0 100 FFFFFF20 BANK0
+__Brbit_1 A0 FFFFFBA0 BANK1
+__Hrbss_0 23 0 BANK0
+__Hrbit_1 500 FFFFFBA0 BANK1
+__Lrbss_0 20 0 BANK0
+__Lrbit_1 500 FFFFFBA0 BANK1
+__Brbit_2 110 FFFFF890 BANK2
+__Hrbss_1 A0 0 BANK1
+__Hrbit_2 880 FFFFF890 BANK2
+__Lrbss_1 A0 0 BANK1
+__Lrbit_2 880 FFFFF890 BANK2
+__Brbit_3 190 FFFFF510 BANK3
+__Hrbss_2 110 0 BANK2
+__Hrbit_3 C80 FFFFF510 BANK3
+__Lrbss_2 110 0 BANK2
+__Lrbit_3 C80 FFFFF510 BANK3
+__Hrbss_3 190 0 BANK3
+__Lrbss_3 190 0 BANK3
+__Hintentry 4 0 CODE
+__Lintentry 4 0 CODE
+intlevel0 4 0 CODE
+?a_Config905 20 0 BANK0
+intlevel1 4 0 CODE
+__Hfloat_text2 34 0 CODE
+__Lfloat_text2 34 0 CODE
+_system_Init 798 0 CODE
+string_indir 21 0 ENTRY
+copy_data 11 0 CODE
+__Hconfig 2007 0 CONFIG
+__Lconfig 2007 0 CONFIG
+_R_S_Byte 723 0 CODE
+__Hfloat_text3 34 0 CODE
+__Lfloat_text3 34 0 CODE
+_TxPacket 769 0 CODE
+__Hintret 4 0 CODE
+__Lintret 4 0 CODE
+__Hstruct 54 0 BANK0
+__Lstruct 54 0 BANK0
+_Config905 757 0 CODE
+__Hfloat_text4 34 0 CODE
+__Lfloat_text4 34 0 CODE
+?a_SpiReadSpiWrite 21 0 BANK0
+__Hcommon_ram 190 0
+__Lcommon_ram 190 0
+__Hidata_0 800 0 CODE
+__Lidata_0 7D1 0 CODE
+__Hrdata_0 52 0 BANK0
+__Lrdata_0 23 0 BANK0
+__Hidata_1 34 0 CODE
+__Lidata_1 34 0 CODE
+__Heeprom_data 2100 0 EEDATA
+__Leeprom_data 2100 0 EEDATA
+__Hrdata_1 A0 0 BANK1
+__Lrdata_1 A0 0 BANK1
+__Hidata_2 34 0 CODE
+__Lidata_2 34 0 CODE
+__Hrdata_2 110 0 BANK2
+__Lrdata_2 110 0 BANK2
+__Hidata_3 34 0 CODE
+__Lidata_3 34 0 CODE
+__Hrdata_3 190 0 BANK3
+__Lrdata_3 190 0 BANK3
+__Hnvram_1 A0 0 BANK1
+__Lnvram_1 A0 0 BANK1
+__Bnvbit_0 52 FFFFFDC2 BANK0
+__Hnvbit_0 290 FFFFFDC2 BANK0
+__Lnvbit_0 290 FFFFFDC2 BANK0
+__Hnvram_2 110 0 BANK2
+__Lnvram_2 110 0 BANK2
+__Bnvbit_1 A0 FFFFFBA0 BANK1
+__Hnvbit_1 500 FFFFFBA0 BANK1
+__Lnvbit_1 500 FFFFFBA0 BANK1
+__Hnvram_3 190 0 BANK3
+__Lnvram_3 190 0 BANK3
+__Bnvbit_2 110 FFFFF890 BANK2
+__Hnvbit_2 880 FFFFF890 BANK2
+__Lnvbit_2 880 FFFFF890 BANK2
+__Bnvbit_3 190 FFFFF510 BANK3
+__Hnvbit_3 C80 FFFFF510 BANK3
+__Lnvbit_3 C80 FFFFF510 BANK3
+copy_bank0 4 0 CODE
+__Hstringtable 34 0 ENTRY
+__Lstringtable 1E 0 ENTRY
+_StartUART 7AD 0 CODE
+%segments
+powerup 0 7 CODE
+intentry 8 67 CODE
+rbit_0 100 133 BANK0
+idata_0 FA2 FFF CODE
+temp 70 70 COMBANK
+text1 E5E FA1 CODE
+text7 E4E E5D CODE
+text9 E46 E4D CODE
+%locals
+F:\mplabProgram\PIC-NRF905\232Weirless\NRF905_Fasong\fasong.obj
+fsr 4
+status 3
+F:\mplabProgram\PIC-NRF905\232Weirless\NRF905_Fasong\fasong.c
+74 72F 0 CODE
+75 730 0 CODE
+76 733 0 CODE
+77 735 0 CODE
+78 738 0 CODE
+79 73A 0 CODE
+80 73C 0 CODE
+83 73D 0 CODE
+85 73D 0 CODE
+86 740 0 CODE
+91 742 0 CODE
+92 744 0 CODE
+93 745 0 CODE
+95 747 0 CODE
+66 748 0 CODE
+68 748 0 CODE
+69 74B 0 CODE
+68 751 0 CODE
+116 757 0 CODE
+118 757 0 CODE
+119 759 0 CODE
+121 75B 0 CODE
+123 75C 0 CODE
+121 762 0 CODE
+125 767 0 CODE
+126 768 0 CODE
+129 769 0 CODE
+131 769 0 CODE
+132 76B 0 CODE
+133 76D 0 CODE
+134 76F 0 CODE
+136 770 0 CODE
+134 776 0 CODE
+138 77B 0 CODE
+139 77C 0 CODE
+140 77E 0 CODE
+141 77F 0 CODE
+142 781 0 CODE
+144 782 0 CODE
+142 788 0 CODE
+146 78D 0 CODE
+147 78E 0 CODE
+148 78F 0 CODE
+149 791 0 CODE
+150 792 0 CODE
+154 793 0 CODE
+155 795 0 CODE
+156 796 0 CODE
+99 798 0 CODE
+100 79B 0 CODE
+101 79D 0 CODE
+102 79F 0 CODE
+103 7A0 0 CODE
+104 7A1 0 CODE
+105 7A3 0 CODE
+106 7A5 0 CODE
+107 7A6 0 CODE
+108 7A7 0 CODE
+109 7A8 0 CODE
+110 7A9 0 CODE
+111 7AA 0 CODE
+112 7AB 0 CODE
+113 7AC 0 CODE
+167 7AD 0 CODE
+168 7B1 0 CODE
+169 7B3 0 CODE
+170 7B4 0 CODE
+171 7B7 0 CODE
+172 7B9 0 CODE
+173 7BA 0 CODE
+174 7BB 0 CODE
+184 7BD 0 CODE
+185 7C1 0 CODE
+186 7C3 0 CODE
+187 7C4 0 CODE
+188 7C5 0 CODE
+189 7C6 0 CODE
+F:\mplabProgram\PIC-NRF905\232Weirless\NRF905_Fasong\fasong.c
+161 7CA 0 CODE
+F:\mplabProgram\PIC-NRF905\232Weirless\NRF905_Fasong\fasong.c
+162 7CD 0 CODE
+F:\mplabProgram\PIC-NRF905\232Weirless\NRF905_Fasong\fasong.c
+190 7D0 0 CODE
+161 727 0 CODE
+162 72C 0 CODE
+177 723 0 CODE
+178 725 0 CODE
+179 726 0 CODE

@@ -1,0 +1,261 @@
+XL
+H 3 areas E global symbols
+M jfp_fasong.c
+S push_gset1 Ref0000
+S pop_gset1 Ref0000
+A text size 110 flags 0
+dbfile C:\DOCUME~1\Administrator\桌面\JASK2001软件开发包\M16-NRF905开发包\无线232传输系统\NRF905_发送\jfp_fasong.c
+dbfunc e Delay 0 fV
+dbsym r i 14 i
+dbsym r x 10 i
+dbline FFFFFFFF 4
+dbline 59 4
+dbline 5C 6
+dbline 5C C
+dbline 5C C
+dbline 5C 10
+dbline 5B 18
+dbline FFFFFFFE 26
+dbline 0 2A
+dbfunc e Spi_initial 2C fV
+dbline FFFFFFFF 2C
+dbline 60 2C
+dbline 63 2C
+dbline FFFFFFFE 30
+dbline 0 30
+dbfunc e SpiReadSpiWrite 32 fc
+dbsym r cData 10 c
+dbline FFFFFFFF 32
+dbline 67 32
+dbline 68 32
+dbline 6A 34
+dbline 6A 34
+dbline 69 34
+dbline 6A 38
+dbline 6B 38
+dbline FFFFFFFE 3A
+dbline 0 3A
+dbfunc e system_Init 3C fV
+dbline FFFFFFFF 3C
+dbline 6F 3C
+dbline 71 3C
+dbline 71 3E
+dbline 72 3E
+dbline 72 40
+dbline 73 40
+dbline 73 42
+dbline 74 42
+dbline 74 44
+dbline 75 44
+dbline 75 46
+dbline 76 46
+dbline 76 48
+dbline 77 48
+dbline 77 4A
+dbline 78 4A
+dbline 78 4C
+dbline FFFFFFFE 4C
+dbline 0 4C
+dbfunc e Config905 4E fV
+dbsym r i 14 c
+dbline FFFFFFFF 52
+dbline 7C 52
+dbline 7E 52
+dbline 7E 54
+dbline 7F 54
+dbline 81 5A
+dbline 82 5E
+dbline 83 5E
+dbline 84 6E
+dbline 81 6E
+dbline 81 70
+dbline 85 74
+dbline 85 76
+dbline FFFFFFFE 76
+dbline 0 7A
+dbfunc e TxPacket 7C fV
+dbsym r i 14 c
+dbline FFFFFFFF 80
+dbline 89 80
+dbline 8B 80
+dbline 8B 82
+dbline 8C 82
+dbline 8D 88
+dbline 8E 8C
+dbline 8F 90
+dbline 90 90
+dbline 91 A0
+dbline 8E A0
+dbline 8E A2
+dbline 92 A6
+dbline 92 A8
+dbline 93 A8
+dbline 94 AE
+dbline 94 B0
+dbline 95 B0
+dbline 96 B4
+dbline 97 B8
+dbline 98 B8
+dbline 99 C8
+dbline 96 C8
+dbline 96 CA
+dbline 9A CE
+dbline 9A D0
+dbline 9B D0
+dbline 9B D2
+dbline 9C D2
+dbline 9D D8
+dbline 9D DA
+dbline FFFFFFFE DA
+dbline 0 DE
+dbfunc e SetTxMode E0 fV
+dbline FFFFFFFF E0
+dbline A1 E0
+dbline A2 E0
+dbline A2 E2
+dbline A3 E2
+dbline A3 E4
+dbline A4 E4
+dbline FFFFFFFE EA
+dbline 0 EA
+dbfunc e TX EC fV
+dbline FFFFFFFF EC
+dbline A8 EC
+dbline A9 EC
+dbline AA EE
+dbline FFFFFFFE F0
+dbline 0 F0
+dbfunc e main F2 fV
+dbline FFFFFFFF F2
+dbline AE F2
+dbline AF F2
+dbline B0 F6
+dbline B1 FA
+dbline B3 FE
+dbline B3 100
+dbline B4 100
+dbline B6 102
+dbline B7 104
+dbline B8 106
+dbline BB 10A
+dbline BC 10A
+dbline BD 10C
+dbline BA 10C
+dbline FFFFFFFE 10E
+dbline 0 10E
+S _main Def00F2
+S _TX Def00EC
+S _SpiReadSpiWrite Def0032
+S _Delay Def0000
+S _Config905 Def004E
+S _TxPacket Def007C
+S _Spi_initial Def002C
+S _SetTxMode Def00E0
+S _system_Init Def003C
+A data size 2F flags 20
+dbfile C:\DOCUME~1\Administrator\桌面\JASK2001软件开发包\M16-NRF905开发包\无线232传输系统\NRF905_发送\jfp_fasong.c
+dbsym e TxRxBuf 0 A[32:32]c
+dbsym e TxAddress 20 A[4:4]c
+dbsym e RFConf 24 A[11:11]c
+S _TxRxBuf Def0000
+S _RFConf Def0024
+S _TxAddress Def0020
+A idata size 2F flags 0
+T 00 00 01 02
+R 00 00 02 00
+T 02 00 03 04
+R 00 00 02 00
+T 04 00 05 06
+R 00 00 02 00
+T 06 00 07 08
+R 00 00 02 00
+T 08 00 09 10
+R 00 00 02 00
+T 0A 00 11 12
+R 00 00 02 00
+T 0C 00 13 14
+R 00 00 02 00
+T 0E 00 15 16
+R 00 00 02 00
+T 10 00 17 18
+R 00 00 02 00
+T 12 00 19 20
+R 00 00 02 00
+T 14 00 21 22
+R 00 00 02 00
+T 16 00 23 24
+R 00 00 02 00
+T 18 00 25 26
+R 00 00 02 00
+T 1A 00 27 28
+R 00 00 02 00
+T 1C 00 29 30
+R 00 00 02 00
+T 1E 00 31 32
+R 00 00 02 00
+T 20 00 CC CC
+R 00 00 02 00
+T 22 00 CC CC
+R 00 00 02 00
+T 24 00 00 4C
+R 00 00 02 00
+T 26 00 0C 44
+R 00 00 02 00
+T 28 00 20 20
+R 00 00 02 00
+T 2A 00 CC CC
+R 00 00 02 00
+T 2C 00 CC CC
+R 00 00 02 00
+T 2E 00 58
+R 00 00 02 00
+T 00 00 0E 94 00 00 09 C0 44 27 55 27 02 C0 4F 5F
+R 00 00 00 00 12 04 00 00
+T 0E 00 5F 4F 40 35 E0 E0 5E 07 D0 F3 18 01 01 50
+R 00 00 00 00
+T 1C 00 10 40 22 20 91 F7 33 20 81 F7 0E 94 00 00
+R 00 00 00 00 12 0E 01 00
+T 2A 00 08 95
+R 00 00 00 00
+T 2C 00 80 E5 8D B9 08 95
+R 00 00 00 00
+T 32 00 0F B9 77 9B FE CF 0F B1 08 95
+R 00 00 00 00
+T 3C 00 C4 9A C7 98 C2 98 C3 98 93 98 C1 9A 94 98
+R 00 00 00 00
+T 4A 00 C0 98 08 95
+R 00 00 00 00
+T 4E 00 0E 94 00 00 C4 98 01 E0 10 E0 D3 DF 44 27
+R 00 00 00 00 12 04 00 00
+T 5C 00 09 C0 80 E0 90 E0 E4 2F FF 27 E8 0F F9 1F
+R 00 00 00 00 20 04 01 00 24 00 40 06 01 00 24 00
+T 6A 00 00 81 E2 DF 43 95 4B 30 A8 F3 C4 9A 0E 94
+R 00 00 00 00
+T 78 00 00 00 08 95
+R 00 00 00 00 12 02 01 00
+T 7C 00 0E 94 00 00 C4 98 01 E0 10 E0 BC DF 00 E2
+R 00 00 00 00 12 04 00 00
+T 8A 00 D3 DF 44 27 09 C0 80 E0 90 E0 E4 2F FF 27
+R 00 00 00 00 20 08 01 00 00 00 40 0A 01 00 00 00
+T 98 00 E8 0F F9 1F 00 81 C9 DF 43 95 40 32 A8 F3
+R 00 00 00 00
+T A6 00 C4 9A 01 E0 10 E0 A9 DF C4 98 02 E2 BF DF
+R 00 00 00 00
+T B4 00 44 27 09 C0 80 E0 90 E0 E4 2F FF 27 E8 0F
+R 00 00 00 00 20 06 01 00 20 00 40 08 01 00 20 00
+T C2 00 F9 1F 00 81 B5 DF 43 95 44 30 A8 F3 C4 9A
+R 00 00 00 00
+T D0 00 94 9A 01 E0 10 E0 94 DF 94 98 0E 94 00 00
+R 00 00 00 00 12 0E 01 00
+T DE 00 08 95
+R 00 00 00 00
+T E0 00 94 98 C0 9A 02 E0 10 E0 8B DF 08 95
+R 00 00 00 00
+T EC 00 F9 DF C6 DF 08 95
+R 00 00 00 00
+T F2 00 83 EB 87 BB 88 EF 84 BB 82 EF 81 BB 95 9A
+R 00 00 00 00
+T 00 01 97 9A 94 DF 9B DF A3 DF 01 C0 F0 DF FE CF
+R 00 00 00 00
+T 0E 01 08 95
+R 00 00 00 00

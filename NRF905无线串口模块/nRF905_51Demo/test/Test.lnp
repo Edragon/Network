@@ -1,0 +1,5 @@
+"STARTUP.obj",
+"main.obj",
+"nRF905.obj",
+"SPI.obj" 
+TO "Test" 

@@ -1,0 +1,824 @@
+                        .module jifeng_jieshou.c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+                        .area data(ram, con, rel)
+ 0000                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 0000           _TxAddress::
+ 0000                   .blkb 2
+                        .area idata
+ 0000 CCCC              .byte 204,204
+                        .area data(ram, con, rel)
+ 0002                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 0002                   .blkb 2
+                        .area idata
+ 0002 CCCC              .byte 204,204
+                        .area data(ram, con, rel)
+ 0004                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 0004                   .dbsym e TxAddress _TxAddress A[4:4]c
+ 0004           _RFConf::
+ 0004                   .blkb 2
+                        .area idata
+ 0004 004C              .byte 0,'L
+                        .area data(ram, con, rel)
+ 0006                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 0006                   .blkb 2
+                        .area idata
+ 0006 0C44              .byte 12,'D
+                        .area data(ram, con, rel)
+ 0008                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 0008                   .blkb 2
+                        .area idata
+ 0008 0404              .byte 4,4
+                        .area data(ram, con, rel)
+ 000A                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 000A                   .blkb 2
+                        .area idata
+ 000A CCCC              .byte 204,204
+                        .area data(ram, con, rel)
+ 000C                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 000C                   .blkb 2
+                        .area idata
+ 000C CCCC              .byte 204,204
+                        .area data(ram, con, rel)
+ 000E                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 000E                   .blkb 1
+                        .area idata
+ 000E 58                .byte 'X
+                        .area data(ram, con, rel)
+ 000F                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 000F                   .dbsym e RFConf _RFConf A[11:11]c
+                        .area text(rom, con, rel)
+ 0000                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 0000                   .dbfunc e Delay _Delay fV
+ 0000           ;              i -> R20,R21
+ 0000           ;              x -> R16,R17
+                        .even
+ 0000           _Delay::
+ 0000 4A93              st -y,R20
+ 0002 5A93              st -y,R21
+ 0004                   .dbline -1
+ 0004                   .dbline 89
+ 0004           ; //ICC-AVR application builder : 2007-8-11 20:37:32
+ 0004           ; // Target : M16
+ 0004           ; // Crystal: 8.0000Mhz
+ 0004           ; #include <iom16v.h>
+ 0004           ; #include <macros.h>
+ 0004           ; #define uint  unsigned int
+ 0004           ; #define uchar unsigned char
+ 0004           ; //---------------------------------模式控制定义---------------------------------
+ 0004           ; //#define  nrf905_TX_EN         PB0       //输出1
+ 0004           ; #define   Hign_nrf905_TX_EN    PORTB |= (1 << PB0);   
+ 0004           ; #define   Low_nrf905_TX_EN     PORTB &= ~(1 << PB0); 
+ 0004           ; //#define  nrf905_TRX_CE  PD4     //输出1
+ 0004           ; #define   Hign_nrf905_TRX_CE    PORTD |= (1 << PD4);   
+ 0004           ; #define   Low_nrf905_TRX_CE     PORTD &= ~(1 << PD4); 
+ 0004           ; //#define  nrf905_PWR     PB1             //输出1
+ 0004           ; #define   Hign_nrf905_PWR    PORTB |= (1 << PB1);   
+ 0004           ; #define   Low_nrf905_PWR     PORTB &= ~(1 << PB1); 
+ 0004           ; //--------------------------------NRF905-SPI口接口定义--------------------------
+ 0004           ; //#define  nrf905_MISO          PB6           //输入0
+ 0004           ; //#define  nrf905_MOSI    PB5     //输出1
+ 0004           ; //#define  nrf905_SCK     PB7     //输出1
+ 0004           ; #define   Low_nrf905_SCK     PORTB &= ~(1 << PB7); 
+ 0004           ; //#define  nrf905_CSN     PB4         //输出1         
+ 0004           ; #define   Hign_nrf905_CSN    PORTB |= (1 << PB4);   
+ 0004           ; #define   Low_nrf905_CSN     PORTB &= ~(1 << PB4);                                            
+ 0004           ; //-------------------------------NRF905状态输出口-------------------------------
+ 0004           ; //#define  nrf905_CD      PD3     //输入0
+ 0004           ; #define   Hign_nrf905_CD    PORTD |= (1 << PD3);   
+ 0004           ; #define   Low_nrf905_CD     PORTD &= ~(1 << PD3); 
+ 0004           ; #define   Read_nrf905_CD    PINB & (1 << PD4);
+ 0004           ; //#define  nrf905_AM      PB3     //输入0
+ 0004           ; #define   Hign_nrf905_AM    PORTB |= (1 << PB3);   
+ 0004           ; #define   Low_nrf905_AM     PORTB &= ~(1 << PB3); 
+ 0004           ; #define   Read_nrf905_AM    PINB & (1 << PB3);
+ 0004           ; //#define  nrf905_DR      PB2                 //输入0
+ 0004           ; #define   Hign_nrf905_DR     PORTB |= (1 << PB2);   
+ 0004           ; #define   Low_nrf905_DR     PORTB &= ~(1 << PB2); 
+ 0004           ; #define   Read_nrf905_DR    PINB & (1 << PB2);   
+ 0004           ; //-------------------------------BELL蜂明器-------------------------------------
+ 0004           ; #define   Hign_BELL  PORTD |= (1 << PD5);   
+ 0004           ; #define   Low_BELL     PORTD &= ~(1 << PD5); 
+ 0004           ; //-------------------------------JDQ继电器--------------------------------------
+ 0004           ; #define   Hign_JDQ  PORTD |= (1 << PD7)
+ 0004           ; #define   Low_JDQ     PORTD &= ~(1 << PD7)
+ 0004           ; 
+ 0004           ; //----------------------------------NRF905-SPI指令------------------------------
+ 0004           ; #define WC    0x00
+ 0004           ; #define RRC   0x10
+ 0004           ; #define WTP   0x20
+ 0004           ; #define RTP   0x21
+ 0004           ; #define WTA   0x22
+ 0004           ; #define RTA   0x23
+ 0004           ; #define RRP   0x24
+ 0004           ; //---------------------------------发送数据-------------------------------------
+ 0004           ; uchar TxRxBuffer[4];
+ 0004           ; //----------------------------------接收地址------------------------------------
+ 0004           ; uchar TxAddress[4]={0xcc,0xcc,0xcc,0xcc };    
+ 0004           ; //------------------------------------------------------------------------------
+ 0004           ; uchar count1 ,count2;
+ 0004           ; //----------------------------------寄存器配置----------------------------------
+ 0004           ; uchar RFConf[11]=
+ 0004           ; {
+ 0004           ;   0x00,                            //配置命令//
+ 0004           ;   0x4c,                           //CH_NO,配置频段在430MHZ
+ 0004           ;   0x0C,                          //输出功率为10db,不重发，节电为正常模式
+ 0004           ;   0x44,                         //地址宽度设置，为4字节
+ 0004           ;   0x04,0x04,                   //接收发送有效数据长度为4字节
+ 0004           ;   0xCC,0xCC,0xCC,0xCC,        //接收地址
+ 0004           ;   0x58,                      //CRC充许，8位CRC校验，外部时钟信号不使能，16M晶振
+ 0004           ; };
+ 0004           ; //----------------------------------NRF905函数申明------------------------------
+ 0004           ; void Delay(uint x);                                                  //延时子程序                                                                                                                                                                                     
+ 0004           ; void Spi_initial();                            //SPI初始化
+ 0004           ; uchar SpiReadSpiWrite(unsigned char cData);    //SPI读写子程序
+ 0004           ; void system_Init(void);                                                  //系统初始化
+ 0004           ; void Config905(void);                                            //NRF905初始化子程序
+ 0004           ; void TxPacket(void);                                          
+ 0004           ; void SetTxMode(void);                                            //数据发送
+ 0004           ; void SetRxMode(void);                                            //
+ 0004           ; void TX(void);
+ 0004           ; unsigned char CheckDR(void);
+ 0004           ; void RxPacket(void);
+ 0004           ; void  RX(void);
+ 0004           ; //-------------------------------串口函数申明-----------------------------------
+ 0004           ; void StartUART(void);
+ 0004           ; void R_S_Byte(uchar R_Byte);
+ 0004           ; //----------------------------------100us延时子程序-----------------------------
+ 0004           ; void Delay(uint x)
+ 0004           ; {
+ 0004 09C0              xjmp L3
+ 0006           L2:
+ 0006                   .dbline 92
+ 0006           ;       uint i;
+ 0006           ;       while(x--)
+ 0006           ;       for(i=0;i<80;i++);
+ 0006 4427              clr R20
+ 0008 5527              clr R21
+ 000A 02C0              xjmp L8
+ 000C           L5:
+ 000C                   .dbline 92
+ 000C           L6:
+ 000C                   .dbline 92
+ 000C 4F5F              subi R20,255  ; offset = 1
+ 000E 5F4F              sbci R21,255
+ 0010           L8:
+ 0010                   .dbline 92
+ 0010 4035              cpi R20,80
+ 0012 E0E0              ldi R30,0
+ 0014 5E07              cpc R21,R30
+ 0016 D0F3              brlo L5
+ 0018           X0:
+ 0018           L3:
+ 0018                   .dbline 91
+ 0018 1801              movw R2,R16
+ 001A 0150              subi R16,1
+ 001C 1040              sbci R17,0
+ 001E 2220              tst R2
+ 0020 91F7              brne L2
+ 0022 3320              tst R3
+ 0024 81F7              brne L2
+ 0026           X1:
+ 0026                   .dbline -2
+ 0026           L1:
+ 0026                   .dbline 0 ; func end
+ 0026 5991              ld R21,y+
+ 0028 4991              ld R20,y+
+ 002A 0895              ret
+ 002C                   .dbsym r i 20 i
+ 002C                   .dbsym r x 16 i
+ 002C                   .dbend
+ 002C                   .dbfunc e Spi_initial _Spi_initial fV
+                        .even
+ 002C           _Spi_initial::
+ 002C                   .dbline -1
+ 002C                   .dbline 96
+ 002C           ; }
+ 002C           ; //----------------------------------SPI初始化-----------------------------------
+ 002C           ; void Spi_initial()
+ 002C           ; {
+ 002C                   .dbline 97
+ 002C           ;       SPCR   = (1<<SPE)|(1<<MSTR)|(0<<CPOL)|(0<<SPR0);// 主机模式，fck/16, SPI方式0
+ 002C 80E5              ldi R24,80
+ 002E 8DB9              out 0xd,R24
+ 0030                   .dbline -2
+ 0030           L9:
+ 0030                   .dbline 0 ; func end
+ 0030 0895              ret
+ 0032                   .dbend
+ 0032                   .dbfunc e SpiReadSpiWrite _SpiReadSpiWrite fc
+ 0032           ;          cData -> R16
+                        .even
+ 0032           _SpiReadSpiWrite::
+ 0032                   .dbline -1
+ 0032                   .dbline 101
+ 0032           ; }
+ 0032           ; //---------------------------------SPI读写程序----------------------------------      
+ 0032           ; uchar SpiReadSpiWrite(unsigned char cData)
+ 0032           ; {
+ 0032                   .dbline 102
+ 0032           ;       SPDR = cData;
+ 0032 0FB9              out 0xf,R16
+ 0034           L11:
+ 0034                   .dbline 104
+ 0034           ;       while(!(SPSR & (1<<SPIF) ))  // 等待SPI发送完毕
+ 0034           ;       {};                     
+ 0034                   .dbline 104
+ 0034           L12:
+ 0034                   .dbline 103
+ 0034 779B              sbis 0xe,7
+ 0036 FECF              rjmp L11
+ 0038           X2:
+ 0038                   .dbline 104
+ 0038                   .dbline 105
+ 0038           ;       return SPDR;
+ 0038 0FB1              in R16,0xf
+ 003A                   .dbline -2
+ 003A           L10:
+ 003A                   .dbline 0 ; func end
+ 003A 0895              ret
+ 003C                   .dbsym r cData 16 c
+ 003C                   .dbend
+ 003C                   .dbfunc e system_Init _system_Init fV
+                        .even
+ 003C           _system_Init::
+ 003C                   .dbline -1
+ 003C                   .dbline 109
+ 003C           ; }
+ 003C           ; //--------------------------------系统状态初始化--------------------------------
+ 003C           ; void system_Init(void)                        
+ 003C           ; {
+ 003C                   .dbline 111
+ 003C           ; 
+ 003C           ;       Hign_nrf905_CSN;                        // SPI使能
+ 003C C49A              sbi 0x18,4
+ 003E                   .dbline 111
+ 003E                   .dbline 112
+ 003E           ;       Low_nrf905_SCK;                         
+ 003E C798              cbi 0x18,7
+ 0040                   .dbline 112
+ 0040                   .dbline 113
+ 0040           ;       Low_nrf905_DR;                          // DR=0
+ 0040 C298              cbi 0x18,2
+ 0042                   .dbline 113
+ 0042                   .dbline 114
+ 0042           ;       Low_nrf905_AM;                          // AM=0
+ 0042 C398              cbi 0x18,3
+ 0044                   .dbline 114
+ 0044                   .dbline 115
+ 0044           ;       Low_nrf905_CD;                          // CD=0
+ 0044 9398              cbi 0x12,3
+ 0046                   .dbline 115
+ 0046                   .dbline 116
+ 0046           ;       Hign_nrf905_PWR;                    // PWR=1
+ 0046 C19A              sbi 0x18,1
+ 0048                   .dbline 116
+ 0048                   .dbline 117
+ 0048           ;       Low_nrf905_TRX_CE;                      // nrf905_TRX_CE=0
+ 0048 9498              cbi 0x12,4
+ 004A                   .dbline 117
+ 004A                   .dbline 118
+ 004A           ;       Low_nrf905_TX_EN ;                      // nrf905_TX_EN=0
+ 004A C098              cbi 0x18,0
+ 004C                   .dbline 118
+ 004C                   .dbline -2
+ 004C           L14:
+ 004C                   .dbline 0 ; func end
+ 004C 0895              ret
+ 004E                   .dbend
+ 004E                   .dbfunc e Config905 _Config905 fV
+ 004E           ;              i -> R20
+                        .even
+ 004E           _Config905::
+ 004E 4A93              st -y,R20
+ 0050 5A93              st -y,R21
+ 0052                   .dbline -1
+ 0052                   .dbline 122
+ 0052           ; }
+ 0052           ; //--------------------------------NRF905寄存器初始化函数------------------------
+ 0052           ; void Config905(void)
+ 0052           ; {
+ 0052                   .dbline 124
+ 0052           ;       uchar i;
+ 0052           ;       Low_nrf905_CSN;                         //SPI使能                                                                                       
+ 0052 C498              cbi 0x18,4
+ 0054                   .dbline 124
+ 0054                   .dbline 125
+ 0054           ;       Delay(1);                                  
+ 0054 01E0              ldi R16,1
+ 0056 10E0              ldi R17,0
+ 0058 D3DF              xcall _Delay
+ 005A                   .dbline 126
+ 005A           ;       for (i=0;i<11;i++)                      //碞RF905配置字
+ 005A 4427              clr R20
+ 005C 09C0              xjmp L19
+ 005E           L16:
+ 005E                   .dbline 127
+ 005E           ;       {
+ 005E                   .dbline 128
+ 005E           ;        SpiReadSpiWrite(RFConf[i]);
+ 005E 80E0              ldi R24,<_RFConf
+ 0060 90E0              ldi R25,>_RFConf
+ 0062 E42F              mov R30,R20
+ 0064 FF27              clr R31
+ 0066 E80F              add R30,R24
+ 0068 F91F              adc R31,R25
+ 006A 0081              ldd R16,z+0
+ 006C E2DF              xcall _SpiReadSpiWrite
+ 006E                   .dbline 129
+ 006E           ;       }
+ 006E           L17:
+ 006E                   .dbline 126
+ 006E 4395              inc R20
+ 0070           L19:
+ 0070                   .dbline 126
+ 0070 4B30              cpi R20,11
+ 0072 A8F3              brlo L16
+ 0074           X3:
+ 0074                   .dbline 130
+ 0074           ;       Hign_nrf905_CSN;                                        // Disable Spi
+ 0074 C49A              sbi 0x18,4
+ 0076                   .dbline 130
+ 0076                   .dbline -2
+ 0076           L15:
+ 0076                   .dbline 0 ; func end
+ 0076 5991              ld R21,y+
+ 0078 4991              ld R20,y+
+ 007A 0895              ret
+ 007C                   .dbsym r i 20 c
+ 007C                   .dbend
+ 007C                   .dbfunc e TxPacket _TxPacket fV
+ 007C           ;              i -> R20
+                        .even
+ 007C           _TxPacket::
+ 007C 4A93              st -y,R20
+ 007E 5A93              st -y,R21
+ 0080                   .dbline -1
+ 0080                   .dbline 134
+ 0080           ; }
+ 0080           ; //--------------------------------NRF905待发数据打包----------------------------
+ 0080           ; void TxPacket(void)
+ 0080           ; {
+ 0080                   .dbline 136
+ 0080           ;       uchar i;
+ 0080           ;       Low_nrf905_CSN;                                         // 使能Spi，允许对nrf905进行读写操作
+ 0080 C498              cbi 0x18,4
+ 0082                   .dbline 136
+ 0082                   .dbline 137
+ 0082           ;       Delay(1);
+ 0082 01E0              ldi R16,1
+ 0084 10E0              ldi R17,0
+ 0086 BCDF              xcall _Delay
+ 0088                   .dbline 138
+ 0088           ;       SpiReadSpiWrite(WTP);                           // 写数据前先写写数据命令
+ 0088 00E2              ldi R16,32
+ 008A D3DF              xcall _SpiReadSpiWrite
+ 008C                   .dbline 139
+ 008C           ;       for (i=0;i<32;i++)
+ 008C 4427              clr R20
+ 008E 09C0              xjmp L24
+ 0090           L21:
+ 0090                   .dbline 140
+ 0090           ;       {
+ 0090                   .dbline 141
+ 0090           ;       SpiReadSpiWrite(TxRxBuffer[i]);         // 待发送的32字节数据
+ 0090 80E0              ldi R24,<_TxRxBuffer
+ 0092 90E0              ldi R25,>_TxRxBuffer
+ 0094 E42F              mov R30,R20
+ 0096 FF27              clr R31
+ 0098 E80F              add R30,R24
+ 009A F91F              adc R31,R25
+ 009C 0081              ldd R16,z+0
+ 009E C9DF              xcall _SpiReadSpiWrite
+ 00A0                   .dbline 142
+ 00A0           ;       }                                               
+ 00A0           L22:
+ 00A0                   .dbline 139
+ 00A0 4395              inc R20
+ 00A2           L24:
+ 00A2                   .dbline 139
+ 00A2 4032              cpi R20,32
+ 00A4 A8F3              brlo L21
+ 00A6           X4:
+ 00A6                   .dbline 143
+ 00A6           ;       Hign_nrf905_CSN;
+ 00A6 C49A              sbi 0x18,4
+ 00A8                   .dbline 143
+ 00A8                   .dbline 144
+ 00A8           ;       Delay(1);                                                       // 关闭Spi，不允许对nrf905进行读写操作
+ 00A8 01E0              ldi R16,1
+ 00AA 10E0              ldi R17,0
+ 00AC A9DF              xcall _Delay
+ 00AE                   .dbline 145
+ 00AE           ;       Low_nrf905_CSN;                                         // 使能Spi
+ 00AE C498              cbi 0x18,4
+ 00B0                   .dbline 145
+ 00B0                   .dbline 146
+ 00B0           ;       SpiReadSpiWrite(WTA);                           // 写地址前首先先写地址命令
+ 00B0 02E2              ldi R16,34
+ 00B2 BFDF              xcall _SpiReadSpiWrite
+ 00B4                   .dbline 147
+ 00B4           ;       for (i=0;i<4;i++)                                       // 写入4 bytes 接收地址
+ 00B4 4427              clr R20
+ 00B6 09C0              xjmp L28
+ 00B8           L25:
+ 00B8                   .dbline 148
+ 00B8           ;       {
+ 00B8                   .dbline 149
+ 00B8           ;       SpiReadSpiWrite(TxAddress[i]);
+ 00B8 80E0              ldi R24,<_TxAddress
+ 00BA 90E0              ldi R25,>_TxAddress
+ 00BC E42F              mov R30,R20
+ 00BE FF27              clr R31
+ 00C0 E80F              add R30,R24
+ 00C2 F91F              adc R31,R25
+ 00C4 0081              ldd R16,z+0
+ 00C6 B5DF              xcall _SpiReadSpiWrite
+ 00C8                   .dbline 150
+ 00C8           ;       }
+ 00C8           L26:
+ 00C8                   .dbline 147
+ 00C8 4395              inc R20
+ 00CA           L28:
+ 00CA                   .dbline 147
+ 00CA 4430              cpi R20,4
+ 00CC A8F3              brlo L25
+ 00CE           X5:
+ 00CE                   .dbline 151
+ 00CE           ;       Hign_nrf905_CSN;                                        // 关闭Spi
+ 00CE C49A              sbi 0x18,4
+ 00D0                   .dbline 151
+ 00D0                   .dbline 152
+ 00D0           ;       Hign_nrf905_TRX_CE;                                     // Set TRX_CE high,start Tx data transmission
+ 00D0 949A              sbi 0x12,4
+ 00D2                   .dbline 152
+ 00D2                   .dbline 153
+ 00D2           ;       Delay(1);                                                       // 等待DR变高
+ 00D2 01E0              ldi R16,1
+ 00D4 10E0              ldi R17,0
+ 00D6 94DF              xcall _Delay
+ 00D8                   .dbline 154
+ 00D8           ;       Low_nrf905_TRX_CE;                                      // 设置TRX_CE=0
+ 00D8 9498              cbi 0x12,4
+ 00DA                   .dbline 154
+ 00DA                   .dbline -2
+ 00DA           L20:
+ 00DA                   .dbline 0 ; func end
+ 00DA 5991              ld R21,y+
+ 00DC 4991              ld R20,y+
+ 00DE 0895              ret
+ 00E0                   .dbsym r i 20 c
+ 00E0                   .dbend
+ 00E0                   .dbfunc e SetTxMode _SetTxMode fV
+                        .even
+ 00E0           _SetTxMode::
+ 00E0                   .dbline -1
+ 00E0                   .dbline 158
+ 00E0           ; }
+ 00E0           ; //------------------------------设置发送模式------------------------------------
+ 00E0           ; void SetTxMode(void)
+ 00E0           ; {
+ 00E0                   .dbline 159
+ 00E0           ;       Low_nrf905_TRX_CE;                              //
+ 00E0 9498              cbi 0x12,4
+ 00E2                   .dbline 159
+ 00E2                   .dbline 160
+ 00E2           ;       Hign_nrf905_TX_EN;                              //发送使能
+ 00E2 C09A              sbi 0x18,0
+ 00E4                   .dbline 160
+ 00E4                   .dbline 161
+ 00E4           ;       Delay(2);                               // delay for mode change(>=650us)
+ 00E4 02E0              ldi R16,2
+ 00E6 10E0              ldi R17,0
+ 00E8 8BDF              xcall _Delay
+ 00EA                   .dbline -2
+ 00EA           L29:
+ 00EA                   .dbline 0 ; func end
+ 00EA 0895              ret
+ 00EC                   .dbend
+ 00EC                   .dbfunc e SetRxMode _SetRxMode fV
+                        .even
+ 00EC           _SetRxMode::
+ 00EC                   .dbline -1
+ 00EC                   .dbline 165
+ 00EC           ; }
+ 00EC           ; //------------------------------设置接收模式激发--------------------------------
+ 00EC           ; void SetRxMode(void)
+ 00EC           ; {
+ 00EC                   .dbline 166
+ 00EC           ;       Low_nrf905_TX_EN;
+ 00EC C098              cbi 0x18,0
+ 00EE                   .dbline 166
+ 00EE                   .dbline 167
+ 00EE           ;       Hign_nrf905_TRX_CE;
+ 00EE 949A              sbi 0x12,4
+ 00F0                   .dbline 167
+ 00F0                   .dbline 168
+ 00F0           ;       Delay(10);                                      // delay for mode change(>=650us)
+ 00F0 0AE0              ldi R16,10
+ 00F2 10E0              ldi R17,0
+ 00F4 85DF              xcall _Delay
+ 00F6                   .dbline -2
+ 00F6           L30:
+ 00F6                   .dbline 0 ; func end
+ 00F6 0895              ret
+ 00F8                   .dbend
+ 00F8                   .dbfunc e TX _TX fV
+                        .even
+ 00F8           _TX::
+ 00F8                   .dbline -1
+ 00F8                   .dbline 172
+ 00F8           ; }
+ 00F8           ; //------------------------------发送数据----------------------------------------
+ 00F8           ; void TX(void)
+ 00F8           ; {
+ 00F8                   .dbline 173
+ 00F8           ;      SetTxMode();        // Set nRF905 in Tx mode
+ 00F8 F3DF              xcall _SetTxMode
+ 00FA                   .dbline 174
+ 00FA           ;        TxPacket();                       // Send data by nRF905
+ 00FA C0DF              xcall _TxPacket
+ 00FC                   .dbline -2
+ 00FC           L31:
+ 00FC                   .dbline 0 ; func end
+ 00FC 0895              ret
+ 00FE                   .dbend
+ 00FE                   .dbfunc e CheckDR _CheckDR fc
+                        .even
+ 00FE           _CheckDR::
+ 00FE                   .dbline -1
+ 00FE                   .dbline 178
+ 00FE           ; }
+ 00FE           ; //-----------------------------判断是否收到数据---------------------------------
+ 00FE           ; unsigned char CheckDR(void)           //检查是否有新数据传入 
+ 00FE           ; {
+ 00FE                   .dbline 179
+ 00FE           ;       if (PINB & (1 << PB2))
+ 00FE B29B              sbis 0x16,2
+ 0100 02C0              rjmp L33
+ 0102           X6:
+ 0102                   .dbline 180
+ 0102           ;       {
+ 0102                   .dbline 181
+ 0102           ;               return 1;                               //收到数据
+ 0102 01E0              ldi R16,1
+ 0104 01C0              xjmp L32
+ 0106           L33:
+ 0106                   .dbline 184
+ 0106           ;       }
+ 0106           ;       else
+ 0106           ;       {
+ 0106                   .dbline 185
+ 0106           ;               return 0;
+ 0106 0027              clr R16
+ 0108                   .dbline -2
+ 0108           L32:
+ 0108                   .dbline 0 ; func end
+ 0108 0895              ret
+ 010A                   .dbend
+ 010A                   .dbfunc e RxPacket _RxPacket fV
+ 010A           ;              i -> R20
+                        .even
+ 010A           _RxPacket::
+ 010A 4A93              st -y,R20
+ 010C 5A93              st -y,R21
+ 010E                   .dbline -1
+ 010E                   .dbline 190
+ 010E           ;       }
+ 010E           ; }
+ 010E           ; //-----------------------------------读接收数据包-------------------------------
+ 010E           ; void RxPacket(void)                                                   //读数据
+ 010E           ; {
+ 010E                   .dbline 192
+ 010E           ;       uchar i;
+ 010E           ;     Low_nrf905_TRX_CE;
+ 010E 9498              cbi 0x12,4
+ 0110                   .dbline 192
+ 0110                   .dbline 193
+ 0110           ;       Low_nrf905_CSN;                                             // 使能SPI
+ 0110 C498              cbi 0x18,4
+ 0112                   .dbline 193
+ 0112                   .dbline 194
+ 0112           ;     Delay(1);
+ 0112 01E0              ldi R16,1
+ 0114 10E0              ldi R17,0
+ 0116 74DF              xcall _Delay
+ 0118                   .dbline 195
+ 0118           ;       SpiReadSpiWrite(RRP);                              // 写入数据接收缓冲区数据命令
+ 0118 04E2              ldi R16,36
+ 011A 8BDF              xcall _SpiReadSpiWrite
+ 011C                   .dbline 196
+ 011C           ;       for (i = 0 ;i < 4 ;i++)
+ 011C 4427              clr R20
+ 011E 0AC0              xjmp L39
+ 0120           L36:
+ 0120                   .dbline 197
+ 0120           ;       {   
+ 0120                   .dbline 198
+ 0120           ;       TxRxBuffer[i]=SpiReadSpiWrite(0);         // 读取数据接收缓冲区数据       
+ 0120 0027              clr R16
+ 0122 87DF              xcall _SpiReadSpiWrite
+ 0124 80E0              ldi R24,<_TxRxBuffer
+ 0126 90E0              ldi R25,>_TxRxBuffer
+ 0128 E42F              mov R30,R20
+ 012A FF27              clr R31
+ 012C E80F              add R30,R24
+ 012E F91F              adc R31,R25
+ 0130 0083              std z+0,R16
+ 0132                   .dbline 199
+ 0132           ;       }
+ 0132           L37:
+ 0132                   .dbline 196
+ 0132 4395              inc R20
+ 0134           L39:
+ 0134                   .dbline 196
+ 0134 4430              cpi R20,4
+ 0136 A0F3              brlo L36
+ 0138           X7:
+ 0138                   .dbline 200
+ 0138           ;       Hign_nrf905_CSN;
+ 0138 C49A              sbi 0x18,4
+ 013A                   .dbline 200
+ 013A                   .dbline 201
+ 013A           ;     Delay(2);                            //
+ 013A 02E0              ldi R16,2
+ 013C 10E0              ldi R17,0
+ 013E 60DF              xcall _Delay
+ 0140                   .dbline 202
+ 0140           ;       Hign_nrf905_TRX_CE;                                                     
+ 0140 949A              sbi 0x12,4
+ 0142                   .dbline 202
+ 0142                   .dbline -2
+ 0142           L35:
+ 0142                   .dbline 0 ; func end
+ 0142 5991              ld R21,y+
+ 0144 4991              ld R20,y+
+ 0146 0895              ret
+ 0148                   .dbsym r i 20 c
+ 0148                   .dbend
+ 0148                   .dbfunc e RX _RX fV
+                        .even
+ 0148           _RX::
+ 0148                   .dbline -1
+ 0148                   .dbline 206
+ 0148           ; }
+ 0148           ; //--------------------------------设置接收模式----------------------------------
+ 0148           ; void  RX(void)
+ 0148           ; {
+ 0148                   .dbline 207
+ 0148           ;     SetRxMode();                                //设置NRF905接收模式
+ 0148 D1DF              xcall _SetRxMode
+ 014A           L41:
+ 014A                   .dbline 208
+ 014A           ;     while (CheckDR()==0);              //等待接收完成
+ 014A           L42:
+ 014A                   .dbline 208
+ 014A D9DF              xcall _CheckDR
+ 014C 0023              tst R16
+ 014E E9F3              breq L41
+ 0150           X8:
+ 0150                   .dbline 209
+ 0150           ;       RxPacket();                     //读取接收数据缓冲区
+ 0150 DCDF              xcall _RxPacket
+ 0152                   .dbline 210
+ 0152           ;       Delay(10);
+ 0152 0AE0              ldi R16,10
+ 0154 10E0              ldi R17,0
+ 0156 54DF              xcall _Delay
+ 0158                   .dbline -2
+ 0158           L40:
+ 0158                   .dbline 0 ; func end
+ 0158 0895              ret
+ 015A                   .dbend
+ 015A                   .dbfunc e main _main fV
+ 015A           ;              i -> <dead>
+                        .even
+ 015A           _main::
+ 015A                   .dbline -1
+ 015A                   .dbline 214
+ 015A           ; }
+ 015A           ; //------------------------------主函数------------------------------------------
+ 015A           ; void main(void)
+ 015A           ; {  
+ 015A                   .dbline 216
+ 015A           ;       uint i;
+ 015A           ;       DDRD=0xF2;                                                //端口D设置                                                                                     
+ 015A 82EF              ldi R24,242
+ 015C 81BB              out 0x11,R24
+ 015E                   .dbline 217
+ 015E           ;       DDRB=0xB3;                                           //端口B设置        
+ 015E 83EB              ldi R24,179
+ 0160 87BB              out 0x17,R24
+ 0162                   .dbline 218
+ 0162           ;       PORTA=0x00;
+ 0162 2224              clr R2
+ 0164 2BBA              out 0x1b,R2
+ 0166                   .dbline 219
+ 0166           ;       PORTC=0xbf;
+ 0166 8FEB              ldi R24,191
+ 0168 85BB              out 0x15,R24
+ 016A                   .dbline 221
+ 016A           ; //------------------------------------------------------------------------------      
+ 016A           ;       Hign_JDQ;                         //关闭继电器                          
+ 016A 979A              sbi 0x12,7
+ 016C                   .dbline 222
+ 016C           ;       Hign_BELL;                                                      
+ 016C 959A              sbi 0x12,5
+ 016E                   .dbline 222
+ 016E                   .dbline 224
+ 016E           ; //------------------------------------------------------------------------------                                                                                      
+ 016E           ;       Spi_initial();                  //SPI初始化                                                                                                                       
+ 016E 5EDF              xcall _Spi_initial
+ 0170                   .dbline 225
+ 0170           ;       system_Init();                             //系统状态初始化                                                                                             
+ 0170 65DF              xcall _system_Init
+ 0172                   .dbline 226
+ 0172           ;       Config905();                              //NRF905初始化        
+ 0172 6DDF              xcall _Config905
+ 0174 13C0              xjmp L46
+ 0176           L45:
+ 0176                   .dbline 230
+ 0176           ;       
+ 0176           ; //------------------------------------------------------------------------------
+ 0176           ;       while(1)
+ 0176           ;       {
+ 0176                   .dbline 231
+ 0176           ;       RX();                                   //接收数据
+ 0176 E8DF              xcall _RX
+ 0178                   .dbline 232
+ 0178           ;       if(TxRxBuffer[0])
+ 0178 20900200          lds R2,_TxRxBuffer
+ 017C 2220              tst R2
+ 017E 49F0              breq L48
+ 0180           X9:
+ 0180                   .dbline 233
+ 0180           ;       {
+ 0180                   .dbline 234
+ 0180           ;       if(TxRxBuffer[0]==0x29)
+ 0180 822D              mov R24,R2
+ 0182 8932              cpi R24,41
+ 0184 09F4              brne L50
+ 0186           X10:
+ 0186                   .dbline 235
+ 0186           ;       {
+ 0186                   .dbline 236
+ 0186           ;       Low_JDQ;                           //打开继电器
+ 0186 9798              cbi 0x12,7
+ 0188                   .dbline 237
+ 0188           ;       }
+ 0188           L50:
+ 0188                   .dbline 238
+ 0188           ;       if(TxRxBuffer[0]==0x30)
+ 0188 80910200          lds R24,_TxRxBuffer
+ 018C 8033              cpi R24,48
+ 018E 09F4              brne L52
+ 0190           X11:
+ 0190                   .dbline 239
+ 0190           ;       {
+ 0190                   .dbline 240
+ 0190           ;       Low_BELL;                          //打开蜂明器
+ 0190 9598              cbi 0x12,5
+ 0192                   .dbline 240
+ 0192                   .dbline 242
+ 0192           ; 
+ 0192           ;       }
+ 0192           L52:
+ 0192                   .dbline 243
+ 0192           ;       }
+ 0192           L48:
+ 0192                   .dbline 244
+ 0192           ;       Delay(200);
+ 0192 08EC              ldi R16,200
+ 0194 10E0              ldi R17,0
+ 0196 34DF              xcall _Delay
+ 0198                   .dbline 245
+ 0198           ;       Hign_JDQ;                         //关闭继电器                          
+ 0198 979A              sbi 0x12,7
+ 019A                   .dbline 246
+ 019A           ;       Hign_BELL;                        //关闭蜂明器          
+ 019A 959A              sbi 0x12,5
+ 019C                   .dbline 246
+ 019C                   .dbline 247
+ 019C           ;       }
+ 019C           L46:
+ 019C                   .dbline 229
+ 019C ECCF              xjmp L45
+ 019E           X12:
+ 019E                   .dbline -2
+ 019E           L44:
+ 019E                   .dbline 0 ; func end
+ 019E 0895              ret
+ 01A0                   .dbsym l i 1 i
+ 01A0                   .dbend
+                        .area bss(ram, con, rel)
+ 0000                   .dbfile F:\JASK\无线资料集锦\开发备份\JASK2001开发包0905\M16-NRF905开发包\单向无线开关控制\NRF905_接收\jifeng_jieshou.c
+ 0000           _count2::
+ 0000                   .blkb 1
+ 0001                   .dbsym e count2 _count2 c
+ 0001           _count1::
+ 0001                   .blkb 1
+ 0002                   .dbsym e count1 _count1 c
+ 0002           _TxRxBuffer::
+ 0002                   .blkb 4
+ 0006                   .dbsym e TxRxBuffer _TxRxBuffer A[4:4]c
+ 0006           ; }

@@ -1,0 +1,53 @@
+此固件基于 ESP8266 SDK_V0.9.2 开发，新增AT指令设置IP，波特率为9600
+
+刷固件，请使用ESP8266一键烧写工具-显MACv0.91-x86.exe。
+
+刷固件时接线：
+
+8266模块       USB转TTL
+
+VCC              3.3V
+
+GND              GND
+
+CH_PD            3.3V
+
+GPIO0            GND
+-------------------------------
+
+刷写固件时需要注意，见附图烧录步骤一完成后需要将8266模块断电后再上电才能烧录步骤二，步骤二烧录完成后再断电。
+
+完成步骤二，刷固件成功后，8266模块启动运行接线：
+
+8266模块       USB转TTL
+
+VCC              3.3V
+
+GND              GND
+
+CH_PD            3.3V
+-------------------------------
+
+最后上电启用模块，调试助手设置波特率为9600，串口按USB转TTL的实际串口选择好，然后使用进行AT指令设置。
+
+本固件波特率为9600
+      增加STATION IP 设置指令：AT+SETIP
+      增加STATION IP自动获取指令：AT+USETIP
+      增加SOFTAP IP 设置指令：AT+SAPIP
+      增加SOFTAP IP恢复原厂指令：AT+USAPIP
+      
+      注：设定STATION的IP为：192.168.1.200
+          设定SOFTAP的IP为：192.168.2.1
+          恢复原厂SOFTAP的IP为：192.168.4.1
+
+指令使用方法：
+STATION模式的IP设置：
+1、使用AT+CWMODE=2设置为模式2
+2、断电后再上电重启模块
+3、通过AT+SETIP，设定模块STATION的IP为192.168.1.200或通过AT+USETIP设定模块STATION 的IP为自动获取。
+SOFTAP模式的IP设置：
+1、使用AT+CWMODE=1设置为模式1
+2、断电后再上电重启模块
+3、通过AT+SAPIP，设定模块SOFTAP的IP为192.168.2.1或通过AT+USAPIP设定模块SOFTAP的IP为192.168.4.1。
+
+2014.11.8 Fans-[范工] 21213686@qq.com

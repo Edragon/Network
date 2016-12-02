@@ -1,0 +1,579 @@
+XL
+H 5 areas 1E global symbols
+M Wendu_fasong.c
+S push_gset1 Ref0000
+S push_gset2 Ref0000
+S pop_gset1 Ref0000
+S pop_gset2 Ref0000
+S empy16s Ref0000
+S mod8u Ref0000
+S div8u Ref0000
+A text size 3A2 flags 0
+dbfile C:\DOCUME~1\Administrator\桌面\JASK2001软件开发包\M16-NRF905开发包\无线温度监控系统\FASONG\Wendu_fasong.c
+dbfunc e delay 0 fV
+dbsym r i 14 i
+dbsym r x 10 i
+dbline FFFFFFFF 4
+dbline 7F 4
+dbline 82 6
+dbline 82 C
+dbline 82 C
+dbline 82 10
+dbline 81 18
+dbline FFFFFFFE 26
+dbline 0 2A
+dbfunc e Spi_initial 2C fV
+dbline FFFFFFFF 2C
+dbline 86 2C
+dbline 89 2C
+dbline FFFFFFFE 30
+dbline 0 30
+dbfunc e SpiReadSpiWrite 32 fc
+dbsym r cData 10 c
+dbline FFFFFFFF 32
+dbline 8D 32
+dbline 8E 32
+dbline 90 34
+dbline 90 34
+dbline 8F 34
+dbline 90 38
+dbline 91 38
+dbline FFFFFFFE 3A
+dbline 0 3A
+dbfunc e system_Init 3C fV
+dbline FFFFFFFF 3C
+dbline 95 3C
+dbline 97 3C
+dbline 97 3E
+dbline 98 3E
+dbline 98 40
+dbline 99 40
+dbline 99 42
+dbline 9A 42
+dbline 9A 44
+dbline 9B 44
+dbline 9B 46
+dbline 9C 46
+dbline 9C 48
+dbline 9D 48
+dbline 9D 4A
+dbline 9E 4A
+dbline 9E 4C
+dbline FFFFFFFE 4C
+dbline 0 4C
+dbfunc e Config905 4E fV
+dbsym r i 14 c
+dbline FFFFFFFF 52
+dbline A2 52
+dbline A4 52
+dbline A4 54
+dbline A5 54
+dbline A7 5A
+dbline A8 5E
+dbline A9 5E
+dbline AA 6E
+dbline A7 6E
+dbline A7 70
+dbline AB 74
+dbline AB 76
+dbline FFFFFFFE 76
+dbline 0 7A
+dbfunc e TxPacket 7C fV
+dbsym r i 14 c
+dbline FFFFFFFF 80
+dbline AF 80
+dbline B1 80
+dbline B1 82
+dbline B2 82
+dbline B3 88
+dbline B4 8C
+dbline B5 90
+dbline B6 90
+dbline B7 A0
+dbline B4 A0
+dbline B4 A2
+dbline B8 A6
+dbline B8 A8
+dbline B9 A8
+dbline BA AE
+dbline BA B0
+dbline BB B0
+dbline BC B4
+dbline BD B8
+dbline BE B8
+dbline BF C8
+dbline BC C8
+dbline BC CA
+dbline C0 CE
+dbline C0 D0
+dbline C1 D0
+dbline C1 D2
+dbline C2 D2
+dbline C3 D8
+dbline C3 DA
+dbline FFFFFFFE DA
+dbline 0 DE
+dbfunc e SetTxMode E0 fV
+dbline FFFFFFFF E0
+dbline C7 E0
+dbline C8 E0
+dbline C8 E2
+dbline C9 E2
+dbline C9 E4
+dbline CA E4
+dbline FFFFFFFE EA
+dbline 0 EA
+dbfunc e TX EC fV
+dbline FFFFFFFF EC
+dbline CE EC
+dbline CF EC
+dbline D0 EE
+dbline FFFFFFFE F0
+dbline 0 F0
+dbfunc e DS1820_delay F2 fV
+dbsym r i 10 i
+dbline FFFFFFFF F2
+dbline D8 F2
+dbline D9 F2
+dbline D9 F2
+dbline FFFFFFFE 100
+dbline 0 100
+dbfunc e Init_DS18B20 102 fV
+dbsym r x 14 c
+dbline FFFFFFFF 106
+dbline DD 106
+dbline DE 106
+dbline E0 108
+dbline E1 10A
+dbline E2 10C
+dbline E3 10E
+dbline E4 114
+dbline E5 116
+dbline E6 118
+dbline E7 11E
+dbline E7 11E
+dbline E8 122
+dbline E9 124
+dbline EA 126
+dbline FFFFFFFE 12C
+dbline 0 130
+dbfunc e ReadOneChar 132 fc
+dbsym r dat 14 c
+dbsym r i 16 c
+dbline FFFFFFFF 136
+dbline EE 136
+dbline F0 136
+dbline F2 138
+dbline F3 13C
+dbline F4 13C
+dbline F5 13E
+dbline F6 140
+dbline F7 142
+dbline F8 144
+dbline F9 146
+dbline FA 14A
+dbline FB 14A
+dbline FC 14C
+dbline FD 14C
+dbline FE 14E
+dbline FF 154
+dbline F2 154
+dbline F2 156
+dbline 100 15C
+dbline FFFFFFFE 15E
+dbline 0 162
+dbfunc e WriteOneChar 164 fV
+dbsym r i 14 c
+dbsym r dat 16 c
+dbline FFFFFFFF 16A
+dbline 104 16A
+dbline 106 16A
+dbline 107 16C
+dbline 108 170
+dbline 109 170
+dbline 10A 172
+dbline 10B 176
+dbline 10C 176
+dbline 10D 178
+dbline 10F 17A
+dbline 110 17A
+dbline 111 17C
+dbline 112 17C
+dbline 113 182
+dbline 114 184
+dbline 115 186
+dbline 107 186
+dbline 107 188
+dbline 116 18E
+dbline FFFFFFFE 194
+dbline 0 198
+dbfunc e ReadTemperature 19A fV
+dbline FFFFFFFF 19A
+dbline 11A 19A
+dbline 11B 19A
+dbline 11C 19C
+dbline 11D 1A0
+dbline 120 1A4
+dbline 121 1A6
+dbline 122 1AA
+dbline 124 1AE
+dbline 125 1B4
+dbline FFFFFFFE 1BA
+dbline 0 1BA
+dbfunc e work_temp 1BC fV
+dbsym r n 14 c
+dbline FFFFFFFF 1C0
+dbline 12F 1C0
+dbline 130 1C0
+dbline 131 1C2
+dbline 132 1CC
+dbline 133 1CC
+dbline 134 1DA
+dbline 135 1EC
+dbline 136 1EE
+dbline 138 1EE
+dbline 139 208
+dbline 13A 214
+dbline 13B 222
+dbline 13C 22C
+dbline 13E 23A
+dbline 13F 276
+dbline 140 276
+dbline 140 27C
+dbline 141 27E
+dbline 141 284
+dbline 142 286
+dbline 142 28C
+dbline 143 28E
+dbline 143 294
+dbline 144 296
+dbline 144 29C
+dbline 145 29E
+dbline 145 2A4
+dbline 146 2A6
+dbline 146 2AC
+dbline 147 2AE
+dbline 147 2B4
+dbline 148 2B6
+dbline 148 2BC
+dbline 149 2BE
+dbline 149 2C4
+dbline 14A 2C6
+dbline 14A 2CC
+dbline 14B 2CE
+dbline 14B 2D4
+dbline 14C 2D6
+dbline 14C 2DC
+dbline 14D 2DE
+dbline 14D 2E4
+dbline 14E 2E6
+dbline 14E 2EC
+dbline 14F 2EE
+dbline 14F 2F4
+dbline 150 2F4
+dbline 152 2F4
+dbline 153 2F8
+dbline 154 2F8
+dbline 155 2FE
+dbline 157 300
+dbline 158 300
+dbline 159 306
+dbline FFFFFFFE 306
+dbline 0 30A
+dbfunc e dis_zhuye 30C fV
+dbline FFFFFFFF 30C
+dbline 15E 30C
+dbline 15F 30C
+dbline 160 31E
+dbline 160 320
+dbline 161 320
+dbline 161 322
+dbline 162 322
+dbline 162 324
+dbline 163 324
+dbline 163 326
+dbline 164 326
+dbline 165 32C
+dbline 165 32E
+dbline 167 32E
+dbline 168 340
+dbline 168 342
+dbline 169 342
+dbline 16A 348
+dbline 16A 34A
+dbline 16C 34A
+dbline 16D 35C
+dbline 16D 35E
+dbline 16E 35E
+dbline 16F 364
+dbline 16F 366
+dbline 171 366
+dbline 172 36A
+dbline 172 36C
+dbline 173 36C
+dbline 174 372
+dbline 174 374
+dbline FFFFFFFE 374
+dbline 0 374
+dbfunc e main 376 fI
+dbline FFFFFFFF 376
+dbline 178 376
+dbline 17A 376
+dbline 17B 37A
+dbline 17C 37E
+dbline 17D 382
+dbline 17E 386
+dbline 17F 388
+dbline 17F 38A
+dbline 180 38A
+dbline 182 38C
+dbline 183 38E
+dbline 184 390
+dbline 185 392
+dbline 187 396
+dbline 188 396
+dbline 189 398
+dbline 18A 39A
+dbline 18B 39C
+dbline 18C 39E
+dbline 186 39E
+dbline FFFFFFFE 3A0
+dbline 0 3A0
+S _main Def0376
+S _WriteOneChar Def0164
+S _TX Def00EC
+S _DS1820_delay Def00F2
+S _dis_zhuye Def030C
+S _work_temp Def01BC
+S _SpiReadSpiWrite Def0032
+S _Config905 Def004E
+S _ReadTemperature Def019A
+S _delay Def0000
+S _ReadOneChar Def0132
+S _TxPacket Def007C
+S _Spi_initial Def002C
+S _SetTxMode Def00E0
+S _Init_DS18B20 Def0102
+S _system_Init Def003C
+A data size 25 flags 20
+dbfile C:\DOCUME~1\Administrator\桌面\JASK2001软件开发包\M16-NRF905开发包\无线温度监控系统\FASONG\Wendu_fasong.c
+dbsym e temp_data 0 A[2:2]c
+dbsym e seg 2 A[10:10]c
+dbsym e seg1 C A[10:10]c
+dbsym e TxAddress 16 A[4:4]c
+dbsym e RFConf 1A A[11:11]c
+S _temp_data Def0000
+S _RFConf Def001A
+S _seg Def0002
+S _seg1 Def000C
+S _TxAddress Def0016
+A idata size 25 flags 0
+A func_lit size 20 flags 0
+A bss size B flags 20
+dbfile C:\DOCUME~1\Administrator\桌面\JASK2001软件开发包\M16-NRF905开发包\无线温度监控系统\FASONG\Wendu_fasong.c
+dbsym e TxRxBuf 0 A[4:4]c
+dbsym e dispaly 4 A[7:7]c
+S _TxRxBuf Def0000
+S _dispaly Def0004
+T 00 00 00 00
+R 00 00 02 00
+T 02 00 C0 CF
+R 00 00 02 00
+T 04 00 A4 B0
+R 00 00 02 00
+T 06 00 99 92
+R 00 00 02 00
+T 08 00 82 F8
+R 00 00 02 00
+T 0A 00 80 90
+R 00 00 02 00
+T 0C 00 40 4F
+R 00 00 02 00
+T 0E 00 24 30
+R 00 00 02 00
+T 10 00 19 12
+R 00 00 02 00
+T 12 00 02 78
+R 00 00 02 00
+T 14 00 00 10
+R 00 00 02 00
+T 16 00 CC CC
+R 00 00 02 00
+T 18 00 CC CC
+R 00 00 02 00
+T 1A 00 00 4C
+R 00 00 02 00
+T 1C 00 0C 44
+R 00 00 02 00
+T 1E 00 04 04
+R 00 00 02 00
+T 20 00 CC CC
+R 00 00 02 00
+T 22 00 CC CC
+R 00 00 02 00
+T 24 00 58
+R 00 00 02 00
+T 00 00 0E 94 00 00 09 C0 44 27 55 27 02 C0 4F 5F
+R 00 00 00 00 12 04 00 00
+T 0E 00 5F 4F 40 35 E0 E0 5E 07 D0 F3 18 01 01 50
+R 00 00 00 00
+T 1C 00 10 40 22 20 91 F7 33 20 81 F7 0E 94 00 00
+R 00 00 00 00 12 0E 02 00
+T 2A 00 08 95
+R 00 00 00 00
+T 2C 00 80 E5 8D B9 08 95
+R 00 00 00 00
+T 32 00 0F B9 77 9B FE CF 0F B1 08 95
+R 00 00 00 00
+T 3C 00 C4 9A C7 98 C2 98 C3 98 93 98 C1 9A 94 98
+R 00 00 00 00
+T 4A 00 C0 98 08 95
+R 00 00 00 00
+T 4E 00 0E 94 00 00 C4 98 01 E0 10 E0 D3 DF 44 27
+R 00 00 00 00 12 04 00 00
+T 5C 00 09 C0 80 E0 90 E0 E4 2F FF 27 E8 0F F9 1F
+R 00 00 00 00 20 04 01 00 1A 00 40 06 01 00 1A 00
+T 6A 00 00 81 E2 DF 43 95 4B 30 A8 F3 C4 9A 0E 94
+R 00 00 00 00
+T 78 00 00 00 08 95
+R 00 00 00 00 12 02 02 00
+T 7C 00 0E 94 00 00 C4 98 01 E0 10 E0 BC DF 00 E2
+R 00 00 00 00 12 04 00 00
+T 8A 00 D3 DF 44 27 09 C0 80 E0 90 E0 E4 2F FF 27
+R 00 00 00 00 20 08 04 00 04 00 40 0A 04 00 04 00
+T 98 00 E8 0F F9 1F 00 81 C9 DF 43 95 44 30 A8 F3
+R 00 00 00 00
+T A6 00 C4 9A 01 E0 10 E0 A9 DF C4 98 02 E2 BF DF
+R 00 00 00 00
+T B4 00 44 27 09 C0 80 E0 90 E0 E4 2F FF 27 E8 0F
+R 00 00 00 00 20 06 01 00 16 00 40 08 01 00 16 00
+T C2 00 F9 1F 00 81 B5 DF 43 95 44 30 A8 F3 C4 9A
+R 00 00 00 00
+T D0 00 94 9A 01 E0 10 E0 94 DF 94 98 0E 94 00 00
+R 00 00 00 00 12 0E 02 00
+T DE 00 08 95
+R 00 00 00 00
+T E0 00 94 98 C0 9A 02 E0 10 E0 8B DF 08 95
+R 00 00 00 00
+T EC 00 F9 DF C6 DF 08 95
+R 00 00 00 00
+T F2 00 18 01 01 50 10 40 22 20 D9 F7 33 20 C9 F7
+R 00 00 00 00
+T 00 01 08 95
+R 00 00 00 00
+T 02 01 0E 94 00 00 41 E0 8E 9A 96 9A 96 98 08 EB
+R 00 00 00 00 12 04 00 00
+T 10 01 1B E0 EF DF 96 9A 8E 98 08 E2 10 E0 EA DF
+R 00 00 00 00
+T 1E 01 86 99 FE CF 8E 9A 96 9A 0C E2 11 E0 E3 DF
+R 00 00 00 00
+T 2C 01 0E 94 00 00 08 95
+R 00 00 00 00 12 04 02 00
+T 32 01 0E 94 00 00 44 27 68 E0 0D C0 8E 9A 96 98
+R 00 00 00 00 12 04 01 00
+T 40 01 46 95 96 9A 8E 98 86 9B 01 C0 40 68 8E 9A
+R 00 00 00 00
+T 4E 01 02 E3 10 E0 CF DF 6A 95 80 E0 86 17 80 F3
+R 00 00 00 00
+T 5C 01 04 2F 0E 94 00 00 08 95
+R 00 00 00 00 12 06 03 00
+T 64 01 0E 94 00 00 60 2F 8E 9A 48 E0 0C C0 96 98
+R 00 00 00 00 12 04 01 00
+T 72 01 60 FF 02 C0 96 9A 01 C0 96 98 08 E2 10 E0
+R 00 00 00 00
+T 80 01 B8 DF 96 9A 66 95 4A 95 80 E0 84 17 88 F3
+R 00 00 00 00
+T 8E 01 08 E0 10 E0 AF DF 0E 94 00 00 08 95
+R 00 00 00 00 12 0A 03 00
+T 9A 01 B3 DF 0C EC E2 DF 04 E4 E0 DF AE DF 0C EC
+R 00 00 00 00
+T A8 01 DD DF 0E EB DB DF C1 DF 00 93 00 00 BE DF
+R 00 00 00 00 00 0C 01 00
+T B6 01 00 93 01 00 08 95
+R 00 00 00 00 00 04 01 00
+T 00 00 77 01 73 01 6F 01
+R 00 00 03 00 10 02 00 00 10 04 00 00 10 06 00 00
+T 06 00 6B 01 67 01 63 01
+R 00 00 03 00 10 02 00 00 10 04 00 00 10 06 00 00
+T 0C 00 5F 01 5B 01 57 01
+R 00 00 03 00 10 02 00 00 10 04 00 00 10 06 00 00
+T 12 00 53 01 4F 01 4B 01
+R 00 00 03 00 10 02 00 00 10 04 00 00 10 06 00 00
+T 18 00 47 01 43 01 3F 01
+R 00 00 03 00 10 02 00 00 10 04 00 00 10 06 00 00
+T 1E 00 3B 01
+R 00 00 03 00 10 02 00 00
+T BC 01 0E 94 00 00 44 27 8F E7 20 90 01 00 82 15
+R 00 00 00 00 12 04 01 00 00 0C 01 00
+T CA 01 88 F4 33 24 80 E0 91 E0 82 19 93 09 80 93
+R 00 00 00 00
+T D8 01 01 00 20 90 00 00 33 24 80 E0 91 E0 82 19
+R 00 00 00 00 00 02 01 00 00 06 01 00
+T E6 01 93 09 80 93 00 00 41 E0 80 91 01 00 8F 70
+R 00 00 00 00 00 06 01 00 00 0C 01 00
+T F4 01 8F 70 82 95 90 91 00 00 90 7F 92 95 9F 70
+R 00 00 00 00 00 08 01 00
+T 02 02 98 2B 90 93 0A 00 14 E6 09 2F 0E 94 00 00
+R 00 00 00 00 00 06 04 00 12 0E 06 00
+T 10 02 00 93 09 00 14 E6 00 91 0A 00 0E 94 00 00
+R 00 00 00 00 00 04 04 00 00 0A 04 00 12 0E 05 00
+T 1E 02 00 93 08 00 1A E0 0E 94 00 00 00 93 06 00
+R 00 00 00 00 00 04 04 00 12 0A 06 00 00 0E 04 00
+T 2C 02 1A E0 00 91 08 00 0E 94 00 00 00 93 05 00
+R 00 00 00 00 00 06 04 00 12 0A 05 00 00 0E 04 00
+T 3A 02 60 91 00 00 77 27 6F 70 70 70 60 30 E0 E0
+R 00 00 00 00 00 04 01 00
+T 48 02 7E 07 0C F4 53 C0 8F E0 90 E0 86 17 97 07
+R 00 00 00 00
+T 56 02 0C F4 4D C0 02 E0 10 E0 9B 01 0E 94 00 00
+R 00 00 00 00 12 0E 04 00
+T 64 02 F8 01 80 E0 90 E0 E8 0F F9 1F 05 90 14 90
+R 00 00 00 00 20 04 03 00 00 00 40 06 03 00 00 00
+T 72 02 F0 01 09 94 89 E0 80 93 04 00 3B C0 89 E0
+R 00 00 00 00 00 0A 04 00
+T 80 02 80 93 04 00 37 C0 88 E0 80 93 04 00 33 C0
+R 00 00 00 00 00 04 04 00 00 0C 04 00
+T 8E 02 88 E0 80 93 04 00 2F C0 87 E0 80 93 04 00
+R 00 00 00 00 00 06 04 00 00 0E 04 00
+T 9C 02 2B C0 86 E0 80 93 04 00 27 C0 86 E0 80 93
+R 00 00 00 00 00 08 04 00
+T AA 02 04 00 23 C0 85 E0 80 93 04 00 1F C0 84 E0
+R 00 00 00 00 00 02 04 00 00 0A 04 00
+T B8 02 80 93 04 00 1B C0 84 E0 80 93 04 00 17 C0
+R 00 00 00 00 00 04 04 00 00 0C 04 00
+T C6 02 83 E0 80 93 04 00 13 C0 83 E0 80 93 04 00
+R 00 00 00 00 00 06 04 00 00 0E 04 00
+T D4 02 0F C0 82 E0 80 93 04 00 0B C0 81 E0 80 93
+R 00 00 00 00 00 08 04 00
+T E2 02 04 00 07 C0 81 E0 80 93 04 00 03 C0 22 24
+R 00 00 00 00 00 02 04 00 00 0A 04 00
+T F0 02 20 92 04 00 44 23 21 F0 81 E1 80 93 07 00
+R 00 00 00 00 00 04 04 00 00 0E 04 00
+T FE 02 03 C0 82 E2 80 93 07 00 0E 94 00 00 08 95
+R 00 00 00 00 00 08 04 00 12 0C 03 00
+T 0C 03 80 E0 90 E0 E0 91
+R 00 00 00 00 20 02 01 00 02 00 40 04 01 00 02 00
+T 12 03 06 00 FF 27 E8 0F F9 1F 20 80 25 BA DC 9A
+R 00 00 00 00 00 02 04 00
+T 20 03 DB 9A DA 9A D9 98 00 E5 10 E0 6A DE D9 9A
+R 00 00 00 00
+T 2E 03 80 E0 90 E0 E0 91
+R 00 00 00 00 20 02 01 00 0C 00 40 04 01 00 0C 00
+T 34 03 05 00 FF 27 E8 0F F9 1F 20 80 25 BA DA 98
+R 00 00 00 00 00 02 04 00
+T 42 03 00 E5 10 E0 5C DE DA 9A 80 E0 90 E0 E0 91
+R 00 00 00 00 20 0A 01 00 02 00 40 0C 01 00 02 00
+T 50 03 04 00 FF 27 E8 0F F9 1F 20 80 25 BA DB 98
+R 00 00 00 00 00 02 04 00
+T 5E 03 00 E5 10 E0 4E DE DB 9A 86 EC 85 BB DC 98
+R 00 00 00 00
+T 6C 03 00 E5 10 E0 47 DE DC 9A 08 95
+R 00 00 00 00
+T 76 03 82 EB 81 BB 83 EB 87 BB 8E E1 8A BB 8F EF
+R 00 00 00 00
+T 84 03 84 BB 8B BB 95 9A 97 9A 4F DE 56 DE 5E DE
+R 00 00 00 00
+T 92 03 B7 DE 04 C0 01 DF 11 DF B8 DF A7 DE FB CF
+R 00 00 00 00
+T A0 03 08 95
+R 00 00 00 00

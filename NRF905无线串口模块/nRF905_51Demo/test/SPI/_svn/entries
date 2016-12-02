@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2009-10-01T13:48:12.868305Z"
+   url="http://192.168.133.82:8080/firmware/NetUSB905/firmware/SPI"
+   last-author="misswhile"
+   kind="dir"
+   repos="http://192.168.133.82:8080/firmware/NetUSB905"
+   revision="2"/>
+<entry
+   committed-rev="2"
+   name="SPI.h"
+   text-time="2007-05-21T10:06:42.000000Z"
+   committed-date="2009-10-01T13:48:12.868305Z"
+   checksum="3c720c2eb9ff365c69a8f9f80cd1529a"
+   last-author="misswhile"
+   kind="file"/>
+<entry
+   committed-rev="2"
+   name="SPI_timing.JPG"
+   text-time="2007-04-04T06:59:36.000000Z"
+   committed-date="2009-10-01T13:48:12.868305Z"
+   checksum="2b63ac2334e85461072378e0b48df0c2"
+   last-author="misswhile"
+   kind="file"
+   prop-time="2007-10-10T13:53:06.000000Z"/>
+<entry
+   committed-rev="2"
+   name="SPI.c"
+   text-time="2007-10-10T08:41:32.000000Z"
+   committed-date="2009-10-01T13:48:12.868305Z"
+   checksum="49c3430bf9060895603022f12c5b56e6"
+   last-author="misswhile"
+   kind="file"/>
+</wc-entries>
