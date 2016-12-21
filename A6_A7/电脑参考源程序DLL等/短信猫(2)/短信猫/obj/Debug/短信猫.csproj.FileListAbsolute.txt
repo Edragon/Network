@@ -1,0 +1,39 @@
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\bin\Debug\短信猫.exe
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\bin\Debug\短信猫.pdb
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\bin\Debug\GSMMODEM.dll
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\ResolveAssemblyReference.cache
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Properties.Resources.resources
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.csproj.GenerateResource.Cache
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.exe
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.pdb
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Form2.resources
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Form3.resources
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Form4.resources
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Form5.resources
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Form6.resources
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Form1.resources
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Form7.resources
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Form8.resources
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\bin\Debug\短信猫.exe.config
+E:\WORK\visual studio 2008\Projects\短信猫(2)\短信猫\obj\Debug\短信猫.Form9.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\bin\Debug\短信猫.exe.config
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.exe
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.pdb
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\bin\Debug\短信猫.exe
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\bin\Debug\短信猫.pdb
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\bin\Debug\GSMMODEM.dll
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.csprojResolveAssemblyReference.cache
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Form1.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Form2.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Form3.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Form4.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Form5.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Form6.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Form7.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Form8.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Form9.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.Properties.Resources.resources
+E:\360data\重要数据\桌面\短信猫(2)\短信猫\obj\Debug\短信猫.csproj.GenerateResource.Cache
+D:\!淘宝在售宝贝！！！\电脑参考源程序DLL等\短信猫(2)\短信猫\bin\Debug\短信猫.exe.config
+D:\!淘宝在售宝贝！！！\电脑参考源程序DLL等\短信猫(2)\短信猫\obj\Debug\短信猫.exe
+D:\!淘宝在售宝贝！！！\电脑参考源程序DLL等\短信猫(2)\短信猫\obj\Debug\短信猫.pdb

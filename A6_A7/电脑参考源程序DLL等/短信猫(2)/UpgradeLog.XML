@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="短信猫">
+</Property><Property Name="解决方案文件" Value="E:\360data\重要数据\桌面\短信猫(2)\短信猫.sln">
+</Property><Property Name="用户选项文件" Value="E:\360data\重要数据\桌面\短信猫(2)\短信猫.suo">
+</Property><Property Name="Date" Value="2014年9月5日">
+</Property><Property Name="Time" Value="17:26">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="短信猫.sln" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫.sln">
+</Event><Event ErrorLevel="0" Project="" Source="短信猫.suo" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫.suo">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\短信猫.csproj" Description="项目文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\短信猫.csproj">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form1.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form1.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form1.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form2.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form2.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form2.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form2.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form3.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form3.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form3.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form3.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form4.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form4.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form4.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form4.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form5.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form5.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form5.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form5.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form6.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form6.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form6.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form6.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form7.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form7.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form7.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form7.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form8.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form8.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form8.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form8.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form9.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form9.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form9.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form9.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Program.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Program.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Properties\AssemblyInfo.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Properties\Resources.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Properties\Settings.Designer.cs" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\app.config" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\app.config">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Properties\Settings.settings" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\AT.ico" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\AT.ico">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form1.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form1.resx">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form2.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form2.resx">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form3.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form3.resx">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form4.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form4.resx">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form5.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form5.resx">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form6.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form6.resx">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form7.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form7.resx">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form8.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form8.resx">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Form9.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Form9.resx">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\Properties\Resources.resx" Description="文件已成功备份为 E:\360data\重要数据\桌面\短信猫(2)\Backup\短信猫\Properties\Resources.resx">
+</Event><Event ErrorLevel="1" Project="短信猫" Source="短信猫\短信猫.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\短信猫.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="短信猫" Source="短信猫\短信猫.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="短信猫.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="短信猫.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="短信猫" Source="短信猫\短信猫.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

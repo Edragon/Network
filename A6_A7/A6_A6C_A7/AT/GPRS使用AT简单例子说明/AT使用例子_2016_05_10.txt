@@ -1,0 +1,86 @@
+1. 上网连接服务器
+AT            //返回OK,表示模块串口工作正常
+ATE0          //返回OK，关闭回显
+
+
+AT+CGATT=1   //返回OK，附着网络
+AT+CGACT=1,1 //激活网络，之后就可以使用tcpip的指令了
+
+AT+CIPSTART="TCP","121.41.97.28",60000 //连接TCPIP服务器
+AT+CIPSEND=20         //返回>,就可以输入要发送的内容20表示有20个字节
+AT+CIPCLOSE           //关闭TCPIP连接
++CIPRCV:5,12345       //收到服务器返回的5个字节
+
+
+2.发送短信
+AT+CMGF=1    //文本方式发送
+AT+CMGS="13631782651"   //返回>,然后输入要发送的txt内容并且以CTRL-Z结束即可
+
+
+3.微信使用例子
+
+
+//连上GPRS以后，就可以通过这条指令启动连接微信云
+AT+WXCLDSTART="C73B931572A6FB306E8D638A2173A724373B420D36E19F0BEC152B1E151FDCEFD2280393C5903C4C7344698C40A25D56C3CD6EB6727BCD772C9C3C9E0AB5ABCEA131BBBA414C24D5EA947CC3D507286C"  
+//关于devicelicense的申请可以http://iot.weixin.qq.com/查看相关文档.申请完公众号以后，在添加产品的时候会给这个号码
+
+
++WXCLDSTART:1 //表示连接登陆微信硬件云服务器成功
+
+//如果失败，使用下面的指令断开连接，重新再+WXCLDSTART
+AT+WXCLDSTOP  
+
+AT+WXCLDSEND=10 //返回>后发送微信的json格式内容
+
+//下面是微信的操作例子，从开机到连接到微信和微信控制
+
+^CINIT: 2, 32, 41891
+
+^CINIT: 1, 0, 0
+
+^CINIT: 8, 2048, 1
+
+^CINIT: 16, 0, 1638450
+
+^CINIT: 32, 0, 0
+
++CREG: 0
+
++CTZV:16/05/10,10:51:35,+08
+
++CREG: 5
+at+ccid
+
++SCID: SIM Card ID: 898602#4221620070426
+
+OK
+at+cgatt=1
+
++CTZV:16/05/10,10:51:38,+08
+
++CGREG: 5
+
+OK
+at+cgact=1,1
+
+OK
+
++CGREG: 5
+at+wxcldstart="C73B931572A6FB306E8D638A2173A724373B420D36E19F0BEC152B1E151FDCEFD2280393C5903C4C7344698C40A25D56C3CD6EB6727BCD772C9C3C9E0AB5ABCEA131BBBA414C24D5EA947CC3D507286C"
+
++CDNSGIP: 1,"cloud.hw.weixin.qq.com","183.192.192.169"
+
+OK
+
++WXCLDSTART:1
+
+OK
+
++CGREG: 5
+
++WXCLDRCV:201,{"msg_id":72419439,"msg_type":"get","services":{"operation_status":{"status":1},"lightbulb":{"alpha":1,"color_hsl":[1,1]}},"user":"okKQAwZkPYO6d82_YW5Rk-PCMvPE","test_create_time":2147483647,"data":""}
+
+OK
+
+
+
