@@ -1,0 +1,100 @@
+C51 COMPILER V9.00   MAIN                                                                  04/28/2014 19:11:45 PAGE 1   
+
+
+C51 COMPILER V9.00, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /*******************************************************/
+   2          /* 名   称：NRF24L01+开发板测试程序（DS18B20温度采集实验）*/
+   3          /* 功   能：发送接收测试程序                           */
+   4          /* 说   明：开发板采集温度通过无线串口发给电脑         */
+   5          /* 作者：BQDZ     （论坛：http://bqdz.taobao.com）     */
+   6          /* 联系方式： QQ :851968194     旺旺：王亚坤2864       */
+   7          /*           手机：15821472722（上海）                 */
+   8          /*******************************************************/
+   9          #include "DS18B20.h"    
+  10          uchar TX_ADDRESS[TX_ADR_WIDTH]={0xFF,0xFF,0xFF,0xFF,0xFF}; //发送地址
+  11          uchar RX_ADDRESS[RX_ADR_WIDTH]={0xFF,0xFF,0xFF,0xFF,0xFF}; //接收地址
+  12          uchar   rate = 0x0F;                                        //2Mbs, 0dB  低噪声增益开启
+  13          sbit    S1   = P3^2;                                            //按键“KEY1”
+  14          sbit    S2       = P3^3;                                                //按键“KEY2”
+  15          sbit    LED1 = P0^3;                                            //LED1
+  16          sbit    LED2 = P0^2;                                            //LED2
+  17          sbit    LED3 = P0^1;                                            //LED3
+  18          sbit    LED4 = P0^0;                                            //LED4
+  19          uchar rece_buf[32];                                                     //接收寄存器
+  20          
+  21          void delay_main(uint t)
+  22          {
+  23   1              uint k;
+  24   1              while(t--)
+  25   1              for(k=0;k<200;k++);
+  26   1      }
+  27          void main()
+  28          {
+  29   1              uint num;
+  30   1              uint temp;
+  31   1              while(NRF24L01_Check()); // 等待检测到NRF24L01，程序才会向下执行
+  32   1              NRF24L01_RT_Init(TX_PLOAD_WIDTH,TX_ADDRESS,TX_ADR_WIDTH,RX_ADDRESS,RX_ADR_WIDTH,rate);                  
+  33   1              while(1)
+  34   1              {
+  35   2                      if(NRF_IRQ==0)          // 如果无线模块接收到数据
+  36   2                      {               
+  37   3                              if(NRF24L01_RxPacket(rece_buf)==0)
+  38   3                              {                          
+  39   4                                      if(     rece_buf[1]=='1')                       //第1位以后是收到的命令数据，rece_buf[0]是数据位数长度
+  40   4                                              LED1=LED3=~LED1;
+  41   4                                      if(     rece_buf[1]=='2')                       //第1位以后是收到的命令数据，rece_buf[0]是数据位数长度
+  42   4                                              LED2=LED4=~LED2;                
+  43   4                              }
+  44   3                      }                       
+  45   2                      delay_main(10);
+  46   2                      num++;
+  47   2                      if(num>=100)
+  48   2                      {
+  49   3                              num=0;
+  50   3                              temp=ReadTemperature();
+  51   3                              rece_buf[1]=0xB5;                                       //当
+  52   3                              rece_buf[2]=0xB1;                                       //当
+  53   3                              rece_buf[3]=0xC7;                                       //前
+  54   3                              rece_buf[4]=0xB0;                                       //前
+  55   3                              rece_buf[5]=0xCE;                                       //温
+C51 COMPILER V9.00   MAIN                                                                  04/28/2014 19:11:45 PAGE 2   
+
+  56   3                              rece_buf[6]=0xC2;                                       //温
+  57   3                              rece_buf[7]=0xB6;                                       //度
+  58   3                              rece_buf[8]=0xC8;                                       //度
+  59   3                              rece_buf[9]=0xA3;                                       //：
+  60   3                              rece_buf[10]=0xBA;                                      //：
+  61   3                              rece_buf[11]=temp/1000+0x30;                            
+  62   3                              rece_buf[12]=temp%1000/100+0x30;                                
+  63   3                              rece_buf[13]=temp%100/10+0x30;                          
+  64   3                              rece_buf[14]='.';                                       
+  65   3                              rece_buf[15]=temp%10+0x30;      
+  66   3                              rece_buf[16]=0x0D;               //回车
+  67   3                              rece_buf[17]=0x0A;               //回车
+  68   3                              rece_buf[0]=17;
+  69   3                              SEND_BUF(rece_buf);                     
+  70   3                      }
+  71   2              }
+  72   1      }
+  73          
+  74          
+  75          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1047    ----
+   CONSTANT SIZE    =     10    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     44      41
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

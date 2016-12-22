@@ -1,0 +1,15 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+E:\360云盘\淘宝资料\产品资料\nRF24L01+开发板新\实验3 DS18B20温度采集实验 - STC10\无线开发板示例程序（DS18B20实验）.uvproj
+Project File Date:  09/28/2013
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+linking...
+Program Size: data=72.0 xdata=0 code=2323
+creating hex file from "无线开发板示例程序（DS18B20实验）"...
+"无线开发板示例程序（DS18B20实验）" - 0 Error(s), 0 Warning(s).

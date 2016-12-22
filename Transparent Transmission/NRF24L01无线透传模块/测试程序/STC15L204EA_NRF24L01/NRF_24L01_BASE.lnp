@@ -1,0 +1,6 @@
+"NRF_24L01.obj",
+"MAIN.obj",
+"UART.obj",
+"delay.obj" 
+TO "NRF_24L01_BASE" 
+RAMSIZE(256) 

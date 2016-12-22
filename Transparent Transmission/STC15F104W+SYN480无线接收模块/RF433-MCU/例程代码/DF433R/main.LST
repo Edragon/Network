@@ -1,0 +1,152 @@
+C51 COMPILER V9.01   MAIN                                                                  01/13/2015 13:08:05 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          
+   2          /*****************************************
+   3          本程序适用于STC15F/L104W
+   4          ****************************************/
+   5          
+   6          /*******************************************
+   7          现定义如下：
+   8          
+   9          下降沿：1ms的高电平，随后500us的低电平。
+  10          起始位：4ms的高电平，随后4ms的低电平。
+  11          数据1：2ms的高电平，随后500us的低电平。
+  12          数据0：1ms的高电平，随后500us的低电平。
+  13          结束位：4ms的低电平。
+  14          ******************************************/
+  15          
+  16          
+  17          //接收程序
+  18          
+  19          #include"reg52.h"  
+  20          #define MCU_FREQ                          12000000      //设置晶振频率
+  21          #define uchar unsigned char 
+  22          sfr P3M0=0xb2;
+  23          sfr P3M1=0xb1;
+  24          sbit RX=P3^2; 
+  25          
+  26          sbit red0=P3^0; 
+  27          
+  28          sbit red1=P3^1; 
+  29          
+  30          uchar m; 
+  31          bit n;  
+  32          void main() 
+  33          { 
+  34   1      uchar a,b,c,p,x,y;    //定义存取的数据
+  35   1      TMOD=0X01; 
+  36   1      P3M1=0x04;
+  37   1      TH0=(65536-100)/256; //开定时器0 
+  38   1      TL0=(65536-100)%256; 
+  39   1      EA=1; 
+  40   1      ET0=1; 
+  41   1      TR0=1; 
+  42   1      EX0=1; 
+  43   1      IT0=1; 
+  44   1      //P0=0Xff; 
+  45   1      //P1=0x00;
+  46   1      red0=1;
+  47   1      red1=1;
+  48   1      p=5; 
+  49   1      x=0;  
+  50   1      while(1) 
+  51   1      { 
+  52   2      if(n==1) 
+  53   2      { 
+  54   3      while(RX==0); //读取协议下降沿
+  55   3      m=0; 
+C51 COMPILER V9.01   MAIN                                                                  01/13/2015 13:08:05 PAGE 2   
+
+  56   3      EX0=0; 
+  57   3      while(RX==1); 
+  58   3      if(m>35&&m<45) //读取协议起始位高电平
+  59   3      {
+  60   4      m=0; 
+  61   4      while(RX==0); 
+  62   4      if(m>35&&m<45)  //读取协议起始位低电平
+  63   4      {
+  64   5      m=0;
+  65   5      
+  66   5      while(RX==1);   //读取数据1 
+  67   5      if(m>5&&m<15) a=0; 
+  68   5      if(m>15&&m<25)a=4; 
+  69   5      while(RX==0); 
+  70   5      m=0; 
+  71   5      
+  72   5      while(RX==1);   //读取数据2  
+  73   5      if(m>5&&m<15) b=0; 
+  74   5      if(m>15&&m<25)b=2; 
+  75   5      while(RX==0); 
+  76   5      m=0;  
+  77   5      
+  78   5      while(RX==1); //读取数据3  
+  79   5      if(m>5&&m<15) c=0; 
+  80   5      if(m>15&&m<25)c=1; 
+  81   5      while(RX==0); 
+  82   5      m=0;  
+  83   5      p=a+b+c;  
+  84   5      x++;  
+  85   5      if(x==1) y=p; 
+  86   5      if(x==2) //连续收到两次数据才进入匹配
+  87   5      { 
+  88   6      x=0; 
+  89   6      if(y==p) 
+  90   6      { 
+  91   7      switch(p) 
+  92   7      
+  93   7      {  
+  94   8      case 0:red0=0;red1=1;
+  95   8             break;
+  96   8      case 1:red0=1;red1=0;
+  97   8             break;
+  98   8      case 2:red0=1;red1=1; 
+  99   8             break;
+ 100   8      case 3:red0=1;red1=1;  
+ 101   8             break;
+ 102   8      case 4:red0=1;red1=1;
+ 103   8             break;
+ 104   8             }
+ 105   7            }
+ 106   6           }
+ 107   5          }
+ 108   4         }
+ 109   3      EX0=1;  }
+ 110   2        
+ 111   2       }
+ 112   1      }
+ 113          
+ 114          void INT_0() interrupt 0
+ 115          
+ 116          {                     
+ 117   1        n=1; 
+C51 COMPILER V9.01   MAIN                                                                  01/13/2015 13:08:05 PAGE 3   
+
+ 118   1      } 
+ 119          void timer0() interrupt 1 
+ 120          { 
+ 121   1      TH0=(65536-100)/256; 
+ 122   1      TL0=(65536-100)%256; 
+ 123   1      m++; 
+ 124   1      TF0=0; 
+ 125   1      } 
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    288    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

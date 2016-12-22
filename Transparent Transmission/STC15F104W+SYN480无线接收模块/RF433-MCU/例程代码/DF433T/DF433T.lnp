@@ -1,0 +1,4 @@
+"STARTUP.obj",
+"main.obj" 
+TO "DF433T" 
+RAMSIZE(256) 

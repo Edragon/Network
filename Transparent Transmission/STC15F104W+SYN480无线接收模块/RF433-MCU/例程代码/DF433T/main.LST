@@ -1,0 +1,190 @@
+C51 COMPILER V9.01   MAIN                                                                  01/12/2015 16:52:56 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /********************************************
+   2          现定义如下：
+   3          
+   4          下降沿：1ms的高电平，随后500us的低电平。
+   5          起始位：4ms的高电平，随后4ms的低电平。
+   6          数据1： 2ms的高电平，随后500us的低电平。
+   7          数据0： 1ms的高电平，随后500us的低电平。
+   8          结束位：4ms的低电平。
+   9          **********************************************/
+  10          //本程序已经过调试硬件测试可用，在SYN480的信号输出脚要接信号放大电路
+  11          //发射模块c程序
+  12          
+  13          #include<reg52.h>  
+  14          #define MCU_FREQ            12000000    //设置晶振频率
+  15          #define uchar unsigned char 
+  16          sfr P3M0=0xb2;
+  17          
+  18          sbit key0=P3^0; 
+  19          
+  20          sbit key1=P3^1; 
+  21          
+  22          
+  23          sbit TX=P3^2; 
+  24          
+  25          uchar m; 
+  26          
+  27          void v0(); 
+  28          
+  29          void v1(); 
+  30          
+  31          void v2(); 
+  32          
+  33          void v3();  
+  34          
+  35          void delay_315(); 
+  36          void main() 
+  37          
+  38          { 
+  39   1      uchar i; 
+  40   1      bit dong=0;  //开定时器0中断
+  41   1      TMOD=0X01; 
+  42   1      P3M0=0x08;
+  43   1      TH0=(65536-100)/256; 
+  44   1      TL0=(65536-100)%256; 
+  45   1      EA=1; 
+  46   1      ET0=1; 
+  47   1      TR0=1; 
+  48   1      TX=0; 
+  49   1      while(1)  { 
+  50   2      if(key0==0)     //发送指令0
+  51   2      { 
+  52   3      delay_315(); 
+  53   3      while(key0==0)
+  54   3      {
+  55   4      v3();
+C51 COMPILER V9.01   MAIN                                                                  01/12/2015 16:52:56 PAGE 2   
+
+  56   4      v2();
+  57   4      v0();
+  58   4      v0();
+  59   4      v0();
+  60   4      m=0;
+  61   4      while(m<40);  //4ms低电平
+  62   4      } 
+  63   3      dong=1; 
+  64   3      } 
+  65   2      
+  66   2      if(key1==0)  //发送指令1 
+  67   2      { 
+  68   3      delay_315(); 
+  69   3      while(key1==0)
+  70   3      {
+  71   4      v3();
+  72   4      v2();
+  73   4      v0();
+  74   4      v0();
+  75   4      v1();
+  76   4      m=0;
+  77   4      while(m<40);
+  78   4      } 
+  79   3      dong=1; 
+  80   3      } 
+  81   2      /*
+  82   2      if(key2==0) 
+  83   2      { 
+  84   2      delay_315(); 
+  85   2      while(key2==0){v3();v2();v0();v1();v0();m=0;while(m<40);} 
+  86   2      dong=1; 
+  87   2      } 
+  88   2      
+  89   2      if(key3==0) 
+  90   2      { 
+  91   2      delay_315(); 
+  92   2      while(key3==0){v3();v2();v0();v1();v1();m=0;while(m<40);} 
+  93   2      dong=1; 
+  94   2      } 
+  95   2      
+  96   2      
+  97   2      if(dong==1) 
+  98   2      { 
+  99   2      dong=0; 
+ 100   2      for(i=0;i<5;i++){v3();v2();v1();v0();v0();m=0;while(m<40);} 
+ 101   2      }
+ 102   2      */ 
+ 103   2      } 
+ 104   1      }
+*** WARNING C280 IN LINE 39 OF MAIN.C: 'i': unreferenced local variable
+ 105          
+ 106          void timer0() interrupt 1 
+ 107          
+ 108          { 
+ 109   1      TH0=(65536-100)/256;
+ 110   1      TL0=(65536-100)%256; 
+ 111   1      m++; 
+ 112   1      TF0=0; 
+ 113   1      } 
+ 114          
+ 115          void v0()  // 1MS高电平500us低电平      数据0 
+ 116          { 
+C51 COMPILER V9.01   MAIN                                                                  01/12/2015 16:52:56 PAGE 3   
+
+ 117   1      m=0; 
+ 118   1      while(m<10) 
+ 119   1      TX=1; 
+ 120   1      m=0; 
+ 121   1      while(m<5) 
+ 122   1      TX=0; 
+ 123   1      } 
+ 124          
+ 125          void v1()   // 2MS高电平500us低电平              数据1
+ 126          { 
+ 127   1      m=0; 
+ 128   1      while(m<20) 
+ 129   1      TX=1; 
+ 130   1      m=0; 
+ 131   1      while(m<5) 
+ 132   1      TX=0; 
+ 133   1      } 
+ 134          
+ 135          
+ 136          
+ 137          void v2()  // 4MS高电平4ms低电平           起始位
+ 138          { 
+ 139   1      m=0; 
+ 140   1      while(m<40) 
+ 141   1      TX=1; 
+ 142   1      m=0; 
+ 143   1      while(m<40) 
+ 144   1      TX=0; 
+ 145   1      } 
+ 146          void v3()  // 1MS高电平500us低电平        下降沿         
+ 147          
+ 148          { 
+ 149   1      m=0; 
+ 150   1      while(m<10) 
+ 151   1      TX=1; 
+ 152   1      m=0; 
+ 153   1      while(m<5) 
+ 154   1      TX=0; 
+ 155   1      } 
+ 156          
+ 157          void delay_315() 
+ 158          { 
+ 159   1      uchar i,j; 
+ 160   1      for(i=0;i<10;i++) 
+ 161   1      for(j=0;j<110;j++); 
+ 162   1      } 
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    240    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----       1
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
