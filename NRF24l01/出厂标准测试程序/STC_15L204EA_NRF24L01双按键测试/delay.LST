@@ -1,0 +1,80 @@
+C51 COMPILER V8.02   DELAY                                                                 11/13/2012 14:53:50 PAGE 1   
+
+
+C51 COMPILER V8.02, COMPILATION OF MODULE DELAY
+OBJECT MODULE PLACED IN delay.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE delay.c ROM(COMPACT) OPTIMIZE(6,SPEED) BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          /******************************************************************************/
+   2          /*                        -- 深圳安信可科技有限公司 --                        */
+   3          /*
+   4          //  文件名：                                                              
+   5          //  说明：                                                                  
+   6          //  编写人员：                                                                   
+   7          //  编写日期：                                                              
+   8          //  程序维护：
+   9          //  维护记录：
+  10          //
+  11          //                                                          
+  12          */ 
+  13          // 免责声明：该程序仅用于学习与交流 
+  14          // (c) Anxinke Corporation. All rights reserved.                                                          
+             -     
+  15          /******************************************************************************/
+  16          #include "delay.h"
+  17          
+  18          
+  19          
+  20          /******************************************************************************/
+  21          // 函数名称： 
+  22          // 输入参数： 
+  23          // 输出参数： 
+  24          // 函数功能： 
+  25          /******************************************************************************/
+  26          void Delay100ms(void)       //@22.1184MHz
+  27          {
+  28   1              unsigned char i, j, k;
+  29   1              _nop_();
+  30   1              _nop_();
+  31   1              i = 9;
+  32   1              j = 104;
+  33   1              k = 139;
+  34   1              do
+  35   1              {
+  36   2                      do
+  37   2                      {
+  38   3                              while (--k);
+  39   3                      } while (--j);
+  40   2              } while (--i);
+  41   1      }
+  42          
+  43          /******************************************************************************/
+  44          // 函数名称： 
+  45          // 输入参数： 
+  46          // 输出参数： 
+  47          // 函数功能： 
+  48          /******************************************************************************/
+  49          void _delay_us(unsigned int _us)
+  50          {
+  51   1          char a=0;
+  52   1          for(_us;_us;_us--)
+  53   1              for(a=0;a<1;a++);
+  54   1      }
+C51 COMPILER V8.02   DELAY                                                                 11/13/2012 14:53:50 PAGE 2   
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     35    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
