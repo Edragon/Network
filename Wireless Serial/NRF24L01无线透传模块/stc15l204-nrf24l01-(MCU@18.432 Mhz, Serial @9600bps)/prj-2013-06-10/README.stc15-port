@@ -1,0 +1,20 @@
+This is a quick test to port the nrf24L01_plus library (https://github.com/kehribar/nrf24L01_plus)
+by ihsan kehribar.
+
+In ./soft_serial is an adaptation of the soft serial code using Timer0 from the
+STC15L204 manual (for SDCC)
+
+In ./util is a 'simple printf', much more simple than the xprintf code
+(functions sprintf for 'strings', dprintf for 'decimal' and hprintf
+for 'hexadecimal').
+
+radioPinFunctions.c is adapted to the stc15l204 + nrf24l01 wireless development boards
+(http://www.electrodragon.com/w/index.php?title=NRF24L01_UART_w/STC15F204_IC)
+(Got mine , via wayengineer.com for ~$7)
+
+Only tested rx_example and tx_example (rx_main & tx_main).
+Only minor changes to be able to compile everything.
+
+No Makefile, just 2 scripts - 'doit' to compile , 'clean' to clean...
+
+JJ

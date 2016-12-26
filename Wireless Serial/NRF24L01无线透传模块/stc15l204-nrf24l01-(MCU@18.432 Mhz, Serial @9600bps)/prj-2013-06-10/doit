@@ -1,0 +1,11 @@
+#!/bin/sh
+
+sdcc -mmcs51 --iram-size 256 -c ./soft_serial/serial.c
+sdcc -mmcs51 --iram-size 256 -c ./util/sprintf.c
+sdcc -mmcs51 --iram-size 256 -c nrf24.c
+
+sdcc -mmcs51 --iram-size 256 tx_main.c nrf24.rel sprintf.rel serial.rel
+cp tx_main.ihx tx_main.hex
+sdcc -mmcs51 --iram-size 256 rx_main.c nrf24.rel sprintf.rel serial.rel
+cp rx_main.ihx rx_main.hex
+

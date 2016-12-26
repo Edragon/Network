@@ -1,0 +1,3 @@
+#!/bin/sh
+rm -f *.asm *.lst *.rst *.rel *.sym
+rm -f *.mem *.map *.lk *.ihx *.hex
