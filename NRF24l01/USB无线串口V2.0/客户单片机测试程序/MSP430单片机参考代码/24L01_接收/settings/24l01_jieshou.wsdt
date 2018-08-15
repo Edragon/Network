@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>24l01_jieshou/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>226</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>932</ColumnWidth1><ColumnWidth2>248</ColumnWidth2><ColumnWidth3>62</ColumnWidth3></Build>
+      <TerminalIO/>
+    </Static>
+    <Windows>
+      
+      
+    <Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-16162-26151</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>24l01_jieshou</ExpandedNode><ExpandedNode>24l01_jieshou/Output</ExpandedNode><ExpandedNode>24l01_jieshou/Output/24l01_jieshou.d43</ExpandedNode><ExpandedNode>24l01_jieshou/users</ExpandedNode><ExpandedNode>24l01_jieshou/users/24l01.c</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-10934-26249</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\main.c</Filename><XPos>0</XPos><YPos>15</YPos><SelStart>1103</SelStart><SelEnd>1103</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\users\24l01.c</Filename><XPos>0</XPos><YPos>279</YPos><SelStart>8627</SelStart><SelEnd>8627</SelEnd></Tab><ActiveTab>1</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\users\24l01.h</Filename><XPos>0</XPos><YPos>41</YPos><SelStart>3213</SelStart><SelEnd>3213</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00e70618><key>iaridepm.enu1</key></Toolbar-00e70618></Sizes></Row0></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>742</Bottom><Right>300</Right><x>-2</x><y>-2</y><xscreen>119</xscreen><yscreen>213</yscreen><sizeHorzCX>61979</sizeHorzCX><sizeHorzCY>213427</sizeHorzCY><sizeVertCX>157292</sizeVertCX><sizeVertCY>745491</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>211</Bottom><Right>1922</Right><x>-2</x><y>-2</y><xscreen>1924</xscreen><yscreen>213</yscreen><sizeHorzCX>1002083</sizeHorzCX><sizeHorzCY>213427</sizeHorzCY><sizeVertCX>61979</sizeVertCX><sizeVertCY>213427</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
